@@ -1,0 +1,1556 @@
+{
+  "project_name": "Granite Ledger Sustainment",
+  "charter_fingerprint": "3874e7b3c016124d",
+  "recommendation": {
+    "workflow": "kanban_continuous_flow",
+    "confidence": 0.891,
+    "margin": 0.829,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "kanban_continuous_flow",
+        "probability": 0.891
+      },
+      {
+        "workflow": "incident_change_control",
+        "probability": 0.0619
+      },
+      {
+        "workflow": "scrumban_hybrid",
+        "probability": 0.038
+      }
+    ],
+    "probabilities": {
+      "kanban_continuous_flow": 0.891,
+      "incident_change_control": 0.0619,
+      "scrumban_hybrid": 0.038,
+      "stage_gate_waterfall": 0.0035,
+      "scrum_product_delivery": 0.0032,
+      "regulated_compliance_pipeline": 0.0022,
+      "dual_track_discovery": 0.0002,
+      "scaled_release_train": 0.0001
+    },
+    "experts": {
+      "semantic": {
+        "kanban_continuous_flow": 0.6318,
+        "incident_change_control": 0.1637,
+        "scrumban_hybrid": 0.1329,
+        "stage_gate_waterfall": 0.025,
+        "scrum_product_delivery": 0.0277,
+        "regulated_compliance_pipeline": 0.0175,
+        "dual_track_discovery": 0.0011,
+        "scaled_release_train": 0.0003
+      },
+      "structural": {
+        "kanban_continuous_flow": 0.9443,
+        "incident_change_control": 0.0401,
+        "scrumban_hybrid": 0.0131,
+        "stage_gate_waterfall": 0.0013,
+        "scrum_product_delivery": 0.0005,
+        "regulated_compliance_pipeline": 0.0006,
+        "dual_track_discovery": 0.0001,
+        "scaled_release_train": 0.0
+      },
+      "precedent": {
+        "kanban_continuous_flow": 0.7969,
+        "incident_change_control": 0.103,
+        "scrumban_hybrid": 0.0991,
+        "stage_gate_waterfall": 0.0002,
+        "scrum_product_delivery": 0.0002,
+        "regulated_compliance_pipeline": 0.0002,
+        "dual_track_discovery": 0.0002,
+        "scaled_release_train": 0.0002
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ00572",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.647,
+        "outcome_score": 0.811
+      },
+      {
+        "project_id": "PRJ02082",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.6378,
+        "outcome_score": 0.802
+      },
+      {
+        "project_id": "PRJ00012",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.5682,
+        "outcome_score": 0.877
+      },
+      {
+        "project_id": "PRJ00122",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.5357,
+        "outcome_score": 0.793
+      },
+      {
+        "project_id": "PRJ01298",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.5189,
+        "outcome_score": 0.753
+      },
+      {
+        "project_id": "PRJ01032",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.518,
+        "outcome_score": 0.822
+      },
+      {
+        "project_id": "PRJ00409",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.5057,
+        "outcome_score": 0.815
+      },
+      {
+        "project_id": "PRJ01725",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4961,
+        "outcome_score": 0.771
+      },
+      {
+        "project_id": "PRJ00102",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4911,
+        "outcome_score": 0.866
+      },
+      {
+        "project_id": "PRJ00852",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.482,
+        "outcome_score": 0.929
+      },
+      {
+        "project_id": "PRJ01752",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4715,
+        "outcome_score": 0.738
+      },
+      {
+        "project_id": "PRJ00901",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4713,
+        "outcome_score": 0.8
+      },
+      {
+        "project_id": "PRJ00488",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4693,
+        "outcome_score": 0.826
+      },
+      {
+        "project_id": "PRJ00651",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.462,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ01530",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4614,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00099",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4461,
+        "outcome_score": 0.893
+      },
+      {
+        "project_id": "PRJ01334",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.44,
+        "outcome_score": 0.783
+      },
+      {
+        "project_id": "PRJ01855",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4371,
+        "outcome_score": 0.937
+      },
+      {
+        "project_id": "PRJ00894",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4365,
+        "outcome_score": 0.971
+      },
+      {
+        "project_id": "PRJ00067",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4143,
+        "outcome_score": 0.802
+      },
+      {
+        "project_id": "PRJ02234",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3691,
+        "outcome_score": 0.823
+      },
+      {
+        "project_id": "PRJ00957",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.3655,
+        "outcome_score": 0.884
+      },
+      {
+        "project_id": "PRJ00297",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3653,
+        "outcome_score": 0.932
+      },
+      {
+        "project_id": "PRJ02091",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.3528,
+        "outcome_score": 0.933
+      },
+      {
+        "project_id": "PRJ00501",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.349,
+        "outcome_score": 0.789
+      },
+      {
+        "project_id": "PRJ00937",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3446,
+        "outcome_score": 0.855
+      },
+      {
+        "project_id": "PRJ00263",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.344,
+        "outcome_score": 0.853
+      },
+      {
+        "project_id": "PRJ00838",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3379,
+        "outcome_score": 0.772
+      },
+      {
+        "project_id": "PRJ00387",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3322,
+        "outcome_score": 0.938
+      },
+      {
+        "project_id": "PRJ01957",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.3289,
+        "outcome_score": 0.769
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_unplanned_work",
+        "contribution": 1.846,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 1.1621,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.9734,
+        "value": 1.0
+      },
+      {
+        "feature": "unplanned_share",
+        "contribution": 0.9424,
+        "value": 0.55
+      },
+      {
+        "feature": "domain_energy_utilities",
+        "contribution": 0.8639,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 0.3134,
+        "value": 0.0
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "unplanned_work": 1.0,
+      "production_critical": 1.0,
+      "personal_data": 1.0
+    },
+    "team_size": 6,
+    "teams": 1,
+    "duration_weeks": 52,
+    "unplanned_pct": 55,
+    "sprint_length_days": null,
+    "regimes": [
+      "gdpr"
+    ],
+    "domain": "energy_utilities",
+    "initiative_type": null,
+    "word_count": 251
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP00572",
+        "doc_type": "blueprint",
+        "title": "Pioneer Lighthouse (smart meter data platform)",
+        "score": 0.64695,
+        "dense_score": 0.647,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00572: Pioneer Lighthouse (smart meter data platform). Workflow archetype adopted: Kanban Continuous Flow. State flow: Intake > Triage > Ready > In Progress > Peer Review > Deploy and Verify > Done. Workflow adjustments applied: add rollback plan. Outcome score 0.81 on a zero to one scale. On time delivery 89%, defect escape rate 4.6%, median cycle time 5.5 days, stakeholder ...",
+        "metadata": {
+          "project_id": "PRJ00572",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.8115,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "support_operations"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP02082",
+        "doc_type": "blueprint",
+        "title": "Marble Vector 900 (demand forecasting service)",
+        "score": 0.63779,
+        "dense_score": 0.6378,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP02082: Marble Vector 900 (demand forecasting service). Workflow archetype adopted: Kanban Continuous Flow. State flow: Intake > Triage > Ready > In Progress > Peer Review > Deploy and Verify > Done. Workflow adjustments applied: add security review, tighten wip. Outcome score 0.80 on a zero to one scale. On time delivery 84%, defect escape rate 6.1%, median cycle time 7.0 days, ...",
+        "metadata": {
+          "project_id": "PRJ02082",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.802,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "support_operations"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP02209",
+        "doc_type": "blueprint",
+        "title": "Coastal Ledger 900 (demand forecasting service)",
+        "score": 0.63641,
+        "dense_score": 0.6364,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP02209: Coastal Ledger 900 (demand forecasting service). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add privacy review, add rollback plan, add security review. Outcome score 0.54 on a zero to one scale. ...",
+        "metadata": {
+          "project_id": "PRJ02209",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.5366,
+          "high_performing": false,
+          "domain": "energy_utilities",
+          "project_type": "support_operations"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP01952",
+        "doc_type": "blueprint",
+        "title": "Northern Junction 900 (smart meter data platform)",
+        "score": 0.62185,
+        "dense_score": 0.6219,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01952: Northern Junction 900 (smart meter data platform). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add definition of ready, add feature flags, add ...",
+        "metadata": {
+          "project_id": "PRJ01952",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.3258,
+          "high_performing": false,
+          "domain": "energy_utilities",
+          "project_type": "support_operations"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP01749",
+        "doc_type": "blueprint",
+        "title": "Sterling Signal 900 (batch record review tool)",
+        "score": 0.62005,
+        "dense_score": 0.6201,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01749: Sterling Signal 900 (batch record review tool). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add dependency sync, add stakeholder demo, tighten wip. Outcome score 0.57 on a zero to one scale. On time delivery 60%, ...",
+        "metadata": {
+          "project_id": "PRJ01749",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.5676,
+          "high_performing": false,
+          "domain": "pharmaceuticals",
+          "project_type": "support_operations"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP01432",
+        "doc_type": "blueprint",
+        "title": "Northern Waypoint 900 (personalised home feed)",
+        "score": 0.59918,
+        "dense_score": 0.5992,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01432: Northern Waypoint 900 (personalised home feed). Workflow archetype adopted: Scrumban Hybrid Flow. State flow: Backlog > Ready > In Progress > Review > Testing > Done. Workflow adjustments applied: add privacy review, add uat stage. Outcome score 0.57 on a zero to one scale. On time delivery 66%, defect escape rate 8.8%, median cycle time 10.1 days, stakeholder satisfaction 3.1 ...",
+        "metadata": {
+          "project_id": "PRJ01432",
+          "workflow_archetype": "scrumban_hybrid",
+          "outcome_score": 0.5696,
+          "high_performing": false,
+          "domain": "media_entertainment",
+          "project_type": "platform_maintenance"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP00012",
+        "doc_type": "blueprint",
+        "title": "Summit Bridge (billing engine)",
+        "score": 0.56822,
+        "dense_score": 0.5682,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00012: Summit Bridge (billing engine). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add data migration rehearsal, add privacy review, add security review, add vendor checkpoint, tighten wip. Outcome ...",
+        "metadata": {
+          "project_id": "PRJ00012",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.8767,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "infrastructure_upgrade"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP01486",
+        "doc_type": "blueprint",
+        "title": "Sterling Relay 900 (production scheduling engine)",
+        "score": 0.54053,
+        "dense_score": 0.5405,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01486: Sterling Relay 900 (production scheduling engine). Workflow archetype adopted: Kanban Continuous Flow. State flow: Intake > Triage > Ready > In Progress > Peer Review > Deploy and Verify > Done. Workflow adjustments applied: add stakeholder demo, tighten wip. Outcome score 0.70 on a zero to one scale. On time delivery 73%, defect escape rate 8.0%, median cycle time 7.5 days, ...",
+        "metadata": {
+          "project_id": "PRJ01486",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.7008,
+          "high_performing": false,
+          "domain": "manufacturing",
+          "project_type": "support_operations"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM00572",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Pioneer Lighthouse (smart meter data platform)",
+        "score": 0.64695,
+        "dense_score": 0.647,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Insert a privacy impact assessment gate wherever personal data processing changes. Treat security review as a workflow gate rather than an optional checklist item. Reduce WIP limits so the team finishes work before starting more.",
+        "metadata": {
+          "project_id": "PRJ00572",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.8115,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM02082",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Marble Vector 900 (demand forecasting service)",
+        "score": 0.63779,
+        "dense_score": 0.6378,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the data protection officer an approver on transitions that change personal data handling. Add an independent security review state before release with a named security approver. Lower the in progress limit when unplanned work is high.",
+        "metadata": {
+          "project_id": "PRJ02082",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.802,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM02209",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Coastal Ledger 900 (demand forecasting service)",
+        "score": 0.63641,
+        "dense_score": 0.6364,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Insert a privacy impact assessment gate wherever personal data processing changes. Require a tested rollback plan before any production release. Add an independent security review state before release with a named security approver. Lower the in progress limit when unplanned work is high.",
+        "metadata": {
+          "project_id": "PRJ02209",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.5366,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM01952",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Northern Junction 900 (smart meter data platform)",
+        "score": 0.62185,
+        "dense_score": 0.6219,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the rollback plan a mandatory field on the release transition. Treat security review as a workflow gate rather than an optional checklist item. Lower the in progress limit when unplanned work is high.",
+        "metadata": {
+          "project_id": "PRJ01952",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.3258,
+          "recommended_adjustments": [
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM01749",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Sterling Signal 900 (batch record review tool)",
+        "score": 0.62005,
+        "dense_score": 0.6201,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the data protection officer an approver on transitions that change personal data handling. Require a tested rollback plan before any production release. Add an independent security review state before release with a named security approver. Invite every business owner to a demo at least monthly. Reduce WIP limits so the team finishes work before starting more.",
+        "metadata": {
+          "project_id": "PRJ01749",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.5676,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "ADD_STAKEHOLDER_DEMO",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM01432",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Northern Waypoint 900 (personalised home feed)",
+        "score": 0.59918,
+        "dense_score": 0.5992,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the rollback plan a mandatory field on the release transition. Reduce WIP limits so the team finishes work before starting more.",
+        "metadata": {
+          "project_id": "PRJ01432",
+          "workflow_archetype": "scrumban_hybrid",
+          "outcome_score": 0.5696,
+          "recommended_adjustments": [
+            "ADD_ROLLBACK_PLAN",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "METHOD_kanban_continuous_flow",
+        "doc_type": "methodology",
+        "title": "Kanban Continuous Flow",
+        "score": 0.03252,
+        "dense_score": 0.7481,
+        "bm25_score": 43.981,
+        "section": "When to use it",
+        "passage": "Kanban Continuous Flow. When to use it. Kanban is the default for maintenance, sustaining engineering and operational support. Work arrives continuously, priorities change daily and the unit of planning is the individual work item rather than a time boxed batch. Charters that describe incident queues, service desk demand, patching, technical debt reduction or a large share of unplanned capacity point strongly ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/kanban_continuous_flow.md"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "TEMPLATE_kanban_continuous_flow",
+        "doc_type": "workflow_template",
+        "title": "Kanban Continuous Flow",
+        "score": 0.0311,
+        "dense_score": 0.5042,
+        "bm25_score": 45.952,
+        "section": "Kanban Continuous Flow",
+        "passage": "Kanban Continuous Flow. Kanban Continuous Flow. Workflow template: Kanban Continuous Flow (kanban_continuous_flow). Pull based flow with explicit WIP limits and classes of service for maintenance and support. States in order: Intake, Triage, Ready, In Progress, Peer Review, Deploy and Verify, Done, Blocked, Rejected. Transition Triage item moves work from intake to triage with no guard. Transition Reject moves work ...",
+        "metadata": {
+          "workflow_archetype": "kanban_continuous_flow"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_wip_limits_and_flow_metrics",
+        "doc_type": "methodology",
+        "title": "WIP Limits and Flow Metrics",
+        "score": 0.02808,
+        "dense_score": 0.5189,
+        "bm25_score": 15.341,
+        "section": "Anti patterns",
+        "passage": "WIP Limits and Flow Metrics. Anti patterns. Limits set so high they never bind; limits ignored by managers who push work in; measuring utilisation of people rather than flow of work.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/wip_limits_and_flow_metrics.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_scrumban_hybrid",
+        "doc_type": "methodology",
+        "title": "Scrumban Hybrid Flow",
+        "score": 0.02715,
+        "dense_score": 0.2655,
+        "bm25_score": 20.849,
+        "section": "When to use it",
+        "passage": "Scrumban Hybrid Flow. When to use it. Scrumban combines the pull system and WIP limits of Kanban with selected Scrum practices such as regular retrospectives and lightweight planning. It suits small teams, often six people or fewer, who own a live product and must balance roadmap features with a moderate, steady stream of interrupts, typically fifteen to thirty five percent of capacity.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/scrumban_hybrid.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Granite Ledger Sustainment",
+      "charter_fingerprint": "3874e7b3c016124d"
+    },
+    "workflow": {
+      "archetype": "kanban_continuous_flow",
+      "display_name": "Kanban Continuous Flow",
+      "family": "flow",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.891
+    },
+    "cadence": {
+      "type": "continuous",
+      "replenishment_days": 7,
+      "classes_of_service": [
+        "expedite",
+        "fixed_date",
+        "standard",
+        "intangible"
+      ]
+    },
+    "states": [
+      {
+        "key": "intake",
+        "name": "Intake",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "triage",
+        "name": "Triage",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 6,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Class of service assigned",
+          "Impact assessed"
+        ]
+      },
+      {
+        "key": "ready",
+        "name": "Ready",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 10,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "in_progress",
+        "name": "In Progress",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 3,
+        "sla_hours": 36,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "peer_review",
+        "name": "Peer Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 2,
+        "sla_hours": 9,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "deploy_verification",
+        "name": "Deploy and Verify",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 2,
+        "sla_hours": 18,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "security_review",
+        "name": "Security Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Security assessment prepared"
+        ],
+        "exit_criteria": [
+          "Approved by security engineer"
+        ]
+      },
+      {
+        "key": "privacy_impact_assessment",
+        "name": "Privacy Impact Assessment",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Dpia record prepared"
+        ],
+        "exit_criteria": [
+          "Approved by data protection officer"
+        ]
+      },
+      {
+        "key": "done",
+        "name": "Done",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "blocked",
+        "name": "Blocked",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 18,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "rejected",
+        "name": "Rejected",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "triage_item",
+        "name": "Triage item",
+        "from": "intake",
+        "to": "triage",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "reject",
+        "name": "Reject",
+        "from": "triage",
+        "to": "rejected",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "rejection_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "accept_into_ready",
+        "name": "Accept into ready",
+        "from": "triage",
+        "to": "ready",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "class_of_service"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "pull",
+        "name": "Pull",
+        "from": "ready",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "wip_available"
+          },
+          {
+            "type": "field_required",
+            "field": "assignee"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "submit_review",
+        "name": "Submit review",
+        "from": "in_progress",
+        "to": "peer_review",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "rework",
+        "name": "Rework",
+        "from": "peer_review",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "approve",
+        "name": "Approve",
+        "from": "peer_review",
+        "to": "deploy_verification",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "verification_failed",
+        "name": "Verification failed",
+        "from": "deploy_verification",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "verify",
+        "name": "Verify",
+        "from": "deploy_verification",
+        "to": "security_review",
+        "guards": [],
+        "actions": [
+          {
+            "type": "stamp_field",
+            "field": "resolved_at"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "block",
+        "name": "Block",
+        "from": "in_progress",
+        "to": "blocked",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "blocker_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "unblock",
+        "name": "Unblock",
+        "from": "blocked",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_passed",
+        "name": "Security Review passed",
+        "from": "security_review",
+        "to": "privacy_impact_assessment",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "security_engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "security_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_failed",
+        "name": "Security Review failed",
+        "from": "security_review",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "security_review_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "privacy_impact_assessment_passed",
+        "name": "Privacy Impact Assessment passed",
+        "from": "privacy_impact_assessment",
+        "to": "done",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "data_protection_officer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "dpia_record"
+          },
+          {
+            "type": "field_required",
+            "field": "rollback_plan"
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "rollback_rehearsal_evidence"
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "privacy_impact_assessment_failed",
+        "name": "Privacy Impact Assessment failed",
+        "from": "privacy_impact_assessment",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "privacy_impact_assessment_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "expedite_jump_queue",
+        "event": "field_changed",
+        "condition": "class_of_service == 'expedite'",
+        "action": "move:ready;priority:top;notify:service_owner",
+        "description": "Places expedite items at the head of the ready queue.",
+        "params": {}
+      },
+      {
+        "key": "wip_limit_guard",
+        "event": "wip_limit_exceeded",
+        "condition": "target_state.wip > target_state.wip_limit",
+        "action": "reject_transition;notify:team",
+        "description": "Refuses pulls that would breach a WIP limit.",
+        "params": {}
+      },
+      {
+        "key": "aging_work_alert",
+        "event": "time_in_state_exceeded",
+        "condition": "hours_in_state > sla_hours",
+        "action": "notify:service_owner;label:aging",
+        "description": "Flags items that exceed the service level for their state.",
+        "params": {}
+      },
+      {
+        "key": "fixed_date_reminder",
+        "event": "scheduled",
+        "condition": "class_of_service == 'fixed_date' and days_to_due < 5",
+        "action": "notify:assignee",
+        "description": "Reminds owners of approaching fixed date commitments.",
+        "params": {}
+      },
+      {
+        "key": "data_retention_review",
+        "event": "scheduled",
+        "condition": "cron == 'quarterly'",
+        "action": "create_task:retention_review",
+        "description": "Checks personal data against retention rules.",
+        "params": {}
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Replenishment",
+        "cadence": "weekly",
+        "duration_minutes": 45,
+        "participants": [
+          "service_owner",
+          "engineer"
+        ]
+      },
+      {
+        "name": "Daily flow review",
+        "cadence": "daily",
+        "duration_minutes": 15,
+        "participants": [
+          "engineer",
+          "service_owner"
+        ]
+      },
+      {
+        "name": "Service delivery review",
+        "cadence": "biweekly",
+        "duration_minutes": 60,
+        "participants": [
+          "service_owner",
+          "stakeholder"
+        ]
+      }
+    ],
+    "roles": [
+      "service_owner",
+      "engineer",
+      "support_analyst",
+      "stakeholder",
+      "security_engineer",
+      "data_protection_officer"
+    ],
+    "metrics": [
+      "throughput",
+      "cycle_time_p85",
+      "work_item_age",
+      "flow_efficiency"
+    ],
+    "anchors": {
+      "intake": "intake",
+      "rework": "in_progress",
+      "release_transition": "privacy_impact_assessment_passed",
+      "done": "done",
+      "blocked": "blocked",
+      "build_states": [
+        "in_progress"
+      ],
+      "review_states": [
+        "peer_review",
+        "deploy_verification"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "gdpr"
+      ],
+      "regime_names": [
+        "UK GDPR and the Data Protection Act 2018"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.9664,
+        "evidence_support": 0.9389,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209",
+          "PM01952",
+          "PM01749"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.8874,
+        "evidence_support": 0.7954,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209",
+          "PM01749",
+          "PM00012"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.85,
+        "evidence_support": 0.7272,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM02209",
+          "PM01952",
+          "PM01749",
+          "PM01432",
+          "PM00012"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 0.7947,
+        "evidence_support": 0.6267,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209",
+          "PM01952",
+          "PM01749"
+        ]
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.1084,
+        "evidence_support": 0.1971,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01749",
+          "PM01486",
+          "PM01471"
+        ]
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.0695,
+        "evidence_support": 0.1264,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00012",
+          "PM00409"
+        ]
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0678,
+        "evidence_support": 0.1233,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01039",
+          "PM01298"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.0368,
+        "evidence_support": 0.0669,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00012"
+        ]
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.035,
+        "evidence_support": 0.0636,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01486"
+        ]
+      },
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.0336,
+        "evidence_support": 0.0611,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01298"
+        ]
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.0333,
+        "evidence_support": 0.0605,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01471"
+        ]
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "WIP limit for in_progress set from 5 to 4",
+        "reason": "Sized to a team of 6 people across 1 team",
+        "evidence": []
+      },
+      {
+        "change": "Scaled 5 state SLAs by 0.75",
+        "reason": "Production critical service: tighter service levels",
+        "evidence": []
+      },
+      {
+        "change": "Inserted gate 'Security Review' before done",
+        "reason": "Security review gate: evidence support 63% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209",
+          "PM01952",
+          "PM01749"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Privacy Impact Assessment' before done",
+        "reason": "Privacy impact assessment gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209",
+          "PM01749",
+          "PM00012"
+        ]
+      },
+      {
+        "change": "Added field required guard (rollback_plan) to the release transition (privacy_impact_assessment_passed)",
+        "reason": "Mandatory rollback plan: evidence support 73% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM02209",
+          "PM01952",
+          "PM01749",
+          "PM01432",
+          "PM00012"
+        ]
+      },
+      {
+        "change": "Added linked artifact guard (rollback_rehearsal_evidence) to the release transition (privacy_impact_assessment_passed)",
+        "reason": "Mandatory rollback plan: evidence support 73% from similar post mortems, charter prior 1.00",
+        "evidence": []
+      },
+      {
+        "change": "WIP limit for in_progress set from 4 to 3",
+        "reason": "Tighter WIP limits: evidence support 94% from similar post mortems, charter prior 1.00",
+        "evidence": []
+      },
+      {
+        "change": "WIP limit for peer_review set from 3 to 2",
+        "reason": "Tighter WIP limits: evidence support 94% from similar post mortems, charter prior 1.00",
+        "evidence": []
+      },
+      {
+        "change": "WIP limit for deploy_verification set from 3 to 2",
+        "reason": "Tighter WIP limits: evidence support 94% from similar post mortems, charter prior 1.00",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'data_retention_review'",
+        "reason": "Storage limitation under UK GDPR",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 11,
+        "states": 11,
+        "transitions": 15,
+        "triggers": 5,
+        "guarded_transitions": 9,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Kanban Continuous Flow is recommended with 89% confidence. The charter indicates that a large share of work arrives unplanned, the service is production critical, personal data is processed. 23 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "a large share of work arrives unplanned",
+      "the service is production critical",
+      "personal data is processed"
+    ],
+    "regimes": [
+      "UK GDPR and the Data Protection Act 2018"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_unplanned_work",
+        "contribution": 1.846,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 1.1621,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.9734,
+        "value": 1.0
+      },
+      {
+        "feature": "unplanned_share",
+        "contribution": 0.9424,
+        "value": 0.55
+      },
+      {
+        "feature": "domain_energy_utilities",
+        "contribution": 0.8639,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 0.3134,
+        "value": 0.0
+      }
+    ],
+    "precedent_agreement": 0.767,
+    "alternatives": [
+      {
+        "workflow": "incident_change_control",
+        "display_name": "Change Controlled Operations",
+        "probability": 0.0619
+      },
+      {
+        "workflow": "scrumban_hybrid",
+        "display_name": "Scrumban Hybrid Flow",
+        "probability": 0.038
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "METHOD_kanban_continuous_flow",
+        "title": "Kanban Continuous Flow",
+        "section": "When to use it",
+        "passage": "Kanban Continuous Flow. When to use it. Kanban is the default for maintenance, sustaining engineering and operational support. Work arrives continuously, priorities change daily and the unit of planning is the individual work item rather than a time boxed batch. Charters that describe incident queues, service desk demand, patching, technical debt reduction ..."
+      },
+      {
+        "doc_id": "TEMPLATE_kanban_continuous_flow",
+        "title": "Kanban Continuous Flow",
+        "section": "Kanban Continuous Flow",
+        "passage": "Kanban Continuous Flow. Kanban Continuous Flow. Workflow template: Kanban Continuous Flow (kanban_continuous_flow). Pull based flow with explicit WIP limits and classes of service for maintenance and support. States in order: Intake, Triage, Ready, In Progress, Peer Review, Deploy and Verify, Done, Blocked, Rejected. Transition Triage item moves work from ..."
+      },
+      {
+        "doc_id": "METHOD_wip_limits_and_flow_metrics",
+        "title": "WIP Limits and Flow Metrics",
+        "section": "Anti patterns",
+        "passage": "WIP Limits and Flow Metrics. Anti patterns. Limits set so high they never bind; limits ignored by managers who push work in; measuring utilisation of people rather than flow of work."
+      },
+      {
+        "doc_id": "METHOD_scrumban_hybrid",
+        "title": "Scrumban Hybrid Flow",
+        "section": "When to use it",
+        "passage": "Scrumban Hybrid Flow. When to use it. Scrumban combines the pull system and WIP limits of Kanban with selected Scrum practices such as regular retrospectives and lightweight planning. It suits small teams, often six people or fewer, who own a live product and must balance roadmap features with a moderate, steady stream of interrupts, typically fifteen to ..."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "score": 0.9664,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "score": 0.8874,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "score": 0.85,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM02209",
+          "PM01952",
+          "PM01749"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "score": 0.7947,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM00572",
+          "PM02082",
+          "PM02209"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 77.4
+}

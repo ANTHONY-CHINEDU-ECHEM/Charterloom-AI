@@ -1,0 +1,1758 @@
+{
+  "project_name": "Clearwater Disputes",
+  "charter_fingerprint": "139f70724aea87f0",
+  "recommendation": {
+    "workflow": "scrum_product_delivery",
+    "confidence": 0.9211,
+    "margin": 0.886,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "scrum_product_delivery",
+        "probability": 0.9211
+      },
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "probability": 0.0351
+      },
+      {
+        "workflow": "kanban_continuous_flow",
+        "probability": 0.0157
+      }
+    ],
+    "probabilities": {
+      "scrum_product_delivery": 0.9211,
+      "regulated_compliance_pipeline": 0.0351,
+      "kanban_continuous_flow": 0.0157,
+      "incident_change_control": 0.01,
+      "scaled_release_train": 0.0074,
+      "stage_gate_waterfall": 0.0048,
+      "scrumban_hybrid": 0.0041,
+      "dual_track_discovery": 0.0019
+    },
+    "experts": {
+      "semantic": {
+        "scrum_product_delivery": 0.7877,
+        "regulated_compliance_pipeline": 0.0756,
+        "kanban_continuous_flow": 0.0295,
+        "incident_change_control": 0.0185,
+        "scaled_release_train": 0.0305,
+        "stage_gate_waterfall": 0.0012,
+        "scrumban_hybrid": 0.0395,
+        "dual_track_discovery": 0.0176
+      },
+      "structural": {
+        "scrum_product_delivery": 0.9854,
+        "regulated_compliance_pipeline": 0.0137,
+        "kanban_continuous_flow": 0.0003,
+        "incident_change_control": 0.0002,
+        "scaled_release_train": 0.0001,
+        "stage_gate_waterfall": 0.0,
+        "scrumban_hybrid": 0.0001,
+        "dual_track_discovery": 0.0001
+      },
+      "precedent": {
+        "scrum_product_delivery": 0.6885,
+        "regulated_compliance_pipeline": 0.1147,
+        "kanban_continuous_flow": 0.0835,
+        "incident_change_control": 0.0536,
+        "scaled_release_train": 0.0284,
+        "stage_gate_waterfall": 0.0309,
+        "scrumban_hybrid": 0.0002,
+        "dual_track_discovery": 0.0002
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ01004",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.6567,
+        "outcome_score": 0.99
+      },
+      {
+        "project_id": "PRJ01849",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.626,
+        "outcome_score": 0.742
+      },
+      {
+        "project_id": "PRJ01773",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.5473,
+        "outcome_score": 0.823
+      },
+      {
+        "project_id": "PRJ00914",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.5354,
+        "outcome_score": 0.752
+      },
+      {
+        "project_id": "PRJ01207",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.5023,
+        "outcome_score": 0.889
+      },
+      {
+        "project_id": "PRJ01026",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4695,
+        "outcome_score": 0.743
+      },
+      {
+        "project_id": "PRJ00547",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4644,
+        "outcome_score": 0.878
+      },
+      {
+        "project_id": "PRJ01774",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4642,
+        "outcome_score": 0.955
+      },
+      {
+        "project_id": "PRJ00402",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4608,
+        "outcome_score": 0.805
+      },
+      {
+        "project_id": "PRJ00162",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4532,
+        "outcome_score": 0.795
+      },
+      {
+        "project_id": "PRJ01805",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4482,
+        "outcome_score": 0.793
+      },
+      {
+        "project_id": "PRJ02148",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4362,
+        "outcome_score": 0.799
+      },
+      {
+        "project_id": "PRJ00486",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4355,
+        "outcome_score": 0.874
+      },
+      {
+        "project_id": "PRJ01767",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4354,
+        "outcome_score": 0.861
+      },
+      {
+        "project_id": "PRJ00211",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.434,
+        "outcome_score": 0.803
+      },
+      {
+        "project_id": "PRJ00602",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.43,
+        "outcome_score": 0.866
+      },
+      {
+        "project_id": "PRJ00740",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4299,
+        "outcome_score": 0.739
+      },
+      {
+        "project_id": "PRJ01013",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4285,
+        "outcome_score": 0.738
+      },
+      {
+        "project_id": "PRJ01189",
+        "workflow_archetype": "scaled_release_train",
+        "similarity": 0.4185,
+        "outcome_score": 0.869
+      },
+      {
+        "project_id": "PRJ00988",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4138,
+        "outcome_score": 0.801
+      },
+      {
+        "project_id": "PRJ01420",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4109,
+        "outcome_score": 0.806
+      },
+      {
+        "project_id": "PRJ00640",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4045,
+        "outcome_score": 0.769
+      },
+      {
+        "project_id": "PRJ00456",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4016,
+        "outcome_score": 0.826
+      },
+      {
+        "project_id": "PRJ01355",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3912,
+        "outcome_score": 0.854
+      },
+      {
+        "project_id": "PRJ01056",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.391,
+        "outcome_score": 0.875
+      },
+      {
+        "project_id": "PRJ01343",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3879,
+        "outcome_score": 0.86
+      },
+      {
+        "project_id": "PRJ01778",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3878,
+        "outcome_score": 0.895
+      },
+      {
+        "project_id": "PRJ02238",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3878,
+        "outcome_score": 0.784
+      },
+      {
+        "project_id": "PRJ01951",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3868,
+        "outcome_score": 0.752
+      },
+      {
+        "project_id": "PRJ01655",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3838,
+        "outcome_score": 0.822
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_requirements_volatility",
+        "contribution": 2.27,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_continuous_deployment",
+        "contribution": 2.1783,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_financial_services",
+        "contribution": 0.9248,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.4921,
+        "value": 0.0
+      },
+      {
+        "feature": "regime_fca_consumer_duty",
+        "contribution": 0.4498,
+        "value": 1.0
+      },
+      {
+        "feature": "team_size_known",
+        "contribution": 0.4226,
+        "value": 1.0
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "requirements_volatility": 1.0,
+      "public_facing": 0.5,
+      "personal_data": 1.0,
+      "high_traffic": 1.0,
+      "many_stakeholders": 1.0,
+      "continuous_deployment": 1.0
+    },
+    "team_size": 9,
+    "teams": 1,
+    "duration_weeks": 28,
+    "unplanned_pct": null,
+    "sprint_length_days": null,
+    "regimes": [
+      "fca_consumer_duty",
+      "gdpr",
+      "pci_dss"
+    ],
+    "domain": "financial_services",
+    "initiative_type": null,
+    "word_count": 374
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP01004",
+        "doc_type": "blueprint",
+        "title": "Harbour Relay 900 (payments dispute portal)",
+        "score": 0.65666,
+        "dense_score": 0.6567,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01004: Harbour Relay 900 (payments dispute portal). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add definition of ready, add feature flags, add model validation, add privacy review, add security review. Outcome score 0.99 on ...",
+        "metadata": {
+          "project_id": "PRJ01004",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.9902,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "new_product_feature"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP01849",
+        "doc_type": "blueprint",
+        "title": "Harbour Waypoint 900 (trade surveillance dashboard)",
+        "score": 0.626,
+        "dense_score": 0.626,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01849: Harbour Waypoint 900 (trade surveillance dashboard). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add privacy review, add rollback plan, add security review. Outcome score 0.74 on a zero to one scale. On time delivery ...",
+        "metadata": {
+          "project_id": "PRJ01849",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.742,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "customer_facing_app"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP01773",
+        "doc_type": "blueprint",
+        "title": "Nimbus Quarry 900 (reconciliation ledger)",
+        "score": 0.54727,
+        "dense_score": 0.5473,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01773: Nimbus Quarry 900 (reconciliation ledger). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add rollback plan, add stakeholder demo. Outcome score 0.82 on ...",
+        "metadata": {
+          "project_id": "PRJ01773",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.8231,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "regulatory_module"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP00914",
+        "doc_type": "blueprint",
+        "title": "Coastal Sentinel (credit decisioning engine)",
+        "score": 0.53545,
+        "dense_score": 0.5354,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00914: Coastal Sentinel (credit decisioning engine). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add performance test, add security review. Outcome score 0.75 on a zero to one scale. On time delivery 85%, defect escape rate ...",
+        "metadata": {
+          "project_id": "PRJ00914",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.752,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "customer_facing_app"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP01162",
+        "doc_type": "blueprint",
+        "title": "Saffron Tributary 900 (client onboarding portal)",
+        "score": 0.52066,
+        "dense_score": 0.5207,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01162: Saffron Tributary 900 (client onboarding portal). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add definition of ready, add performance test. Outcome score 0.69 on a zero to one scale. On time delivery 76%, defect ...",
+        "metadata": {
+          "project_id": "PRJ01162",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.6868,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "new_product_feature"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP00859",
+        "doc_type": "blueprint",
+        "title": "Sterling Canopy (reconciliation ledger)",
+        "score": 0.51661,
+        "dense_score": 0.5166,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00859: Sterling Canopy (reconciliation ledger). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add privacy review, add security review. Outcome score 0.66 on a zero to one scale. On time delivery 77%, ...",
+        "metadata": {
+          "project_id": "PRJ00859",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.6589,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "support_operations"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP01207",
+        "doc_type": "blueprint",
+        "title": "Saffron Current 900 (mortgage origination journey)",
+        "score": 0.50227,
+        "dense_score": 0.5023,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01207: Saffron Current 900 (mortgage origination journey). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add model validation, add performance test, add privacy review. Outcome score 0.89 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ01207",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.8892,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "new_product_feature"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP01087",
+        "doc_type": "blueprint",
+        "title": "Granite Junction 900 (card controls feature)",
+        "score": 0.47771,
+        "dense_score": 0.4777,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01087: Granite Junction 900 (card controls feature). Workflow archetype adopted: Scaled Agile Release Train. State flow: Programme Backlog > Feature Analysis > Committed to Increment > Feature In Progress > System Demo > Integration Testing > Release Ready > Released. Workflow adjustments applied: tighten wip. Outcome score 0.31 on a zero to one scale. On time delivery 40%, defect ...",
+        "metadata": {
+          "project_id": "PRJ01087",
+          "workflow_archetype": "scaled_release_train",
+          "outcome_score": 0.3107,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "customer_facing_app"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM01004",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Harbour Relay 900 (payments dispute portal)",
+        "score": 0.65666,
+        "dense_score": 0.6567,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Introduce a definition of ready guard before work enters delivery. Use progressive rollout controlled by flags for every release. Make the data protection officer an approver on transitions that change personal data handling. Treat security review as a workflow gate rather than an optional checklist item. Invite every business owner to a demo at least monthly.",
+        "metadata": {
+          "project_id": "PRJ01004",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.9902,
+          "recommended_adjustments": [
+            "ADD_DEFINITION_OF_READY",
+            "ADD_FEATURE_FLAGS",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "ADD_STAKEHOLDER_DEMO"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM01849",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Harbour Waypoint 900 (trade surveillance dashboard)",
+        "score": 0.626,
+        "dense_score": 0.626,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add a performance testing stage against forecast peak demand before release. Make the data protection officer an approver on transitions that change personal data handling. Make the rollback plan a mandatory field on the release transition. Add an independent security review state before release with a named security approver. Reduce WIP limits so the team finishes work before starting more.",
+        "metadata": {
+          "project_id": "PRJ01849",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.742,
+          "recommended_adjustments": [
+            "ADD_PERFORMANCE_TEST",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM01773",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Nimbus Quarry 900 (reconciliation ledger)",
+        "score": 0.54727,
+        "dense_score": 0.5473,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the rollback plan a mandatory field on the release transition. Add a recurring stakeholder demonstration to the workflow ceremonies. Add a user acceptance testing state with explicit client signoff before release.",
+        "metadata": {
+          "project_id": "PRJ01773",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.8231,
+          "recommended_adjustments": [
+            "ADD_ROLLBACK_PLAN",
+            "ADD_STAKEHOLDER_DEMO",
+            "ADD_UAT_STAGE"
+          ]
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM00914",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Coastal Sentinel (credit decisioning engine)",
+        "score": 0.53545,
+        "dense_score": 0.5354,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Use progressive rollout controlled by flags for every release. Add a performance testing stage against forecast peak demand before release. Insert a privacy impact assessment gate wherever personal data processing changes. Make the rollback plan a mandatory field on the release transition. Treat security review as a workflow gate rather than an optional checklist item.",
+        "metadata": {
+          "project_id": "PRJ00914",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.752,
+          "recommended_adjustments": [
+            "ADD_FEATURE_FLAGS",
+            "ADD_PERFORMANCE_TEST",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM01162",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Saffron Tributary 900 (client onboarding portal)",
+        "score": 0.52066,
+        "dense_score": 0.5207,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Introduce a definition of ready guard before work enters delivery. Add a performance testing stage against forecast peak demand before release. Insert a privacy impact assessment gate wherever personal data processing changes. Make the rollback plan a mandatory field on the release transition. Add an independent security review state before release with a named security approver. Attach a timebox to every research ...",
+        "metadata": {
+          "project_id": "PRJ01162",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.6868,
+          "recommended_adjustments": [
+            "ADD_DEFINITION_OF_READY",
+            "ADD_PERFORMANCE_TEST",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "ADD_SPIKE_TIMEBOX",
+            "ADD_STAKEHOLDER_DEMO"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM00859",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Sterling Canopy (reconciliation ledger)",
+        "score": 0.51661,
+        "dense_score": 0.5166,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Rehearse the full migration at production volumes at least twice. Insert a privacy impact assessment gate wherever personal data processing changes. Make the rollback plan a mandatory field on the release transition. Treat security review as a workflow gate rather than an optional checklist item. Reduce WIP limits so the team finishes work before starting more.",
+        "metadata": {
+          "project_id": "PRJ00859",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.6589,
+          "recommended_adjustments": [
+            "ADD_DATA_MIGRATION_REHEARSAL",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "METHOD_scrum_product_delivery",
+        "doc_type": "methodology",
+        "title": "Agile Scrum Product Delivery",
+        "score": 0.03252,
+        "dense_score": 0.5646,
+        "bm25_score": 46.502,
+        "section": "Signals of a good fit in a charter",
+        "passage": "Agile Scrum Product Delivery. Signals of a good fit in a charter. Language about learning from customers, evolving requirements, prototypes, frequent reprioritisation and a single accountable product owner. A team size below twelve and a delivery horizon of one to nine months.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/scrum_product_delivery.md"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "TEMPLATE_scrum_product_delivery",
+        "doc_type": "workflow_template",
+        "title": "Agile Scrum Product Delivery",
+        "score": 0.03105,
+        "dense_score": 0.3996,
+        "bm25_score": 40.327,
+        "section": "Agile Scrum Product Delivery",
+        "passage": "Agile Scrum Product Delivery. Agile Scrum Product Delivery. Workflow template: Agile Scrum Product Delivery (scrum_product_delivery). Fixed length sprints for evolving product features with a single accountable product owner. States in order: Product Backlog, Sprint Backlog, In Progress, Code Review, QA Verification, Ready for Release, Done, Blocked, Cancelled. Transition Plan into sprint moves work from ...",
+        "metadata": {
+          "workflow_archetype": "scrum_product_delivery"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_post_mortem_practice",
+        "doc_type": "methodology",
+        "title": "Post Mortem Practice",
+        "score": 0.02742,
+        "dense_score": 0.2669,
+        "bm25_score": 9.939,
+        "section": "Using post mortems for new projects",
+        "passage": "Post Mortem Practice. Using post mortems for new projects. When a new charter arrives, the post mortems of the most similar historical projects are retrieved. Recommendations that recur across several similar projects carry more weight than a single mention, and their weight increases with the similarity of the source project.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/post_mortem_practice.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_release_and_deployment_controls",
+        "doc_type": "methodology",
+        "title": "Release and Deployment Controls",
+        "score": 0.02705,
+        "dense_score": 0.1914,
+        "bm25_score": 15.368,
+        "section": "Performance testing",
+        "passage": "Release and Deployment Controls. Performance testing. Services with high or spiky traffic need load and soak testing against forecast peak demand before release. Results are attached as a load test report to a performance testing gate.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/release_and_deployment_controls.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Clearwater Disputes",
+      "charter_fingerprint": "139f70724aea87f0"
+    },
+    "workflow": {
+      "archetype": "scrum_product_delivery",
+      "display_name": "Agile Scrum Product Delivery",
+      "family": "iterative",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.9211
+    },
+    "cadence": {
+      "type": "sprint",
+      "sprint_length_days": 14
+    },
+    "states": [
+      {
+        "key": "product_backlog",
+        "name": "Product Backlog",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Story written in user voice",
+          "Acceptance criteria agreed"
+        ]
+      },
+      {
+        "key": "sprint_backlog",
+        "name": "Sprint Backlog",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [
+          "Estimated in story points",
+          "Committed in sprint planning"
+        ],
+        "exit_criteria": []
+      },
+      {
+        "key": "in_progress",
+        "name": "In Progress",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 6,
+        "sla_hours": 72,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "code_review",
+        "name": "Code Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 4,
+        "sla_hours": 24,
+        "entry_criteria": [
+          "Pull request linked",
+          "Unit tests passing"
+        ],
+        "exit_criteria": []
+      },
+      {
+        "key": "qa_verification",
+        "name": "QA Verification",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 4,
+        "sla_hours": 48,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "ready_for_release",
+        "name": "Ready for Release",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [
+          "Definition of done satisfied"
+        ],
+        "exit_criteria": []
+      },
+      {
+        "key": "performance_testing",
+        "name": "Performance Testing",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Load test report prepared"
+        ],
+        "exit_criteria": [
+          "Approved by performance engineer"
+        ]
+      },
+      {
+        "key": "security_review",
+        "name": "Security Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Security assessment prepared"
+        ],
+        "exit_criteria": [
+          "Approved by security engineer"
+        ]
+      },
+      {
+        "key": "privacy_impact_assessment",
+        "name": "Privacy Impact Assessment",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Dpia record prepared"
+        ],
+        "exit_criteria": [
+          "Approved by data protection officer"
+        ]
+      },
+      {
+        "key": "done",
+        "name": "Done",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "blocked",
+        "name": "Blocked",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 48,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "cancelled",
+        "name": "Cancelled",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "plan_into_sprint",
+        "name": "Plan into sprint",
+        "from": "product_backlog",
+        "to": "sprint_backlog",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "story_points"
+          },
+          {
+            "type": "field_required",
+            "field": "acceptance_criteria"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "return_to_backlog",
+        "name": "Return to backlog",
+        "from": "sprint_backlog",
+        "to": "product_backlog",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "start_work",
+        "name": "Start work",
+        "from": "sprint_backlog",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "assignee"
+          },
+          {
+            "type": "wip_available"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "submit_for_review",
+        "name": "Submit for review",
+        "from": "in_progress",
+        "to": "code_review",
+        "guards": [
+          {
+            "type": "linked_artifact",
+            "artifact": "pull_request"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "request_changes",
+        "name": "Request changes",
+        "from": "code_review",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "approve_review",
+        "name": "Approve review",
+        "from": "code_review",
+        "to": "qa_verification",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "fail_verification",
+        "name": "Fail verification",
+        "from": "qa_verification",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [
+          {
+            "type": "increment_counter",
+            "field": "reopen_count"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "pass_verification",
+        "name": "Pass verification",
+        "from": "qa_verification",
+        "to": "ready_for_release",
+        "guards": [
+          {
+            "type": "checklist_complete",
+            "checklist": "test_plan"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "release",
+        "name": "Release",
+        "from": "ready_for_release",
+        "to": "performance_testing",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "product_owner",
+            "min_approvals": 1,
+            "distinct_from_author": false
+          }
+        ],
+        "actions": [
+          {
+            "type": "stamp_field",
+            "field": "released_at"
+          },
+          {
+            "type": "notify",
+            "audience": "stakeholders"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "block",
+        "name": "Block",
+        "from": "in_progress",
+        "to": "blocked",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "blocker_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "unblock",
+        "name": "Unblock",
+        "from": "blocked",
+        "to": "in_progress",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "cancel",
+        "name": "Cancel",
+        "from": "product_backlog",
+        "to": "cancelled",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "cancellation_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "performance_testing_passed",
+        "name": "Performance Testing passed",
+        "from": "performance_testing",
+        "to": "security_review",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "performance_engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "load_test_report"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "performance_testing_failed",
+        "name": "Performance Testing failed",
+        "from": "performance_testing",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "performance_testing_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "security_review_passed",
+        "name": "Security Review passed",
+        "from": "security_review",
+        "to": "privacy_impact_assessment",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "security_engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "security_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_failed",
+        "name": "Security Review failed",
+        "from": "security_review",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "security_review_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "privacy_impact_assessment_passed",
+        "name": "Privacy Impact Assessment passed",
+        "from": "privacy_impact_assessment",
+        "to": "done",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "data_protection_officer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "dpia_record"
+          },
+          {
+            "type": "field_required",
+            "field": "feature_flag"
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "customer_outcome_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "privacy_impact_assessment_failed",
+        "name": "Privacy Impact Assessment failed",
+        "from": "privacy_impact_assessment",
+        "to": "in_progress",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "privacy_impact_assessment_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "auto_submit_on_pull_request",
+        "event": "external_webhook",
+        "condition": "pull_request.opened and item.state == 'in_progress'",
+        "action": "transition:submit_for_review",
+        "description": "Moves an item to code review when its pull request is opened.",
+        "params": {}
+      },
+      {
+        "key": "stale_review_alert",
+        "event": "time_in_state_exceeded",
+        "condition": "state == 'code_review' and hours_in_state > 24",
+        "action": "notify:reviewers",
+        "description": "Nudges reviewers when a review has waited longer than a working day.",
+        "params": {}
+      },
+      {
+        "key": "blocked_escalation",
+        "event": "time_in_state_exceeded",
+        "condition": "state == 'blocked' and hours_in_state > 48",
+        "action": "notify:scrum_master",
+        "description": "Escalates blockers that have not cleared within two days.",
+        "params": {}
+      },
+      {
+        "key": "sprint_close_carryover",
+        "event": "sprint_closed",
+        "condition": "item.state not in ['done', 'cancelled']",
+        "action": "move:sprint_backlog;label:carryover",
+        "description": "Carries unfinished work into the next sprint and labels it.",
+        "params": {}
+      },
+      {
+        "key": "progressive_rollout",
+        "event": "transition_completed",
+        "condition": "transition == 'privacy_impact_assessment_passed'",
+        "action": "start_rollout:feature_flag",
+        "description": "Ramps exposure 1, 10, 50 then 100 percent with guardrail metrics.",
+        "params": {
+          "stages": [
+            1,
+            10,
+            50,
+            100
+          ]
+        }
+      },
+      {
+        "key": "cardholder_scope_review",
+        "event": "scheduled",
+        "condition": "cron == 'quarterly'",
+        "action": "create_task:pci_scope_review",
+        "description": "Confirms the cardholder data environment boundary each quarter.",
+        "params": {}
+      },
+      {
+        "key": "data_retention_review",
+        "event": "scheduled",
+        "condition": "cron == 'quarterly'",
+        "action": "create_task:retention_review",
+        "description": "Checks personal data against retention rules.",
+        "params": {}
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Sprint planning",
+        "cadence": "per_sprint",
+        "duration_minutes": 120,
+        "participants": [
+          "product_owner",
+          "scrum_master",
+          "engineer"
+        ]
+      },
+      {
+        "name": "Daily scrum",
+        "cadence": "daily",
+        "duration_minutes": 15,
+        "participants": [
+          "engineer",
+          "scrum_master"
+        ]
+      },
+      {
+        "name": "Backlog refinement",
+        "cadence": "weekly",
+        "duration_minutes": 60,
+        "participants": [
+          "product_owner",
+          "engineer"
+        ]
+      },
+      {
+        "name": "Sprint review",
+        "cadence": "per_sprint",
+        "duration_minutes": 60,
+        "participants": [
+          "product_owner",
+          "engineer",
+          "stakeholder"
+        ]
+      },
+      {
+        "name": "Retrospective",
+        "cadence": "per_sprint",
+        "duration_minutes": 60,
+        "participants": [
+          "scrum_master",
+          "engineer",
+          "product_owner"
+        ]
+      },
+      {
+        "name": "Stakeholder demonstration",
+        "cadence": "monthly",
+        "duration_minutes": 60,
+        "participants": [
+          "product_owner",
+          "stakeholder"
+        ]
+      }
+    ],
+    "roles": [
+      "product_owner",
+      "scrum_master",
+      "engineer",
+      "qa_engineer",
+      "stakeholder",
+      "performance_engineer",
+      "security_engineer",
+      "data_protection_officer"
+    ],
+    "metrics": [
+      "velocity",
+      "sprint_goal_success_rate",
+      "escaped_defects",
+      "cycle_time"
+    ],
+    "anchors": {
+      "intake": "product_backlog",
+      "rework": "in_progress",
+      "release_transition": "privacy_impact_assessment_passed",
+      "done": "done",
+      "blocked": "blocked",
+      "build_states": [
+        "in_progress"
+      ],
+      "review_states": [
+        "code_review",
+        "qa_verification"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "fca_consumer_duty",
+        "gdpr",
+        "pci_dss"
+      ],
+      "regime_names": [
+        "the FCA Consumer Duty",
+        "UK GDPR and the Data Protection Act 2018",
+        "PCI DSS v4.0"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 0.9606,
+        "evidence_support": 0.9284,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM00859"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.8593,
+        "evidence_support": 0.7443,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM00859"
+        ]
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.7111,
+        "evidence_support": 0.4748,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01004",
+          "PM01773",
+          "PM01162",
+          "PM01207",
+          "PM01087"
+        ]
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.6735,
+        "evidence_support": 0.4063,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM01207",
+          "PM00547"
+        ]
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.6023,
+        "evidence_support": 0.277,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01004",
+          "PM00914",
+          "PM00547",
+          "PM00402"
+        ]
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.4545,
+        "evidence_support": 0.3355,
+        "charter_prior": 0.6,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01004",
+          "PM01162",
+          "PM02266",
+          "PM00402",
+          "PM02228"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.2982,
+        "evidence_support": 0.5422,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01849",
+          "PM01773",
+          "PM00914",
+          "PM01162",
+          "PM00859"
+        ]
+      },
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.1166,
+        "evidence_support": 0.2119,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01849",
+          "PM00859",
+          "PM01087"
+        ]
+      },
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.0718,
+        "evidence_support": 0.1306,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01162",
+          "PM01087"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.0709,
+        "evidence_support": 0.129,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00859",
+          "PM02266"
+        ]
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0675,
+        "evidence_support": 0.0,
+        "charter_prior": 0.15,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.0394,
+        "evidence_support": 0.0716,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01773"
+        ]
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "Inserted gate 'Performance Testing' before done",
+        "reason": "Performance testing stage: evidence support 41% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM01207",
+          "PM00547"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Security Review' before done",
+        "reason": "Security review gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM00859"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Privacy Impact Assessment' before done",
+        "reason": "Privacy impact assessment gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914",
+          "PM01162",
+          "PM00859"
+        ]
+      },
+      {
+        "change": "Added field required guard (feature_flag) to the release transition (privacy_impact_assessment_passed)",
+        "reason": "Feature flag release control: evidence support 28% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01004",
+          "PM00914",
+          "PM00547",
+          "PM00402"
+        ]
+      },
+      {
+        "change": "Added automation 'progressive_rollout'",
+        "reason": "Feature flag release control: evidence support 28% from similar post mortems, charter prior 1.00",
+        "evidence": []
+      },
+      {
+        "change": "Added ceremony 'Stakeholder demonstration'",
+        "reason": "Stakeholder demonstration ceremony: evidence support 47% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01004",
+          "PM01773",
+          "PM01162",
+          "PM01207",
+          "PM01087"
+        ]
+      },
+      {
+        "change": "Added linked artifact guard (customer_outcome_assessment) to the release transition (privacy_impact_assessment_passed)",
+        "reason": "Evidence of good customer outcomes under the FCA Consumer Duty",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'cardholder_scope_review'",
+        "reason": "Scope management under PCI DSS v4.0",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'data_retention_review'",
+        "reason": "Storage limitation under UK GDPR",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 12,
+        "states": 12,
+        "transitions": 18,
+        "triggers": 7,
+        "guarded_transitions": 14,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Agile Scrum Product Delivery is recommended with 92% confidence. The charter indicates that requirements are expected to change, personal data is processed, peak traffic is high, the stakeholder group is broad. 20 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "requirements are expected to change",
+      "personal data is processed",
+      "peak traffic is high",
+      "the stakeholder group is broad",
+      "the team deploys continuously",
+      "the service is used directly by the public"
+    ],
+    "regimes": [
+      "the FCA Consumer Duty",
+      "UK GDPR and the Data Protection Act 2018",
+      "PCI DSS v4.0"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_requirements_volatility",
+        "contribution": 2.27,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_continuous_deployment",
+        "contribution": 2.1783,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_financial_services",
+        "contribution": 0.9248,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.4921,
+        "value": 0.0
+      },
+      {
+        "feature": "regime_fca_consumer_duty",
+        "contribution": 0.4498,
+        "value": 1.0
+      },
+      {
+        "feature": "team_size_known",
+        "contribution": 0.4226,
+        "value": 1.0
+      }
+    ],
+    "precedent_agreement": 0.667,
+    "alternatives": [
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "display_name": "Regulated Compliance Pipeline",
+        "probability": 0.0351
+      },
+      {
+        "workflow": "kanban_continuous_flow",
+        "display_name": "Kanban Continuous Flow",
+        "probability": 0.0157
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "METHOD_scrum_product_delivery",
+        "title": "Agile Scrum Product Delivery",
+        "section": "Signals of a good fit in a charter",
+        "passage": "Agile Scrum Product Delivery. Signals of a good fit in a charter. Language about learning from customers, evolving requirements, prototypes, frequent reprioritisation and a single accountable product owner. A team size below twelve and a delivery horizon of one to nine months."
+      },
+      {
+        "doc_id": "TEMPLATE_scrum_product_delivery",
+        "title": "Agile Scrum Product Delivery",
+        "section": "Agile Scrum Product Delivery",
+        "passage": "Agile Scrum Product Delivery. Agile Scrum Product Delivery. Workflow template: Agile Scrum Product Delivery (scrum_product_delivery). Fixed length sprints for evolving product features with a single accountable product owner. States in order: Product Backlog, Sprint Backlog, In Progress, Code Review, QA Verification, Ready for Release, Done, Blocked, ..."
+      },
+      {
+        "doc_id": "METHOD_post_mortem_practice",
+        "title": "Post Mortem Practice",
+        "section": "Using post mortems for new projects",
+        "passage": "Post Mortem Practice. Using post mortems for new projects. When a new charter arrives, the post mortems of the most similar historical projects are retrieved. Recommendations that recur across several similar projects carry more weight than a single mention, and their weight increases with the similarity of the source project."
+      },
+      {
+        "doc_id": "METHOD_release_and_deployment_controls",
+        "title": "Release and Deployment Controls",
+        "section": "Performance testing",
+        "passage": "Release and Deployment Controls. Performance testing. Services with high or spiky traffic need load and soak testing against forecast peak demand before release. Results are attached as a load test report to a performance testing gate."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "score": 0.9606,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "score": 0.8593,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01004",
+          "PM01849",
+          "PM00914"
+        ]
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "score": 0.7111,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01004",
+          "PM01773",
+          "PM01162"
+        ]
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "score": 0.6735,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01849",
+          "PM00914",
+          "PM01162"
+        ]
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "score": 0.6023,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01004",
+          "PM00914",
+          "PM00547"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 127.1
+}

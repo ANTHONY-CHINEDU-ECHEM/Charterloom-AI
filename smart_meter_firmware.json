@@ -1,0 +1,1526 @@
+{
+  "project_name": "Copper Relay",
+  "charter_fingerprint": "c33af79f03e6648f",
+  "recommendation": {
+    "workflow": "stage_gate_waterfall",
+    "confidence": 0.8979,
+    "margin": 0.8338,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "stage_gate_waterfall",
+        "probability": 0.8979
+      },
+      {
+        "workflow": "incident_change_control",
+        "probability": 0.0642
+      },
+      {
+        "workflow": "scrumban_hybrid",
+        "probability": 0.0111
+      }
+    ],
+    "probabilities": {
+      "stage_gate_waterfall": 0.8979,
+      "incident_change_control": 0.0642,
+      "scrumban_hybrid": 0.0111,
+      "regulated_compliance_pipeline": 0.0104,
+      "scrum_product_delivery": 0.0075,
+      "kanban_continuous_flow": 0.0073,
+      "dual_track_discovery": 0.0008,
+      "scaled_release_train": 0.0008
+    },
+    "experts": {
+      "semantic": {
+        "stage_gate_waterfall": 0.6694,
+        "incident_change_control": 0.1747,
+        "scrumban_hybrid": 0.0393,
+        "regulated_compliance_pipeline": 0.0389,
+        "scrum_product_delivery": 0.0351,
+        "kanban_continuous_flow": 0.0278,
+        "dual_track_discovery": 0.0078,
+        "scaled_release_train": 0.007
+      },
+      "structural": {
+        "stage_gate_waterfall": 0.9502,
+        "incident_change_control": 0.0417,
+        "scrumban_hybrid": 0.0027,
+        "regulated_compliance_pipeline": 0.0042,
+        "scrum_product_delivery": 0.0005,
+        "kanban_continuous_flow": 0.0007,
+        "dual_track_discovery": 0.0,
+        "scaled_release_train": 0.0001
+      },
+      "precedent": {
+        "stage_gate_waterfall": 0.7891,
+        "incident_change_control": 0.103,
+        "scrumban_hybrid": 0.034,
+        "regulated_compliance_pipeline": 0.0225,
+        "scrum_product_delivery": 0.0245,
+        "kanban_continuous_flow": 0.0265,
+        "dual_track_discovery": 0.0002,
+        "scaled_release_train": 0.0002
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ01935",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.6876,
+        "outcome_score": 0.817
+      },
+      {
+        "project_id": "PRJ01625",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.603,
+        "outcome_score": 0.782
+      },
+      {
+        "project_id": "PRJ00702",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.5884,
+        "outcome_score": 0.798
+      },
+      {
+        "project_id": "PRJ01703",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.5766,
+        "outcome_score": 0.906
+      },
+      {
+        "project_id": "PRJ00549",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.574,
+        "outcome_score": 0.94
+      },
+      {
+        "project_id": "PRJ00280",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.5582,
+        "outcome_score": 0.814
+      },
+      {
+        "project_id": "PRJ01320",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.5024,
+        "outcome_score": 0.899
+      },
+      {
+        "project_id": "PRJ00545",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4961,
+        "outcome_score": 0.85
+      },
+      {
+        "project_id": "PRJ01387",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4938,
+        "outcome_score": 0.781
+      },
+      {
+        "project_id": "PRJ01313",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4933,
+        "outcome_score": 0.73
+      },
+      {
+        "project_id": "PRJ02162",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4908,
+        "outcome_score": 0.974
+      },
+      {
+        "project_id": "PRJ00083",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.49,
+        "outcome_score": 0.885
+      },
+      {
+        "project_id": "PRJ00330",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4833,
+        "outcome_score": 0.857
+      },
+      {
+        "project_id": "PRJ01800",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4797,
+        "outcome_score": 0.848
+      },
+      {
+        "project_id": "PRJ00131",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4774,
+        "outcome_score": 0.789
+      },
+      {
+        "project_id": "PRJ01247",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4742,
+        "outcome_score": 0.829
+      },
+      {
+        "project_id": "PRJ02193",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4689,
+        "outcome_score": 0.808
+      },
+      {
+        "project_id": "PRJ02127",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4649,
+        "outcome_score": 0.811
+      },
+      {
+        "project_id": "PRJ00501",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4631,
+        "outcome_score": 0.789
+      },
+      {
+        "project_id": "PRJ00069",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4508,
+        "outcome_score": 0.754
+      },
+      {
+        "project_id": "PRJ00582",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4413,
+        "outcome_score": 0.876
+      },
+      {
+        "project_id": "PRJ01645",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4372,
+        "outcome_score": 0.771
+      },
+      {
+        "project_id": "PRJ00727",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4343,
+        "outcome_score": 0.837
+      },
+      {
+        "project_id": "PRJ01584",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4337,
+        "outcome_score": 0.836
+      },
+      {
+        "project_id": "PRJ00036",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4332,
+        "outcome_score": 0.816
+      },
+      {
+        "project_id": "PRJ01948",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4302,
+        "outcome_score": 0.786
+      },
+      {
+        "project_id": "PRJ00637",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4209,
+        "outcome_score": 0.86
+      },
+      {
+        "project_id": "PRJ01710",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4198,
+        "outcome_score": 0.852
+      },
+      {
+        "project_id": "PRJ01533",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4194,
+        "outcome_score": 0.905
+      },
+      {
+        "project_id": "PRJ00918",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4187,
+        "outcome_score": 0.829
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 1.7834,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_hardware",
+        "contribution": 1.4883,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_fixed_deadline",
+        "contribution": 0.9408,
+        "value": 0.5
+      },
+      {
+        "feature": "signal_scope_fixed",
+        "contribution": 0.7721,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.7028,
+        "value": 1.0
+      },
+      {
+        "feature": "log_team_size",
+        "contribution": 0.4034,
+        "value": 2.7081
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "scope_fixed": 1.0,
+      "production_critical": 0.5,
+      "vendor_dependency": 1.0,
+      "fixed_deadline": 0.5,
+      "hardware": 1.0
+    },
+    "team_size": 14,
+    "teams": 2,
+    "duration_weeks": 48,
+    "unplanned_pct": null,
+    "sprint_length_days": null,
+    "regimes": [
+      "iso_27001",
+      "nis2"
+    ],
+    "domain": "energy_utilities",
+    "initiative_type": null,
+    "word_count": 272
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP01935",
+        "doc_type": "blueprint",
+        "title": "Harbour Horizon 900 (smart meter data platform)",
+        "score": 0.68763,
+        "dense_score": 0.6876,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01935: Harbour Horizon 900 (smart meter data platform). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add privacy review, add uat stage, add vendor checkpoint. Outcome score 0.82 on a zero to one scale. On time delivery ...",
+        "metadata": {
+          "project_id": "PRJ01935",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.8168,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP00540",
+        "doc_type": "blueprint",
+        "title": "Atlas Junction (field workforce scheduler)",
+        "score": 0.67527,
+        "dense_score": 0.6753,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00540: Atlas Junction (field workforce scheduler). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add definition of ready, add performance test, add security review. Outcome score 0.70 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ00540",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.6964,
+          "high_performing": false,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP01625",
+        "doc_type": "blueprint",
+        "title": "Atlas Cascade 900 (demand forecasting service)",
+        "score": 0.60296,
+        "dense_score": 0.603,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01625: Atlas Cascade 900 (demand forecasting service). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add dependency sync, add security review. Outcome score 0.78 on a zero to one scale. On time delivery 82%, defect escape ...",
+        "metadata": {
+          "project_id": "PRJ01625",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7825,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP01868",
+        "doc_type": "blueprint",
+        "title": "Beacon Vector 900 (demand forecasting service)",
+        "score": 0.59382,
+        "dense_score": 0.5938,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01868: Beacon Vector 900 (demand forecasting service). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: none. Outcome score 0.43 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ01868",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.4296,
+          "high_performing": false,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP00702",
+        "doc_type": "blueprint",
+        "title": "Nimbus Foundry (field workforce scheduler)",
+        "score": 0.5884,
+        "dense_score": 0.5884,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00702: Nimbus Foundry (field workforce scheduler). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add vendor checkpoint. Outcome score 0.80 on a zero to one scale. On time delivery 72%, defect escape rate 5.0%, median cycle ...",
+        "metadata": {
+          "project_id": "PRJ00702",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7984,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP00370",
+        "doc_type": "blueprint",
+        "title": "Saffron Junction (field workforce scheduler)",
+        "score": 0.58041,
+        "dense_score": 0.5804,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00370: Saffron Junction (field workforce scheduler). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add vendor checkpoint. Outcome score 0.44 on a zero to one scale. On time delivery 63%, defect escape rate 11.2%, median cycle ...",
+        "metadata": {
+          "project_id": "PRJ00370",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.4429,
+          "high_performing": false,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP00592",
+        "doc_type": "blueprint",
+        "title": "Silver Sentinel (manufacturing execution system)",
+        "score": 0.58025,
+        "dense_score": 0.5802,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00592: Silver Sentinel (manufacturing execution system). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add model validation, add security review, add ...",
+        "metadata": {
+          "project_id": "PRJ00592",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.6841,
+          "high_performing": false,
+          "domain": "manufacturing",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP01703",
+        "doc_type": "blueprint",
+        "title": "Tidal Ledger 900 (outage management system)",
+        "score": 0.5766,
+        "dense_score": 0.5766,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01703: Tidal Ledger 900 (outage management system). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add dependency sync. Outcome score 0.91 on a zero to one scale. On time delivery 80%, defect escape rate 4.9%, median cycle ...",
+        "metadata": {
+          "project_id": "PRJ01703",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.906,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "hardware_firmware"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM01935",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Harbour Horizon 900 (smart meter data platform)",
+        "score": 0.68763,
+        "dense_score": 0.6876,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Insert a privacy impact assessment gate wherever personal data processing changes. Add an independent security review state before release with a named security approver. Add a user acceptance testing state with explicit client signoff before release. Add a vendor acceptance checkpoint with contract conformance evidence.",
+        "metadata": {
+          "project_id": "PRJ01935",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.8168,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "ADD_UAT_STAGE",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM00540",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Atlas Junction (field workforce scheduler)",
+        "score": 0.67527,
+        "dense_score": 0.6753,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Require a tested rollback plan before any production release. Add an independent security review state before release with a named security approver.",
+        "metadata": {
+          "project_id": "PRJ00540",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.6964,
+          "recommended_adjustments": [
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM01625",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Atlas Cascade 900 (demand forecasting service)",
+        "score": 0.60296,
+        "dense_score": 0.603,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Insert a privacy impact assessment gate wherever personal data processing changes. Treat security review as a workflow gate rather than an optional checklist item. Add a user acceptance testing state with explicit client signoff before release. Add a vendor acceptance checkpoint with contract conformance evidence.",
+        "metadata": {
+          "project_id": "PRJ01625",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7825,
+          "recommended_adjustments": [
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "ADD_UAT_STAGE",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM01868",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Beacon Vector 900 (demand forecasting service)",
+        "score": 0.59382,
+        "dense_score": 0.5938,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Treat security review as a workflow gate rather than an optional checklist item.",
+        "metadata": {
+          "project_id": "PRJ01868",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.4296,
+          "recommended_adjustments": [
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM00702",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Nimbus Foundry (field workforce scheduler)",
+        "score": 0.5884,
+        "dense_score": 0.5884,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Make the rollback plan a mandatory field on the release transition. Add an independent security review state before release with a named security approver. Add a vendor acceptance checkpoint with contract conformance evidence.",
+        "metadata": {
+          "project_id": "PRJ00702",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7984,
+          "recommended_adjustments": [
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM00370",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Saffron Junction (field workforce scheduler)",
+        "score": 0.58041,
+        "dense_score": 0.5804,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Treat security review as a workflow gate rather than an optional checklist item. Track vendor milestones as states rather than in a separate spreadsheet.",
+        "metadata": {
+          "project_id": "PRJ00370",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.4429,
+          "recommended_adjustments": [
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_SECURITY_REVIEW",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "METHOD_stage_gate_waterfall",
+        "doc_type": "methodology",
+        "title": "Stage Gate Phased Delivery",
+        "score": 0.03252,
+        "dense_score": 0.7927,
+        "bm25_score": 48.626,
+        "section": "When to use it",
+        "passage": "Stage Gate Phased Delivery. When to use it. Phased delivery separated by governance gates is appropriate when the cost of change rises steeply over time and scope can be fixed early. Hardware and firmware programmes, commercial package implementations, fixed price supplier contracts and infrastructure procurements all share this property. Once tooling is cut, hardware is ordered or a contract is signed, changing ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/stage_gate_waterfall.md"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "TEMPLATE_stage_gate_waterfall",
+        "doc_type": "workflow_template",
+        "title": "Stage Gate Phased Delivery",
+        "score": 0.03083,
+        "dense_score": 0.5475,
+        "bm25_score": 44.252,
+        "section": "Stage Gate Phased Delivery",
+        "passage": "Stage Gate Phased Delivery. Stage Gate Phased Delivery. Workflow template: Stage Gate Phased Delivery (stage_gate_waterfall). Sequential phases separated by formal governance gates for fixed scope and hardware work. States in order: Initiation, Requirements Definition, Solution Design, Build, System Testing, Deployment Readiness, Closed, Change Control, Cancelled. Transition Gate one requirements moves work from ...",
+        "metadata": {
+          "workflow_archetype": "stage_gate_waterfall"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_vendor_and_contract_delivery",
+        "doc_type": "methodology",
+        "title": "Vendor and Contract Delivery",
+        "score": 0.02879,
+        "dense_score": 0.4942,
+        "bm25_score": 19.833,
+        "section": "Fixed price contracts",
+        "passage": "Vendor and Contract Delivery. Fixed price contracts. Fixed price contracts usually fix scope, which favours a stage gate lifecycle with formal change control. Any change to scope, price or dates is raised as a change request.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/vendor_and_contract_delivery.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "doc_type": "methodology",
+        "title": "Workflow Selection Heuristics",
+        "score": 0.02819,
+        "dense_score": 0.3092,
+        "bm25_score": 19.709,
+        "section": "Decision table",
+        "passage": "Workflow Selection Heuristics. Decision table. * Evolving product feature, one or two teams: Agile Scrum Product Delivery. * Maintenance or support with high unplanned load: Kanban Continuous Flow. * Regulated module with strict evidence obligations: Regulated Compliance Pipeline. * Hardware, firmware, package implementation or fixed price contract: Stage Gate Phased Delivery. * Multi team programme with heavy ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/workflow_selection_heuristics.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Copper Relay",
+      "charter_fingerprint": "c33af79f03e6648f"
+    },
+    "workflow": {
+      "archetype": "stage_gate_waterfall",
+      "display_name": "Stage Gate Phased Delivery",
+      "family": "phased",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.8979
+    },
+    "cadence": {
+      "type": "phased",
+      "gate_count": 5
+    },
+    "states": [
+      {
+        "key": "initiation",
+        "name": "Initiation",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Business case approved"
+        ]
+      },
+      {
+        "key": "requirements_definition",
+        "name": "Requirements Definition",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 480,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "solution_design",
+        "name": "Solution Design",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 9,
+        "sla_hours": 480,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "build",
+        "name": "Build",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 9,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "system_testing",
+        "name": "System Testing",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 240,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "deployment_readiness",
+        "name": "Deployment Readiness",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 120,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "security_review",
+        "name": "Security Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Security assessment prepared"
+        ],
+        "exit_criteria": [
+          "Approved by security engineer"
+        ]
+      },
+      {
+        "key": "vendor_acceptance",
+        "name": "Vendor Acceptance",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Vendor conformance certificate prepared"
+        ],
+        "exit_criteria": [
+          "Approved by supplier manager"
+        ]
+      },
+      {
+        "key": "closed",
+        "name": "Closed",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "change_control",
+        "name": "Change Control",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "cancelled",
+        "name": "Cancelled",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "gate_one_requirements",
+        "name": "Gate one requirements",
+        "from": "initiation",
+        "to": "requirements_definition",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "steering_committee",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "gate_review_pack"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "gate_two_design",
+        "name": "Gate two design",
+        "from": "requirements_definition",
+        "to": "solution_design",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "steering_committee",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "gate_review_pack"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "gate_three_build",
+        "name": "Gate three build",
+        "from": "solution_design",
+        "to": "build",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "steering_committee",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "gate_review_pack"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "gate_four_test",
+        "name": "Gate four test",
+        "from": "build",
+        "to": "system_testing",
+        "guards": [
+          {
+            "type": "checklist_complete",
+            "checklist": "build_completion"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "defects_found",
+        "name": "Defects found",
+        "from": "system_testing",
+        "to": "build",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "gate_five_readiness",
+        "name": "Gate five readiness",
+        "from": "system_testing",
+        "to": "deployment_readiness",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "steering_committee",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "gate_review_pack"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "go_live",
+        "name": "Go live",
+        "from": "deployment_readiness",
+        "to": "security_review",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "sponsor",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "stamp_field",
+            "field": "go_live_at"
+          },
+          {
+            "type": "notify",
+            "audience": "stakeholders"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "raise_change_request",
+        "name": "Raise change request",
+        "from": "build",
+        "to": "change_control",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "change_request_reference"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "change_approved",
+        "name": "Change approved",
+        "from": "change_control",
+        "to": "build",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "change_board",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "terminate",
+        "name": "Terminate",
+        "from": "initiation",
+        "to": "cancelled",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "termination_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_passed",
+        "name": "Security Review passed",
+        "from": "security_review",
+        "to": "vendor_acceptance",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "security_engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "security_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_failed",
+        "name": "Security Review failed",
+        "from": "security_review",
+        "to": "build",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "security_review_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "vendor_acceptance_passed",
+        "name": "Vendor Acceptance passed",
+        "from": "vendor_acceptance",
+        "to": "closed",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "supplier_manager",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "vendor_conformance_certificate"
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "vendor_acceptance_failed",
+        "name": "Vendor Acceptance failed",
+        "from": "vendor_acceptance",
+        "to": "build",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "vendor_acceptance_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "gate_review_scheduler",
+        "event": "transition_requested",
+        "condition": "transition.startswith('gate')",
+        "action": "create_meeting:gate_review",
+        "description": "Books a gate review with the steering committee.",
+        "params": {}
+      },
+      {
+        "key": "baseline_change_detection",
+        "event": "field_changed",
+        "condition": "field in ['scope', 'budget', 'end_date']",
+        "action": "transition:raise_change_request",
+        "description": "Routes any baseline change through change control.",
+        "params": {}
+      },
+      {
+        "key": "milestone_slippage_alert",
+        "event": "scheduled",
+        "condition": "days_behind_baseline > 5",
+        "action": "notify:sponsor;label:at_risk",
+        "description": "Alerts the sponsor when a milestone slips beyond tolerance.",
+        "params": {}
+      },
+      {
+        "key": "significant_incident_early_warning",
+        "event": "external_webhook",
+        "condition": "incident.significant == true",
+        "action": "create_task:early_warning_report;notify:ciso",
+        "description": "Starts the 24 hour early warning clock for significant incidents.",
+        "params": {
+          "deadline_hours": 24
+        }
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Gate review",
+        "cadence": "per_phase",
+        "duration_minutes": 120,
+        "participants": [
+          "steering_committee",
+          "project_manager",
+          "sponsor"
+        ]
+      },
+      {
+        "name": "Weekly status",
+        "cadence": "weekly",
+        "duration_minutes": 45,
+        "participants": [
+          "project_manager",
+          "workstream_lead"
+        ]
+      },
+      {
+        "name": "Change board",
+        "cadence": "weekly",
+        "duration_minutes": 60,
+        "participants": [
+          "change_board",
+          "project_manager"
+        ]
+      }
+    ],
+    "roles": [
+      "sponsor",
+      "project_manager",
+      "workstream_lead",
+      "steering_committee",
+      "change_board",
+      "engineer",
+      "security_engineer",
+      "supplier_manager"
+    ],
+    "metrics": [
+      "schedule_performance_index",
+      "cost_performance_index",
+      "change_request_volume",
+      "defect_density"
+    ],
+    "anchors": {
+      "intake": "initiation",
+      "rework": "build",
+      "release_transition": "vendor_acceptance_passed",
+      "done": "closed",
+      "blocked": "change_control",
+      "build_states": [
+        "build",
+        "solution_design"
+      ],
+      "review_states": [
+        "system_testing",
+        "deployment_readiness"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "iso_27001",
+        "nis2"
+      ],
+      "regime_names": [
+        "ISO/IEC 27001 information security controls",
+        "the NIS2 Directive"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 1.0,
+        "evidence_support": 1.0,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01935",
+          "PM00540",
+          "PM01625",
+          "PM01868",
+          "PM00702"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.8185,
+        "evidence_support": 0.67,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01935",
+          "PM01625",
+          "PM00702",
+          "PM00370",
+          "PM00592"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.3736,
+        "evidence_support": 0.2702,
+        "charter_prior": 0.5,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00540",
+          "PM00702",
+          "PM01605",
+          "PM01990"
+        ]
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.2982,
+        "evidence_support": 0.5422,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00540",
+          "PM01625",
+          "PM01868",
+          "PM00702",
+          "PM00370"
+        ]
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.1168,
+        "evidence_support": 0.2124,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01935",
+          "PM01625",
+          "PM01605"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.0815,
+        "evidence_support": 0.1482,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01935",
+          "PM01625"
+        ]
+      },
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.0661,
+        "evidence_support": 0.1202,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01990",
+          "PM00405"
+        ]
+      },
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.0352,
+        "evidence_support": 0.064,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01431"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "WIP limit for build set from 12 to 9",
+        "reason": "Sized to a team of 14 people across 2 teams",
+        "evidence": []
+      },
+      {
+        "change": "WIP limit for solution_design set from None to 9",
+        "reason": "Sized to a team of 14 people across 2 teams",
+        "evidence": []
+      },
+      {
+        "change": "Inserted gate 'Security Review' before closed",
+        "reason": "Security review gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM01935",
+          "PM00540",
+          "PM01625",
+          "PM01868",
+          "PM00702"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Vendor Acceptance' before closed",
+        "reason": "Vendor acceptance checkpoint: evidence support 67% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01935",
+          "PM01625",
+          "PM00702",
+          "PM00370",
+          "PM00592"
+        ]
+      },
+      {
+        "change": "Added automation 'significant_incident_early_warning'",
+        "reason": "Incident reporting under the NIS2 Directive",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 11,
+        "states": 11,
+        "transitions": 14,
+        "triggers": 4,
+        "guarded_transitions": 13,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Stage Gate Phased Delivery is recommended with 90% confidence. The charter indicates that scope is fixed and baselined, external vendors supply key components, hardware or firmware constraints apply, the service is production critical. 22 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "scope is fixed and baselined",
+      "external vendors supply key components",
+      "hardware or firmware constraints apply",
+      "the service is production critical",
+      "the deadline is fixed"
+    ],
+    "regimes": [
+      "ISO/IEC 27001 information security controls",
+      "the NIS2 Directive"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 1.7834,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_hardware",
+        "contribution": 1.4883,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_fixed_deadline",
+        "contribution": 0.9408,
+        "value": 0.5
+      },
+      {
+        "feature": "signal_scope_fixed",
+        "contribution": 0.7721,
+        "value": 1.0
+      },
+      {
+        "feature": "long_duration",
+        "contribution": 0.7028,
+        "value": 1.0
+      },
+      {
+        "feature": "log_team_size",
+        "contribution": 0.4034,
+        "value": 2.7081
+      }
+    ],
+    "precedent_agreement": 0.733,
+    "alternatives": [
+      {
+        "workflow": "incident_change_control",
+        "display_name": "Change Controlled Operations",
+        "probability": 0.0642
+      },
+      {
+        "workflow": "scrumban_hybrid",
+        "display_name": "Scrumban Hybrid Flow",
+        "probability": 0.0111
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "METHOD_stage_gate_waterfall",
+        "title": "Stage Gate Phased Delivery",
+        "section": "When to use it",
+        "passage": "Stage Gate Phased Delivery. When to use it. Phased delivery separated by governance gates is appropriate when the cost of change rises steeply over time and scope can be fixed early. Hardware and firmware programmes, commercial package implementations, fixed price supplier contracts and infrastructure procurements all share this property. Once tooling is ..."
+      },
+      {
+        "doc_id": "TEMPLATE_stage_gate_waterfall",
+        "title": "Stage Gate Phased Delivery",
+        "section": "Stage Gate Phased Delivery",
+        "passage": "Stage Gate Phased Delivery. Stage Gate Phased Delivery. Workflow template: Stage Gate Phased Delivery (stage_gate_waterfall). Sequential phases separated by formal governance gates for fixed scope and hardware work. States in order: Initiation, Requirements Definition, Solution Design, Build, System Testing, Deployment Readiness, Closed, Change Control, ..."
+      },
+      {
+        "doc_id": "METHOD_vendor_and_contract_delivery",
+        "title": "Vendor and Contract Delivery",
+        "section": "Fixed price contracts",
+        "passage": "Vendor and Contract Delivery. Fixed price contracts. Fixed price contracts usually fix scope, which favours a stage gate lifecycle with formal change control. Any change to scope, price or dates is raised as a change request."
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "title": "Workflow Selection Heuristics",
+        "section": "Decision table",
+        "passage": "Workflow Selection Heuristics. Decision table. * Evolving product feature, one or two teams: Agile Scrum Product Delivery. * Maintenance or support with high unplanned load: Kanban Continuous Flow. * Regulated module with strict evidence obligations: Regulated Compliance Pipeline. * Hardware, firmware, package implementation or fixed price contract: Stage ..."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "score": 1.0,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01935",
+          "PM00540",
+          "PM01625"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "score": 0.8185,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01935",
+          "PM01625",
+          "PM00702"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 77.9
+}

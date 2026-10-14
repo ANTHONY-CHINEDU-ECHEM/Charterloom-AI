@@ -1,0 +1,1660 @@
+{
+  "project_name": "Tidal Cutover",
+  "charter_fingerprint": "caec79cf81aa1bf1",
+  "recommendation": {
+    "workflow": "incident_change_control",
+    "confidence": 0.9227,
+    "margin": 0.8928,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "incident_change_control",
+        "probability": 0.9227
+      },
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "probability": 0.0299
+      },
+      {
+        "workflow": "scrum_product_delivery",
+        "probability": 0.0189
+      }
+    ],
+    "probabilities": {
+      "incident_change_control": 0.9227,
+      "regulated_compliance_pipeline": 0.0299,
+      "scrum_product_delivery": 0.0189,
+      "stage_gate_waterfall": 0.0131,
+      "kanban_continuous_flow": 0.0089,
+      "scaled_release_train": 0.0051,
+      "dual_track_discovery": 0.0007,
+      "scrumban_hybrid": 0.0006
+    },
+    "experts": {
+      "semantic": {
+        "incident_change_control": 0.5999,
+        "regulated_compliance_pipeline": 0.1924,
+        "scrum_product_delivery": 0.0199,
+        "stage_gate_waterfall": 0.0871,
+        "kanban_continuous_flow": 0.0882,
+        "scaled_release_train": 0.0001,
+        "dual_track_discovery": 0.0067,
+        "scrumban_hybrid": 0.0058
+      },
+      "structural": {
+        "incident_change_control": 0.9991,
+        "regulated_compliance_pipeline": 0.0003,
+        "scrum_product_delivery": 0.0,
+        "stage_gate_waterfall": 0.0005,
+        "kanban_continuous_flow": 0.0001,
+        "scaled_release_train": 0.0,
+        "dual_track_discovery": 0.0,
+        "scrumban_hybrid": 0.0
+      },
+      "precedent": {
+        "incident_change_control": 0.7559,
+        "regulated_compliance_pipeline": 0.0696,
+        "scrum_product_delivery": 0.1123,
+        "stage_gate_waterfall": 0.0271,
+        "kanban_continuous_flow": 0.0003,
+        "scaled_release_train": 0.0343,
+        "dual_track_discovery": 0.0003,
+        "scrumban_hybrid": 0.0003
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ01322",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.7403,
+        "outcome_score": 0.773
+      },
+      {
+        "project_id": "PRJ02250",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.659,
+        "outcome_score": 0.809
+      },
+      {
+        "project_id": "PRJ01054",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.5778,
+        "outcome_score": 0.744
+      },
+      {
+        "project_id": "PRJ00143",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.5601,
+        "outcome_score": 0.844
+      },
+      {
+        "project_id": "PRJ00699",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4977,
+        "outcome_score": 0.895
+      },
+      {
+        "project_id": "PRJ01420",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4964,
+        "outcome_score": 0.806
+      },
+      {
+        "project_id": "PRJ00902",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4897,
+        "outcome_score": 0.825
+      },
+      {
+        "project_id": "PRJ01202",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4885,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00718",
+        "workflow_archetype": "scaled_release_train",
+        "similarity": 0.481,
+        "outcome_score": 0.887
+      },
+      {
+        "project_id": "PRJ02175",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4714,
+        "outcome_score": 0.902
+      },
+      {
+        "project_id": "PRJ01063",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4675,
+        "outcome_score": 0.935
+      },
+      {
+        "project_id": "PRJ01221",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4573,
+        "outcome_score": 0.875
+      },
+      {
+        "project_id": "PRJ01774",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4543,
+        "outcome_score": 0.955
+      },
+      {
+        "project_id": "PRJ01066",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.445,
+        "outcome_score": 0.995
+      },
+      {
+        "project_id": "PRJ00203",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4385,
+        "outcome_score": 0.902
+      },
+      {
+        "project_id": "PRJ02351",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4314,
+        "outcome_score": 0.834
+      },
+      {
+        "project_id": "PRJ02366",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4301,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00128",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4294,
+        "outcome_score": 0.955
+      },
+      {
+        "project_id": "PRJ01677",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4229,
+        "outcome_score": 0.825
+      },
+      {
+        "project_id": "PRJ00960",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4171,
+        "outcome_score": 0.831
+      },
+      {
+        "project_id": "PRJ00801",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4171,
+        "outcome_score": 0.762
+      },
+      {
+        "project_id": "PRJ01170",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4128,
+        "outcome_score": 0.813
+      },
+      {
+        "project_id": "PRJ01385",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4106,
+        "outcome_score": 0.782
+      },
+      {
+        "project_id": "PRJ00860",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4098,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00340",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4095,
+        "outcome_score": 0.749
+      },
+      {
+        "project_id": "PRJ01090",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4,
+        "outcome_score": 0.914
+      },
+      {
+        "project_id": "PRJ01311",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.3979,
+        "outcome_score": 0.837
+      },
+      {
+        "project_id": "PRJ02305",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.3945,
+        "outcome_score": 0.978
+      },
+      {
+        "project_id": "PRJ01873",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.392,
+        "outcome_score": 0.854
+      },
+      {
+        "project_id": "PRJ01919",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3902,
+        "outcome_score": 0.968
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "initiative_data_platform_migration",
+        "contribution": 2.5957,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 1.9634,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_data_migration",
+        "contribution": 1.8036,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_change_risk",
+        "contribution": 1.6442,
+        "value": 1.0
+      },
+      {
+        "feature": "regime_sox",
+        "contribution": 0.7738,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 0.7324,
+        "value": 1.0
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "unplanned_work": 0.5,
+      "production_critical": 1.0,
+      "change_risk": 1.0,
+      "data_migration": 1.0,
+      "vendor_dependency": 1.0
+    },
+    "team_size": 8,
+    "teams": 1,
+    "duration_weeks": 30,
+    "unplanned_pct": null,
+    "sprint_length_days": null,
+    "regimes": [
+      "dora",
+      "sox"
+    ],
+    "domain": "financial_services",
+    "initiative_type": "data_platform_migration",
+    "word_count": 277
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP01322",
+        "doc_type": "blueprint",
+        "title": "Linden Citadel 900 (open banking aggregation service)",
+        "score": 0.74035,
+        "dense_score": 0.7403,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01322: Linden Citadel 900 (open banking aggregation service). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add privacy review, add rollback plan. Outcome score 0.77 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ01322",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.7726,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP00262",
+        "doc_type": "blueprint",
+        "title": "Silver Tributary (mortgage origination journey)",
+        "score": 0.68134,
+        "dense_score": 0.6813,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00262: Silver Tributary (mortgage origination journey). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add rollback plan, add security review. Outcome score ...",
+        "metadata": {
+          "project_id": "PRJ00262",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.7156,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP00395",
+        "doc_type": "blueprint",
+        "title": "Harbour Prism (mortgage origination journey)",
+        "score": 0.67025,
+        "dense_score": 0.6702,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00395: Harbour Prism (mortgage origination journey). Workflow archetype adopted: Scrumban Hybrid Flow. State flow: Backlog > Ready > In Progress > Review > Testing > Done. Workflow adjustments applied: add data migration rehearsal, add privacy review, add rollback plan, add vendor checkpoint. Outcome score 0.64 on a zero to one scale. On time delivery 71%, defect escape rate 8.5%, ...",
+        "metadata": {
+          "project_id": "PRJ00395",
+          "workflow_archetype": "scrumban_hybrid",
+          "outcome_score": 0.6435,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP02250",
+        "doc_type": "blueprint",
+        "title": "Saffron Foundry 900 (client onboarding portal)",
+        "score": 0.65896,
+        "dense_score": 0.659,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP02250: Saffron Foundry 900 (client onboarding portal). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add data migration rehearsal, add dependency sync, add privacy review, add rollback plan, add security ...",
+        "metadata": {
+          "project_id": "PRJ02250",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.8091,
+          "high_performing": true,
+          "domain": "financial_services",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP01131",
+        "doc_type": "blueprint",
+        "title": "Falcon Pathway 900 (reconciliation ledger)",
+        "score": 0.58826,
+        "dense_score": 0.5883,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01131: Falcon Pathway 900 (reconciliation ledger). Workflow archetype adopted: Kanban Continuous Flow. State flow: Intake > Triage > Ready > In Progress > Peer Review > Deploy and Verify > Done. Workflow adjustments applied: add performance test. Outcome score 0.71 on a zero to one scale. On time delivery 80%, defect escape rate 7.4%, median cycle time 6.4 days, stakeholder ...",
+        "metadata": {
+          "project_id": "PRJ01131",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.7073,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "support_operations"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP01054",
+        "doc_type": "blueprint",
+        "title": "Granite Waypoint 900 (telematics pricing feature)",
+        "score": 0.57784,
+        "dense_score": 0.5778,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01054: Granite Waypoint 900 (telematics pricing feature). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add data migration rehearsal, add privacy review. Outcome score 0.74 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ01054",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.7436,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP01699",
+        "doc_type": "blueprint",
+        "title": "Obsidian Horizon 900 (reconciliation ledger)",
+        "score": 0.56984,
+        "dense_score": 0.5698,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01699: Obsidian Horizon 900 (reconciliation ledger). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add data migration rehearsal, add rollback plan, add vendor checkpoint. Outcome score 0.59 on a zero to one scale. On time ...",
+        "metadata": {
+          "project_id": "PRJ01699",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.5874,
+          "high_performing": false,
+          "domain": "financial_services",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP00143",
+        "doc_type": "blueprint",
+        "title": "Silver Gateway (asset condition monitoring)",
+        "score": 0.56012,
+        "dense_score": 0.5601,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00143: Silver Gateway (asset condition monitoring). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add rollback plan, add security review, add vendor checkpoint. Outcome score 0.84 on a zero to one scale. ...",
+        "metadata": {
+          "project_id": "PRJ00143",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.8444,
+          "high_performing": true,
+          "domain": "energy_utilities",
+          "project_type": "data_platform_migration"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM01322",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Linden Citadel 900 (open banking aggregation service)",
+        "score": 0.74035,
+        "dense_score": 0.7403,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add a migration rehearsal stage with reconciliation evidence before any cutover. Schedule a weekly cross team dependency sync with automatic escalation of blocked items. Insert a privacy impact assessment gate wherever personal data processing changes. Require a tested rollback plan before any production release. Add an independent security review state before release with a named security approver. Track vendor ...",
+        "metadata": {
+          "project_id": "PRJ01322",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.7726,
+          "recommended_adjustments": [
+            "ADD_DATA_MIGRATION_REHEARSAL",
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM00262",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Silver Tributary (mortgage origination journey)",
+        "score": 0.68134,
+        "dense_score": 0.6813,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Require a model card and validation report before promotion to production. Require a tested rollback plan before any production release. Treat security review as a workflow gate rather than an optional checklist item.",
+        "metadata": {
+          "project_id": "PRJ00262",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.7156,
+          "recommended_adjustments": [
+            "ADD_MODEL_VALIDATION",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM00395",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Harbour Prism (mortgage origination journey)",
+        "score": 0.67025,
+        "dense_score": 0.6702,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Rehearse the full migration at production volumes at least twice. Make the data protection officer an approver on transitions that change personal data handling. Make the rollback plan a mandatory field on the release transition. Treat security review as a workflow gate rather than an optional checklist item. Track vendor milestones as states rather than in a separate spreadsheet.",
+        "metadata": {
+          "project_id": "PRJ00395",
+          "workflow_archetype": "scrumban_hybrid",
+          "outcome_score": 0.6435,
+          "recommended_adjustments": [
+            "ADD_DATA_MIGRATION_REHEARSAL",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "ADD_VENDOR_CHECKPOINT"
+          ]
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM02250",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Saffron Foundry 900 (client onboarding portal)",
+        "score": 0.65896,
+        "dense_score": 0.659,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add a migration rehearsal stage with reconciliation evidence before any cutover. Make dependency owners explicit on every blocked work item. Insert a privacy impact assessment gate wherever personal data processing changes. Require a tested rollback plan before any production release. Treat security review as a workflow gate rather than an optional checklist item.",
+        "metadata": {
+          "project_id": "PRJ02250",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.8091,
+          "recommended_adjustments": [
+            "ADD_DATA_MIGRATION_REHEARSAL",
+            "ADD_DEPENDENCY_SYNC",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM01131",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Falcon Pathway 900 (reconciliation ledger)",
+        "score": 0.58826,
+        "dense_score": 0.5883,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the data protection officer an approver on transitions that change personal data handling. Make the rollback plan a mandatory field on the release transition. Add an independent security review state before release with a named security approver. Lower the in progress limit when unplanned work is high.",
+        "metadata": {
+          "project_id": "PRJ01131",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.7073,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM01054",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Granite Waypoint 900 (telematics pricing feature)",
+        "score": 0.57784,
+        "dense_score": 0.5778,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add a migration rehearsal stage with reconciliation evidence before any cutover. Add a performance testing stage against forecast peak demand before release. Make the data protection officer an approver on transitions that change personal data handling. Make the rollback plan a mandatory field on the release transition. Add an independent security review state before release with a named security approver.",
+        "metadata": {
+          "project_id": "PRJ01054",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.7436,
+          "recommended_adjustments": [
+            "ADD_DATA_MIGRATION_REHEARSAL",
+            "ADD_PERFORMANCE_TEST",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SECURITY_REVIEW"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "METHOD_incident_change_control",
+        "doc_type": "methodology",
+        "title": "Change Controlled Operations",
+        "score": 0.03178,
+        "dense_score": 0.6752,
+        "bm25_score": 24.598,
+        "section": "Change types",
+        "passage": "Change Controlled Operations. Change types. * Standard changes are pre approved, low risk and repeatable, and can bypass the board. * Normal changes are assessed and approved by the change advisory board. * Emergency changes restore service urgently and are reviewed after the fact.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/incident_change_control.md"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "TEMPLATE_incident_change_control",
+        "doc_type": "workflow_template",
+        "title": "Change Controlled Operations",
+        "score": 0.0311,
+        "dense_score": 0.5301,
+        "bm25_score": 45.822,
+        "section": "Change Controlled Operations",
+        "passage": "Change Controlled Operations. Change Controlled Operations. Workflow template: Change Controlled Operations (incident_change_control). Risk assessed, CAB approved change lifecycle for production infrastructure and migrations. States in order: Change Request, Risk Assessment, Change Advisory Board Review, Scheduled, Implementing, Post Implementation Review, Closed, Rolled Back, Rejected. Transition Assess moves work ...",
+        "metadata": {
+          "workflow_archetype": "incident_change_control"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_kanban_continuous_flow",
+        "doc_type": "methodology",
+        "title": "Kanban Continuous Flow",
+        "score": 0.02845,
+        "dense_score": 0.2831,
+        "bm25_score": 26.86,
+        "section": "When to use it",
+        "passage": "Kanban Continuous Flow. When to use it. Kanban is the default for maintenance, sustaining engineering and operational support. Work arrives continuously, priorities change daily and the unit of planning is the individual work item rather than a time boxed batch. Charters that describe incident queues, service desk demand, patching, technical debt reduction or a large share of unplanned capacity point strongly ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/kanban_continuous_flow.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "doc_type": "methodology",
+        "title": "Workflow Selection Heuristics",
+        "score": 0.02819,
+        "dense_score": 0.3621,
+        "bm25_score": 20.219,
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How many teams must integrate? Four or more teams sharing a ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/workflow_selection_heuristics.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Tidal Cutover",
+      "charter_fingerprint": "caec79cf81aa1bf1"
+    },
+    "workflow": {
+      "archetype": "incident_change_control",
+      "display_name": "Change Controlled Operations",
+      "family": "controlled",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.9227
+    },
+    "cadence": {
+      "type": "change_windows",
+      "standard_window": "weekday_evening",
+      "freeze_calendar": true
+    },
+    "states": [
+      {
+        "key": "change_request",
+        "name": "Change Request",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "risk_assessment",
+        "name": "Risk Assessment",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 18,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Impact and blast radius documented",
+          "Risk rating assigned"
+        ]
+      },
+      {
+        "key": "cab_review",
+        "name": "Change Advisory Board Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 54,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "security_review",
+        "name": "Security Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Security assessment prepared"
+        ],
+        "exit_criteria": [
+          "Approved by security engineer"
+        ]
+      },
+      {
+        "key": "migration_rehearsal",
+        "name": "Migration Rehearsal",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Reconciliation report prepared"
+        ],
+        "exit_criteria": [
+          "Approved by data migration lead"
+        ]
+      },
+      {
+        "key": "vendor_acceptance",
+        "name": "Vendor Acceptance",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Vendor conformance certificate prepared"
+        ],
+        "exit_criteria": [
+          "Approved by supplier manager"
+        ]
+      },
+      {
+        "key": "scheduled",
+        "name": "Scheduled",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "implementing",
+        "name": "Implementing",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 5,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "post_implementation_review",
+        "name": "Post Implementation Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 54,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "closed",
+        "name": "Closed",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "rolled_back",
+        "name": "Rolled Back",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "rejected",
+        "name": "Rejected",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "assess",
+        "name": "Assess",
+        "from": "change_request",
+        "to": "risk_assessment",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "submit_to_cab",
+        "name": "Submit to cab",
+        "from": "risk_assessment",
+        "to": "cab_review",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "risk_rating"
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "implementation_plan"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "cab_rejects",
+        "name": "Cab rejects",
+        "from": "cab_review",
+        "to": "rejected",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "rejection_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "cab_requests_rework",
+        "name": "Cab requests rework",
+        "from": "cab_review",
+        "to": "risk_assessment",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "schedule",
+        "name": "Schedule",
+        "from": "cab_review",
+        "to": "security_review",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "change_advisory_board",
+            "min_approvals": 2,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "emergency_change",
+        "name": "Emergency change",
+        "from": "change_request",
+        "to": "implementing",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "emergency_change_authority",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "field_required",
+            "field": "incident_reference"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "begin_implementation",
+        "name": "Begin implementation",
+        "from": "scheduled",
+        "to": "implementing",
+        "guards": [
+          {
+            "type": "change_window_open"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "complete_implementation",
+        "name": "Complete implementation",
+        "from": "implementing",
+        "to": "post_implementation_review",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "roll_back",
+        "name": "Roll back",
+        "from": "implementing",
+        "to": "rolled_back",
+        "guards": [],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "service_owner"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "replan_after_rollback",
+        "name": "Replan after rollback",
+        "from": "rolled_back",
+        "to": "risk_assessment",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "close_change",
+        "name": "Close change",
+        "from": "post_implementation_review",
+        "to": "closed",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "pir_outcome"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_passed",
+        "name": "Security Review passed",
+        "from": "security_review",
+        "to": "migration_rehearsal",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "security_engineer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "security_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "security_review_failed",
+        "name": "Security Review failed",
+        "from": "security_review",
+        "to": "risk_assessment",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "security_review_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "migration_rehearsal_passed",
+        "name": "Migration Rehearsal passed",
+        "from": "migration_rehearsal",
+        "to": "vendor_acceptance",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "data_migration_lead",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "reconciliation_report"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "migration_rehearsal_failed",
+        "name": "Migration Rehearsal failed",
+        "from": "migration_rehearsal",
+        "to": "risk_assessment",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "migration_rehearsal_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "vendor_acceptance_passed",
+        "name": "Vendor Acceptance passed",
+        "from": "vendor_acceptance",
+        "to": "scheduled",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "supplier_manager",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "vendor_conformance_certificate"
+          },
+          {
+            "type": "field_required",
+            "field": "rollback_plan"
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "rollback_rehearsal_evidence"
+          },
+          {
+            "type": "approval",
+            "role": "control_owner",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "vendor_acceptance_failed",
+        "name": "Vendor Acceptance failed",
+        "from": "vendor_acceptance",
+        "to": "risk_assessment",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "vendor_acceptance_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "freeze_window_enforcement",
+        "event": "transition_requested",
+        "condition": "transition == 'begin_implementation' and calendar.freeze_active",
+        "action": "reject_transition;notify:change_manager",
+        "description": "Prevents implementation during declared change freezes.",
+        "params": {}
+      },
+      {
+        "key": "health_check_auto_rollback",
+        "event": "external_webhook",
+        "condition": "monitoring.error_budget_burn > 2.0 and state == 'implementing'",
+        "action": "transition:roll_back;page:on_call",
+        "description": "Rolls back automatically when error budget burn spikes.",
+        "params": {}
+      },
+      {
+        "key": "pir_reminder",
+        "event": "time_in_state_exceeded",
+        "condition": "state == 'post_implementation_review' and hours_in_state > 72",
+        "action": "notify:change_manager",
+        "description": "Chases overdue post implementation reviews.",
+        "params": {}
+      },
+      {
+        "key": "emergency_change_retro_review",
+        "event": "transition_completed",
+        "condition": "transition == 'emergency_change'",
+        "action": "create_task:retrospective_cab_review",
+        "description": "Forces retrospective CAB review of emergency changes.",
+        "params": {}
+      },
+      {
+        "key": "audit_trail_every_transition",
+        "event": "transition_completed",
+        "condition": "true",
+        "action": "append_audit_log",
+        "description": "Writes an immutable, time stamped audit record for every state change.",
+        "params": {
+          "retain_years": 7
+        }
+      },
+      {
+        "key": "ict_incident_classification",
+        "event": "external_webhook",
+        "condition": "incident.opened",
+        "action": "classify:major_ict_incident;notify:resilience_office",
+        "description": "Classifies ICT incidents against DORA major incident criteria.",
+        "params": {}
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Change advisory board",
+        "cadence": "weekly",
+        "duration_minutes": 60,
+        "participants": [
+          "change_advisory_board",
+          "change_manager",
+          "service_owner"
+        ]
+      },
+      {
+        "name": "Operational readiness review",
+        "cadence": "per_change",
+        "duration_minutes": 30,
+        "participants": [
+          "service_owner",
+          "engineer"
+        ]
+      }
+    ],
+    "roles": [
+      "change_manager",
+      "change_advisory_board",
+      "emergency_change_authority",
+      "service_owner",
+      "engineer",
+      "on_call",
+      "security_engineer",
+      "data_migration_lead",
+      "supplier_manager"
+    ],
+    "metrics": [
+      "change_failure_rate",
+      "mean_time_to_restore",
+      "emergency_change_ratio",
+      "change_lead_time"
+    ],
+    "anchors": {
+      "intake": "change_request",
+      "rework": "risk_assessment",
+      "release_transition": "vendor_acceptance_passed",
+      "done": "closed",
+      "blocked": "rolled_back",
+      "build_states": [
+        "implementing"
+      ],
+      "review_states": [
+        "cab_review",
+        "post_implementation_review"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "dora",
+        "sox"
+      ],
+      "regime_names": [
+        "the EU Digital Operational Resilience Act",
+        "Sarbanes Oxley Section 404 internal controls"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.9374,
+        "evidence_support": 0.8861,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395",
+          "PM02250",
+          "PM01131"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 0.8672,
+        "evidence_support": 0.7586,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395",
+          "PM02250",
+          "PM01131"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.789,
+        "evidence_support": 0.6163,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM02250",
+          "PM01054",
+          "PM01699"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.6769,
+        "evidence_support": 0.4126,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM01699",
+          "PM00143",
+          "PM01420"
+        ]
+      },
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.2948,
+        "evidence_support": 0.127,
+        "charter_prior": 0.5,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01131",
+          "PM01420"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.273,
+        "evidence_support": 0.4963,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM02250",
+          "PM01131",
+          "PM01054"
+        ]
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.1906,
+        "evidence_support": 0.3466,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01322",
+          "PM02250",
+          "PM01699",
+          "PM00494",
+          "PM00459"
+        ]
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.1661,
+        "evidence_support": 0.302,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01054",
+          "PM00548",
+          "PM01420",
+          "PM00902",
+          "PM00459"
+        ]
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.0439,
+        "evidence_support": 0.0797,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00262"
+        ]
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.032,
+        "evidence_support": 0.0583,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00699"
+        ]
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.0315,
+        "evidence_support": 0.0573,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00902"
+        ]
+      },
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.0311,
+        "evidence_support": 0.0566,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00459"
+        ]
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "WIP limit for implementing set from 3 to 5",
+        "reason": "Sized to a team of 8 people across 1 team",
+        "evidence": []
+      },
+      {
+        "change": "Scaled 3 state SLAs by 0.75",
+        "reason": "Production critical service: tighter service levels",
+        "evidence": []
+      },
+      {
+        "change": "Inserted gate 'Security Review' before scheduled",
+        "reason": "Security review gate: evidence support 76% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395",
+          "PM02250",
+          "PM01131"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Migration Rehearsal' before scheduled",
+        "reason": "Migration rehearsal stage: evidence support 62% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM02250",
+          "PM01054",
+          "PM01699"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Vendor Acceptance' before scheduled",
+        "reason": "Vendor acceptance checkpoint: evidence support 41% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM01699",
+          "PM00143",
+          "PM01420"
+        ]
+      },
+      {
+        "change": "Added field required guard (rollback_plan) to the release transition (vendor_acceptance_passed)",
+        "reason": "Mandatory rollback plan mandated by detected regulatory regime",
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395",
+          "PM02250",
+          "PM01131"
+        ]
+      },
+      {
+        "change": "Added linked artifact guard (rollback_rehearsal_evidence) to the release transition (vendor_acceptance_passed)",
+        "reason": "Mandatory rollback plan mandated by detected regulatory regime",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'audit_trail_every_transition'",
+        "reason": "Required by Sarbanes Oxley Section 404 internal controls",
+        "evidence": []
+      },
+      {
+        "change": "Added approval guard (control_owner) to the release transition (vendor_acceptance_passed)",
+        "reason": "Segregation of duties under Sarbanes Oxley Section 404",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'ict_incident_classification'",
+        "reason": "Incident classification under DORA",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 12,
+        "states": 12,
+        "transitions": 17,
+        "triggers": 6,
+        "guarded_transitions": 12,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Change Controlled Operations is recommended with 92% confidence. The charter indicates that the service is production critical, production change risk is high, a data migration is involved, external vendors supply key components. 22 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "the service is production critical",
+      "production change risk is high",
+      "a data migration is involved",
+      "external vendors supply key components",
+      "a large share of work arrives unplanned"
+    ],
+    "regimes": [
+      "the EU Digital Operational Resilience Act",
+      "Sarbanes Oxley Section 404 internal controls"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "initiative_data_platform_migration",
+        "contribution": 2.5957,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 1.9634,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_data_migration",
+        "contribution": 1.8036,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_change_risk",
+        "contribution": 1.6442,
+        "value": 1.0
+      },
+      {
+        "feature": "regime_sox",
+        "contribution": 0.7738,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_vendor_dependency",
+        "contribution": 0.7324,
+        "value": 1.0
+      }
+    ],
+    "precedent_agreement": 0.733,
+    "alternatives": [
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "display_name": "Regulated Compliance Pipeline",
+        "probability": 0.0299
+      },
+      {
+        "workflow": "scrum_product_delivery",
+        "display_name": "Agile Scrum Product Delivery",
+        "probability": 0.0189
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "METHOD_incident_change_control",
+        "title": "Change Controlled Operations",
+        "section": "Change types",
+        "passage": "Change Controlled Operations. Change types. * Standard changes are pre approved, low risk and repeatable, and can bypass the board. * Normal changes are assessed and approved by the change advisory board. * Emergency changes restore service urgently and are reviewed after the fact."
+      },
+      {
+        "doc_id": "TEMPLATE_incident_change_control",
+        "title": "Change Controlled Operations",
+        "section": "Change Controlled Operations",
+        "passage": "Change Controlled Operations. Change Controlled Operations. Workflow template: Change Controlled Operations (incident_change_control). Risk assessed, CAB approved change lifecycle for production infrastructure and migrations. States in order: Change Request, Risk Assessment, Change Advisory Board Review, Scheduled, Implementing, Post Implementation Review, ..."
+      },
+      {
+        "doc_id": "METHOD_kanban_continuous_flow",
+        "title": "Kanban Continuous Flow",
+        "section": "When to use it",
+        "passage": "Kanban Continuous Flow. When to use it. Kanban is the default for maintenance, sustaining engineering and operational support. Work arrives continuously, priorities change daily and the unit of planning is the individual work item rather than a time boxed batch. Charters that describe incident queues, service desk demand, patching, technical debt reduction ..."
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "title": "Workflow Selection Heuristics",
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How ..."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "score": 0.9374,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "score": 0.8672,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01322",
+          "PM00262",
+          "PM00395"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "score": 0.789,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM02250"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "score": 0.6769,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01322",
+          "PM00395",
+          "PM01699"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 69.0
+}

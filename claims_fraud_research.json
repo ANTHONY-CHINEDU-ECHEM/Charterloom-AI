@@ -1,0 +1,1566 @@
+{
+  "project_name": "Kestrel Signal",
+  "charter_fingerprint": "539991e13c1c52e4",
+  "recommendation": {
+    "workflow": "dual_track_discovery",
+    "confidence": 0.9086,
+    "margin": 0.8805,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "dual_track_discovery",
+        "probability": 0.9086
+      },
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "probability": 0.0281
+      },
+      {
+        "workflow": "scrum_product_delivery",
+        "probability": 0.0249
+      }
+    ],
+    "probabilities": {
+      "dual_track_discovery": 0.9086,
+      "regulated_compliance_pipeline": 0.0281,
+      "scrum_product_delivery": 0.0249,
+      "incident_change_control": 0.0175,
+      "scrumban_hybrid": 0.0106,
+      "kanban_continuous_flow": 0.0089,
+      "stage_gate_waterfall": 0.0011,
+      "scaled_release_train": 0.0002
+    },
+    "experts": {
+      "semantic": {
+        "dual_track_discovery": 0.7385,
+        "regulated_compliance_pipeline": 0.0649,
+        "scrum_product_delivery": 0.0577,
+        "incident_change_control": 0.0279,
+        "scrumban_hybrid": 0.0626,
+        "kanban_continuous_flow": 0.0381,
+        "stage_gate_waterfall": 0.0084,
+        "scaled_release_train": 0.0018
+      },
+      "structural": {
+        "dual_track_discovery": 0.9883,
+        "regulated_compliance_pipeline": 0.0032,
+        "scrum_product_delivery": 0.0059,
+        "incident_change_control": 0.0004,
+        "scrumban_hybrid": 0.0014,
+        "kanban_continuous_flow": 0.0004,
+        "stage_gate_waterfall": 0.0003,
+        "scaled_release_train": 0.0
+      },
+      "precedent": {
+        "dual_track_discovery": 0.6237,
+        "regulated_compliance_pipeline": 0.1282,
+        "scrum_product_delivery": 0.0977,
+        "incident_change_control": 0.0964,
+        "scrumban_hybrid": 0.0218,
+        "kanban_continuous_flow": 0.0315,
+        "stage_gate_waterfall": 0.0003,
+        "scaled_release_train": 0.0003
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ01716",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.8059,
+        "outcome_score": 0.953
+      },
+      {
+        "project_id": "PRJ02122",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.766,
+        "outcome_score": 0.731
+      },
+      {
+        "project_id": "PRJ00745",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.6914,
+        "outcome_score": 0.905
+      },
+      {
+        "project_id": "PRJ01538",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.659,
+        "outcome_score": 0.944
+      },
+      {
+        "project_id": "PRJ01217",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.5561,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ02353",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.5415,
+        "outcome_score": 0.958
+      },
+      {
+        "project_id": "PRJ01167",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.5397,
+        "outcome_score": 0.872
+      },
+      {
+        "project_id": "PRJ01070",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.5299,
+        "outcome_score": 0.745
+      },
+      {
+        "project_id": "PRJ01444",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.5261,
+        "outcome_score": 0.819
+      },
+      {
+        "project_id": "PRJ00740",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4784,
+        "outcome_score": 0.739
+      },
+      {
+        "project_id": "PRJ01678",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.472,
+        "outcome_score": 0.959
+      },
+      {
+        "project_id": "PRJ02004",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.461,
+        "outcome_score": 0.792
+      },
+      {
+        "project_id": "PRJ00347",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4559,
+        "outcome_score": 0.876
+      },
+      {
+        "project_id": "PRJ01155",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4534,
+        "outcome_score": 0.773
+      },
+      {
+        "project_id": "PRJ01353",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4457,
+        "outcome_score": 0.754
+      },
+      {
+        "project_id": "PRJ00303",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4426,
+        "outcome_score": 0.884
+      },
+      {
+        "project_id": "PRJ00227",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.4299,
+        "outcome_score": 0.875
+      },
+      {
+        "project_id": "PRJ02083",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.415,
+        "outcome_score": 0.816
+      },
+      {
+        "project_id": "PRJ00924",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4072,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00505",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4069,
+        "outcome_score": 0.764
+      },
+      {
+        "project_id": "PRJ02029",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.3977,
+        "outcome_score": 0.824
+      },
+      {
+        "project_id": "PRJ01451",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3931,
+        "outcome_score": 0.849
+      },
+      {
+        "project_id": "PRJ00349",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.391,
+        "outcome_score": 0.947
+      },
+      {
+        "project_id": "PRJ00011",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.3897,
+        "outcome_score": 0.86
+      },
+      {
+        "project_id": "PRJ01536",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.3887,
+        "outcome_score": 0.777
+      },
+      {
+        "project_id": "PRJ01498",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.3835,
+        "outcome_score": 0.811
+      },
+      {
+        "project_id": "PRJ01730",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3819,
+        "outcome_score": 0.891
+      },
+      {
+        "project_id": "PRJ00390",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.3805,
+        "outcome_score": 0.808
+      },
+      {
+        "project_id": "PRJ00324",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.3767,
+        "outcome_score": 0.748
+      },
+      {
+        "project_id": "PRJ01611",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.3765,
+        "outcome_score": 0.856
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_research_uncertainty",
+        "contribution": 3.7364,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_ml_component",
+        "contribution": 3.2422,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_insurance",
+        "contribution": 1.146,
+        "value": 1.0
+      },
+      {
+        "feature": "log_word_count",
+        "contribution": 0.5634,
+        "value": 5.656
+      },
+      {
+        "feature": "signal_change_risk",
+        "contribution": 0.3272,
+        "value": 0.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 0.3191,
+        "value": 0.0
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "research_uncertainty": 1.0,
+      "ml_component": 1.0,
+      "personal_data": 0.5
+    },
+    "team_size": 5,
+    "teams": 1,
+    "duration_weeks": 20,
+    "unplanned_pct": null,
+    "sprint_length_days": null,
+    "regimes": [
+      "fca_consumer_duty",
+      "gdpr"
+    ],
+    "domain": "insurance",
+    "initiative_type": null,
+    "word_count": 285
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP01716",
+        "doc_type": "blueprint",
+        "title": "Harbour Anchor 900 (telematics pricing feature)",
+        "score": 0.80587,
+        "dense_score": 0.8059,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01716: Harbour Anchor 900 (telematics pricing feature). Workflow archetype adopted: Dual Track Discovery and Delivery. State flow: Opportunity Backlog > Hypothesis Framing > Discovery Research > Experiment Running > Evidence Review > Delivery Backlog > Building > Validation in Production > Learned and Shipped. Workflow adjustments applied: add model validation, add privacy review, add ...",
+        "metadata": {
+          "project_id": "PRJ01716",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.9529,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP02122",
+        "doc_type": "blueprint",
+        "title": "Riverside Citadel 900 (telematics pricing feature)",
+        "score": 0.76603,
+        "dense_score": 0.766,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP02122: Riverside Citadel 900 (telematics pricing feature). Workflow archetype adopted: Dual Track Discovery and Delivery. State flow: Opportunity Backlog > Hypothesis Framing > Discovery Research > Experiment Running > Evidence Review > Delivery Backlog > Building > Validation in Production > Learned and Shipped. Workflow adjustments applied: none. Outcome score 0.73 on a zero to one ...",
+        "metadata": {
+          "project_id": "PRJ02122",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.7313,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP00745",
+        "doc_type": "blueprint",
+        "title": "Quiet Junction (claims triage service)",
+        "score": 0.69143,
+        "dense_score": 0.6914,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00745: Quiet Junction (claims triage service). Workflow archetype adopted: Dual Track Discovery and Delivery. State flow: Opportunity Backlog > Hypothesis Framing > Discovery Research > Experiment Running > Evidence Review > Delivery Backlog > Building > Validation in Production > Learned and Shipped. Workflow adjustments applied: add model validation, add privacy review, add rollback ...",
+        "metadata": {
+          "project_id": "PRJ00745",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.905,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP00970",
+        "doc_type": "blueprint",
+        "title": "Obsidian Meadow 899 (broker quotation portal)",
+        "score": 0.67746,
+        "dense_score": 0.6775,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00970: Obsidian Meadow 899 (broker quotation portal). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add model validation, add security review. Outcome score 0.54 on a zero to one scale. On time delivery 63%, defect escape rate ...",
+        "metadata": {
+          "project_id": "PRJ00970",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.5438,
+          "high_performing": false,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP01538",
+        "doc_type": "blueprint",
+        "title": "Amber Harvest 900 (broker quotation portal)",
+        "score": 0.65902,
+        "dense_score": 0.659,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01538: Amber Harvest 900 (broker quotation portal). Workflow archetype adopted: Dual Track Discovery and Delivery. State flow: Opportunity Backlog > Hypothesis Framing > Discovery Research > Experiment Running > Evidence Review > Delivery Backlog > Building > Validation in Production > Learned and Shipped. Workflow adjustments applied: add accessibility review, add model validation, ...",
+        "metadata": {
+          "project_id": "PRJ01538",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.9441,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP00381",
+        "doc_type": "blueprint",
+        "title": "Saffron Canopy (policy renewal engine)",
+        "score": 0.59103,
+        "dense_score": 0.591,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00381: Saffron Canopy (policy renewal engine). Workflow archetype adopted: Dual Track Discovery and Delivery. State flow: Opportunity Backlog > Hypothesis Framing > Discovery Research > Experiment Running > Evidence Review > Delivery Backlog > Building > Validation in Production > Learned and Shipped. Workflow adjustments applied: add model validation, add privacy review, add security ...",
+        "metadata": {
+          "project_id": "PRJ00381",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.7094,
+          "high_performing": false,
+          "domain": "insurance",
+          "project_type": "ml_research"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP00258",
+        "doc_type": "blueprint",
+        "title": "Vantage Foundry (underwriting workbench)",
+        "score": 0.55759,
+        "dense_score": 0.5576,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00258: Vantage Foundry (underwriting workbench). Workflow archetype adopted: Scrumban Hybrid Flow. State flow: Backlog > Ready > In Progress > Review > Testing > Done. Workflow adjustments applied: add feature flags, add stakeholder demo, add vendor checkpoint. Outcome score 0.38 on a zero to one scale. On time delivery 52%, defect escape rate 12.6%, median cycle time 11.5 days, ...",
+        "metadata": {
+          "project_id": "PRJ00258",
+          "workflow_archetype": "scrumban_hybrid",
+          "outcome_score": 0.3817,
+          "high_performing": false,
+          "domain": "insurance",
+          "project_type": "new_product_feature"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP01217",
+        "doc_type": "blueprint",
+        "title": "Nimbus Prism 900 (broker quotation portal)",
+        "score": 0.55614,
+        "dense_score": 0.5561,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01217: Nimbus Prism 900 (broker quotation portal). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add performance test, add privacy review, add rollback plan, ...",
+        "metadata": {
+          "project_id": "PRJ01217",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 1.0,
+          "high_performing": true,
+          "domain": "insurance",
+          "project_type": "regulatory_module"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM01716",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Harbour Anchor 900 (telematics pricing feature)",
+        "score": 0.80587,
+        "dense_score": 0.8059,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Require a model card and validation report before promotion to production. Insert a privacy impact assessment gate wherever personal data processing changes. Define kill criteria before starting an experiment. Add a recurring stakeholder demonstration to the workflow ceremonies.",
+        "metadata": {
+          "project_id": "PRJ01716",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.9529,
+          "recommended_adjustments": [
+            "ADD_MODEL_VALIDATION",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SPIKE_TIMEBOX",
+            "ADD_STAKEHOLDER_DEMO"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM02122",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Riverside Citadel 900 (telematics pricing feature)",
+        "score": 0.76603,
+        "dense_score": 0.766,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add an independent model validation gate covering bias, drift and performance. Define kill criteria before starting an experiment.",
+        "metadata": {
+          "project_id": "PRJ02122",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.7313,
+          "recommended_adjustments": [
+            "ADD_MODEL_VALIDATION",
+            "ADD_SPIKE_TIMEBOX"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM00745",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Quiet Junction (claims triage service)",
+        "score": 0.69143,
+        "dense_score": 0.6914,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add an independent model validation gate covering bias, drift and performance. Make the rollback plan a mandatory field on the release transition. Attach a timebox to every research spike with an explicit decision on expiry.",
+        "metadata": {
+          "project_id": "PRJ00745",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.905,
+          "recommended_adjustments": [
+            "ADD_MODEL_VALIDATION",
+            "ADD_ROLLBACK_PLAN",
+            "ADD_SPIKE_TIMEBOX"
+          ]
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM00970",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Obsidian Meadow 899 (broker quotation portal)",
+        "score": 0.67746,
+        "dense_score": 0.6775,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Insert a privacy impact assessment gate wherever personal data processing changes. Define kill criteria before starting an experiment.",
+        "metadata": {
+          "project_id": "PRJ00970",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.5438,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SPIKE_TIMEBOX"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM01538",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Amber Harvest 900 (broker quotation portal)",
+        "score": 0.65902,
+        "dense_score": 0.659,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Introduce a definition of ready guard before work enters delivery. Add an independent model validation gate covering bias, drift and performance. Attach a timebox to every research spike with an explicit decision on expiry.",
+        "metadata": {
+          "project_id": "PRJ01538",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.9441,
+          "recommended_adjustments": [
+            "ADD_DEFINITION_OF_READY",
+            "ADD_MODEL_VALIDATION",
+            "ADD_SPIKE_TIMEBOX"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM00381",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Saffron Canopy (policy renewal engine)",
+        "score": 0.59103,
+        "dense_score": 0.591,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Require a model card and validation report before promotion to production. Insert a privacy impact assessment gate wherever personal data processing changes. Add an independent security review state before release with a named security approver. Define kill criteria before starting an experiment.",
+        "metadata": {
+          "project_id": "PRJ00381",
+          "workflow_archetype": "dual_track_discovery",
+          "outcome_score": 0.7094,
+          "recommended_adjustments": [
+            "ADD_MODEL_VALIDATION",
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "ADD_SPIKE_TIMEBOX"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "METHOD_dual_track_discovery",
+        "doc_type": "methodology",
+        "title": "Dual Track Discovery and Delivery",
+        "score": 0.03252,
+        "dense_score": 0.9149,
+        "bm25_score": 39.792,
+        "section": "When to use it",
+        "passage": "Dual Track Discovery and Delivery. When to use it. Dual track working separates learning what to build from building it. A discovery track tests hypotheses quickly and cheaply; only validated ideas move into a delivery track. This archetype suits machine learning research, new market exploration, data products whose feasibility is unproven, and any initiative where the biggest risk is building the wrong thing or ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/dual_track_discovery.md"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "TEMPLATE_dual_track_discovery",
+        "doc_type": "workflow_template",
+        "title": "Dual Track Discovery and Delivery",
+        "score": 0.03068,
+        "dense_score": 0.5636,
+        "bm25_score": 49.938,
+        "section": "Dual Track Discovery and Delivery",
+        "passage": "Dual Track Discovery and Delivery. Dual Track Discovery and Delivery. Workflow template: Dual Track Discovery and Delivery (dual_track_discovery). Hypothesis driven discovery feeding a delivery track, suited to research and ML work. States in order: Opportunity Backlog, Hypothesis Framing, Discovery Research, Experiment Running, Evidence Review, Delivery Backlog, Building, Validation in Production, Learned and ...",
+        "metadata": {
+          "workflow_archetype": "dual_track_discovery"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "doc_type": "methodology",
+        "title": "Workflow Selection Heuristics",
+        "score": 0.02762,
+        "dense_score": 0.459,
+        "bm25_score": 22.255,
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How many teams must integrate? Four or more teams sharing a ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/workflow_selection_heuristics.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_ml_model_governance",
+        "doc_type": "methodology",
+        "title": "Machine Learning Model Governance",
+        "score": 0.02721,
+        "dense_score": 0.4779,
+        "bm25_score": 18.074,
+        "section": "Monitoring after release",
+        "passage": "Machine Learning Model Governance. Monitoring after release. Track input drift, prediction drift and, where labels arrive, realised performance. Set alerts that open review tasks when drift exceeds tolerance.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/ml_model_governance.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Kestrel Signal",
+      "charter_fingerprint": "539991e13c1c52e4"
+    },
+    "workflow": {
+      "archetype": "dual_track_discovery",
+      "display_name": "Dual Track Discovery and Delivery",
+      "family": "experimental",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.9086
+    },
+    "cadence": {
+      "type": "dual_track",
+      "discovery_cycle_days": 7,
+      "delivery_iteration_days": 14
+    },
+    "states": [
+      {
+        "key": "opportunity_backlog",
+        "name": "Opportunity Backlog",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "hypothesis_framing",
+        "name": "Hypothesis Framing",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Falsifiable hypothesis",
+          "Success metric and kill criteria agreed"
+        ]
+      },
+      {
+        "key": "discovery_research",
+        "name": "Discovery Research",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 3,
+        "sla_hours": 120,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "experiment_running",
+        "name": "Experiment Running",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 3,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "evidence_review",
+        "name": "Evidence Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 48,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "delivery_backlog",
+        "name": "Delivery Backlog",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "building",
+        "name": "Building",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 3,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "validation_in_production",
+        "name": "Validation in Production",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "privacy_impact_assessment",
+        "name": "Privacy Impact Assessment",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Dpia record prepared"
+        ],
+        "exit_criteria": [
+          "Approved by data protection officer"
+        ]
+      },
+      {
+        "key": "model_validation",
+        "name": "Model Validation",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Model validation report prepared"
+        ],
+        "exit_criteria": [
+          "Approved by model risk reviewer"
+        ]
+      },
+      {
+        "key": "learned_and_shipped",
+        "name": "Learned and Shipped",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "blocked",
+        "name": "Blocked",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "discarded",
+        "name": "Discarded",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "frame_hypothesis",
+        "name": "Frame hypothesis",
+        "from": "opportunity_backlog",
+        "to": "hypothesis_framing",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "begin_discovery",
+        "name": "Begin discovery",
+        "from": "hypothesis_framing",
+        "to": "discovery_research",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "success_metric"
+          },
+          {
+            "type": "field_required",
+            "field": "kill_criteria"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "launch_experiment",
+        "name": "Launch experiment",
+        "from": "discovery_research",
+        "to": "experiment_running",
+        "guards": [
+          {
+            "type": "linked_artifact",
+            "artifact": "experiment_design"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "collect_evidence",
+        "name": "Collect evidence",
+        "from": "experiment_running",
+        "to": "evidence_review",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "iterate_research",
+        "name": "Iterate research",
+        "from": "evidence_review",
+        "to": "discovery_research",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "discard_hypothesis",
+        "name": "Discard hypothesis",
+        "from": "evidence_review",
+        "to": "discarded",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "learning_summary"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "promote_to_delivery",
+        "name": "Promote to delivery",
+        "from": "evidence_review",
+        "to": "delivery_backlog",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "product_trio",
+            "min_approvals": 2,
+            "distinct_from_author": false
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "start_build",
+        "name": "Start build",
+        "from": "delivery_backlog",
+        "to": "building",
+        "guards": [
+          {
+            "type": "wip_available"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "ship_for_validation",
+        "name": "Ship for validation",
+        "from": "building",
+        "to": "validation_in_production",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "outcome_missed",
+        "name": "Outcome missed",
+        "from": "validation_in_production",
+        "to": "building",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "confirm_outcome",
+        "name": "Confirm outcome",
+        "from": "validation_in_production",
+        "to": "privacy_impact_assessment",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "measured_outcome"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "block",
+        "name": "Block",
+        "from": "building",
+        "to": "blocked",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "unblock",
+        "name": "Unblock",
+        "from": "blocked",
+        "to": "building",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "privacy_impact_assessment_passed",
+        "name": "Privacy Impact Assessment passed",
+        "from": "privacy_impact_assessment",
+        "to": "model_validation",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "data_protection_officer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "dpia_record"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "privacy_impact_assessment_failed",
+        "name": "Privacy Impact Assessment failed",
+        "from": "privacy_impact_assessment",
+        "to": "building",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "privacy_impact_assessment_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "model_validation_passed",
+        "name": "Model Validation passed",
+        "from": "model_validation",
+        "to": "learned_and_shipped",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "model_risk_reviewer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "model_validation_report"
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "customer_outcome_assessment"
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "model_validation_failed",
+        "name": "Model Validation failed",
+        "from": "model_validation",
+        "to": "building",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "model_validation_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "experiment_metrics_attach",
+        "event": "transition_completed",
+        "condition": "transition == 'collect_evidence'",
+        "action": "attach:experiment_dashboard",
+        "description": "Attaches experiment telemetry to the evidence review.",
+        "params": {}
+      },
+      {
+        "key": "kill_criteria_check",
+        "event": "scheduled",
+        "condition": "state == 'experiment_running'",
+        "action": "evaluate:kill_criteria;notify:product_trio",
+        "description": "Evaluates kill criteria daily while experiments run.",
+        "params": {}
+      },
+      {
+        "key": "learning_log",
+        "event": "transition_completed",
+        "condition": "transition in ['discard_hypothesis', 'confirm_outcome']",
+        "action": "append_learning_log",
+        "description": "Records every validated or invalidated hypothesis.",
+        "params": {}
+      },
+      {
+        "key": "spike_timebox_expiry",
+        "event": "time_in_state_exceeded",
+        "condition": "item.type == 'spike' and days_in_state > timebox_days",
+        "action": "notify:owner;label:decision_required",
+        "description": "Forces a continue or stop decision when a research spike exceeds its timebox.",
+        "params": {
+          "timebox_days": 5
+        }
+      },
+      {
+        "key": "data_retention_review",
+        "event": "scheduled",
+        "condition": "cron == 'quarterly'",
+        "action": "create_task:retention_review",
+        "description": "Checks personal data against retention rules.",
+        "params": {}
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Discovery sync",
+        "cadence": "twice_weekly",
+        "duration_minutes": 30,
+        "participants": [
+          "product_trio",
+          "researcher"
+        ]
+      },
+      {
+        "name": "Evidence review",
+        "cadence": "weekly",
+        "duration_minutes": 60,
+        "participants": [
+          "product_trio",
+          "data_scientist"
+        ]
+      },
+      {
+        "name": "Delivery planning",
+        "cadence": "biweekly",
+        "duration_minutes": 60,
+        "participants": [
+          "product_trio",
+          "engineer"
+        ]
+      }
+    ],
+    "roles": [
+      "product_trio",
+      "researcher",
+      "data_scientist",
+      "engineer",
+      "stakeholder",
+      "data_protection_officer",
+      "model_risk_reviewer"
+    ],
+    "metrics": [
+      "hypotheses_tested",
+      "validated_learning_rate",
+      "time_to_evidence",
+      "outcome_attainment"
+    ],
+    "anchors": {
+      "intake": "opportunity_backlog",
+      "rework": "building",
+      "release_transition": "model_validation_passed",
+      "done": "learned_and_shipped",
+      "blocked": "blocked",
+      "build_states": [
+        "building",
+        "discovery_research"
+      ],
+      "review_states": [
+        "evidence_review",
+        "validation_in_production"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "fca_consumer_duty",
+        "gdpr"
+      ],
+      "regime_names": [
+        "the FCA Consumer Duty",
+        "UK GDPR and the Data Protection Act 2018"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.8327,
+        "evidence_support": 0.6959,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745",
+          "PM00970",
+          "PM01538"
+        ]
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.8244,
+        "evidence_support": 0.6808,
+        "charter_prior": 1.0,
+        "mandated_by_regime": false,
+        "applied": true,
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745",
+          "PM01538",
+          "PM00381"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.739,
+        "evidence_support": 0.5255,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01716",
+          "PM00970",
+          "PM00381",
+          "PM01217",
+          "PM00210"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 0.1693,
+        "evidence_support": 0.3078,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00381",
+          "PM01217",
+          "PM00210",
+          "PM02353",
+          "PM01830"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.1388,
+        "evidence_support": 0.2523,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00745",
+          "PM01217",
+          "PM02353",
+          "PM00851"
+        ]
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.1021,
+        "evidence_support": 0.1857,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01538",
+          "PM01070",
+          "PM00851"
+        ]
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.0492,
+        "evidence_support": 0.0894,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01716"
+        ]
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.034,
+        "evidence_support": 0.0619,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00258"
+        ]
+      },
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.0329,
+        "evidence_support": 0.0599,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01167"
+        ]
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.0323,
+        "evidence_support": 0.0588,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01070"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "WIP limit for building set from 5 to 3",
+        "reason": "Sized to a team of 5 people across 1 team",
+        "evidence": []
+      },
+      {
+        "change": "WIP limit for discovery_research set from 4 to 3",
+        "reason": "Sized to a team of 5 people across 1 team",
+        "evidence": []
+      },
+      {
+        "change": "Inserted gate 'Privacy Impact Assessment' before learned_and_shipped",
+        "reason": "Privacy impact assessment gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM01716",
+          "PM00970",
+          "PM00381",
+          "PM01217",
+          "PM00210"
+        ]
+      },
+      {
+        "change": "Inserted gate 'Model Validation' before learned_and_shipped",
+        "reason": "Model validation gate: evidence support 68% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745",
+          "PM01538",
+          "PM00381"
+        ]
+      },
+      {
+        "change": "Added automation 'spike_timebox_expiry'",
+        "reason": "Timeboxed research spikes: evidence support 70% from similar post mortems, charter prior 1.00",
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745",
+          "PM00970",
+          "PM01538"
+        ]
+      },
+      {
+        "change": "Added linked artifact guard (customer_outcome_assessment) to the release transition (model_validation_passed)",
+        "reason": "Evidence of good customer outcomes under the FCA Consumer Duty",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'data_retention_review'",
+        "reason": "Storage limitation under UK GDPR",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 13,
+        "states": 13,
+        "transitions": 17,
+        "triggers": 5,
+        "guarded_transitions": 10,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Dual Track Discovery and Delivery is recommended with 91% confidence. The charter indicates that feasibility is uncertain and needs experimentation, a machine learning model is part of the solution, personal data is processed. 12 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "feasibility is uncertain and needs experimentation",
+      "a machine learning model is part of the solution",
+      "personal data is processed"
+    ],
+    "regimes": [
+      "the FCA Consumer Duty",
+      "UK GDPR and the Data Protection Act 2018"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "signal_research_uncertainty",
+        "contribution": 3.7364,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_ml_component",
+        "contribution": 3.2422,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_insurance",
+        "contribution": 1.146,
+        "value": 1.0
+      },
+      {
+        "feature": "log_word_count",
+        "contribution": 0.5634,
+        "value": 5.656
+      },
+      {
+        "feature": "signal_change_risk",
+        "contribution": 0.3272,
+        "value": 0.0
+      },
+      {
+        "feature": "signal_production_critical",
+        "contribution": 0.3191,
+        "value": 0.0
+      }
+    ],
+    "precedent_agreement": 0.4,
+    "alternatives": [
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "display_name": "Regulated Compliance Pipeline",
+        "probability": 0.0281
+      },
+      {
+        "workflow": "scrum_product_delivery",
+        "display_name": "Agile Scrum Product Delivery",
+        "probability": 0.0249
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "METHOD_dual_track_discovery",
+        "title": "Dual Track Discovery and Delivery",
+        "section": "When to use it",
+        "passage": "Dual Track Discovery and Delivery. When to use it. Dual track working separates learning what to build from building it. A discovery track tests hypotheses quickly and cheaply; only validated ideas move into a delivery track. This archetype suits machine learning research, new market exploration, data products whose feasibility is unproven, and any ..."
+      },
+      {
+        "doc_id": "TEMPLATE_dual_track_discovery",
+        "title": "Dual Track Discovery and Delivery",
+        "section": "Dual Track Discovery and Delivery",
+        "passage": "Dual Track Discovery and Delivery. Dual Track Discovery and Delivery. Workflow template: Dual Track Discovery and Delivery (dual_track_discovery). Hypothesis driven discovery feeding a delivery track, suited to research and ML work. States in order: Opportunity Backlog, Hypothesis Framing, Discovery Research, Experiment Running, Evidence Review, Delivery ..."
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "title": "Workflow Selection Heuristics",
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How ..."
+      },
+      {
+        "doc_id": "METHOD_ml_model_governance",
+        "title": "Machine Learning Model Governance",
+        "section": "Monitoring after release",
+        "passage": "Machine Learning Model Governance. Monitoring after release. Track input drift, prediction drift and, where labels arrive, realised performance. Set alerts that open review tasks when drift exceeds tolerance."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "score": 0.8327,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745"
+        ]
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "score": 0.8244,
+        "mandated_by_regime": false,
+        "evidence": [
+          "PM01716",
+          "PM02122",
+          "PM00745"
+        ]
+      },
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "score": 0.739,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01716",
+          "PM00970",
+          "PM00381"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 67.7
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "charter": "citizen_benefits_programme.md",
+    "project": "Northern Compass",
+    "workflow": "Scaled Agile Release Train",
+    "confidence": 0.9384,
+    "needs_human_review": false,
+    "states": 14,
+    "transitions": 20,
+    "triggers": 5,
+    "applied_adjustments": [
+      "ADD_ACCESSIBILITY_REVIEW",
+      "ADD_DEPENDENCY_SYNC",
+      "ADD_PRIVACY_REVIEW",
+      "ADD_SECURITY_REVIEW",
+      "ADD_STAKEHOLDER_DEMO",
+      "ADD_PERFORMANCE_TEST"
+    ],
+    "regimes": [
+      "gdpr",
+      "wcag"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "claims_fraud_research.md",
+    "project": "Kestrel Signal",
+    "workflow": "Dual Track Discovery and Delivery",
+    "confidence": 0.9086,
+    "needs_human_review": false,
+    "states": 13,
+    "transitions": 17,
+    "triggers": 5,
+    "applied_adjustments": [
+      "ADD_SPIKE_TIMEBOX",
+      "ADD_MODEL_VALIDATION",
+      "ADD_PRIVACY_REVIEW"
+    ],
+    "regimes": [
+      "fca_consumer_duty",
+      "gdpr"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "clinical_trial_ecrf_module.md",
+    "project": "Meridian Capture",
+    "workflow": "Regulated Compliance Pipeline",
+    "confidence": 0.6465,
+    "needs_human_review": false,
+    "states": 12,
+    "transitions": 17,
+    "triggers": 5,
+    "applied_adjustments": [
+      "ADD_PRIVACY_REVIEW"
+    ],
+    "regimes": [
+      "cfr_part_11",
+      "gdpr"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "core_ledger_migration.md",
+    "project": "Tidal Cutover",
+    "workflow": "Change Controlled Operations",
+    "confidence": 0.9227,
+    "needs_human_review": false,
+    "states": 12,
+    "transitions": 17,
+    "triggers": 6,
+    "applied_adjustments": [
+      "ADD_ROLLBACK_PLAN",
+      "ADD_SECURITY_REVIEW",
+      "ADD_DATA_MIGRATION_REHEARSAL",
+      "ADD_VENDOR_CHECKPOINT"
+    ],
+    "regimes": [
+      "dora",
+      "sox"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "legacy_billing_support.md",
+    "project": "Granite Ledger Sustainment",
+    "workflow": "Kanban Continuous Flow",
+    "confidence": 0.891,
+    "needs_human_review": false,
+    "states": 11,
+    "transitions": 15,
+    "triggers": 5,
+    "applied_adjustments": [
+      "TIGHTEN_WIP",
+      "ADD_PRIVACY_REVIEW",
+      "ADD_ROLLBACK_PLAN",
+      "ADD_SECURITY_REVIEW"
+    ],
+    "regimes": [
+      "gdpr"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "payments_dispute_portal.md",
+    "project": "Clearwater Disputes",
+    "workflow": "Agile Scrum Product Delivery",
+    "confidence": 0.9211,
+    "needs_human_review": false,
+    "states": 12,
+    "transitions": 18,
+    "triggers": 7,
+    "applied_adjustments": [
+      "ADD_SECURITY_REVIEW",
+      "ADD_PRIVACY_REVIEW",
+      "ADD_STAKEHOLDER_DEMO",
+      "ADD_PERFORMANCE_TEST",
+      "ADD_FEATURE_FLAGS"
+    ],
+    "regimes": [
+      "fca_consumer_duty",
+      "gdpr",
+      "pci_dss"
+    ],
+    "valid": true
+  },
+  {
+    "charter": "smart_meter_firmware.md",
+    "project": "Copper Relay",
+    "workflow": "Stage Gate Phased Delivery",
+    "confidence": 0.8979,
+    "needs_human_review": false,
+    "states": 11,
+    "transitions": 14,
+    "triggers": 4,
+    "applied_adjustments": [
+      "ADD_SECURITY_REVIEW",
+      "ADD_VENDOR_CHECKPOINT"
+    ],
+    "regimes": [
+      "iso_27001",
+      "nis2"
+    ],
+    "valid": true
+  }
+]

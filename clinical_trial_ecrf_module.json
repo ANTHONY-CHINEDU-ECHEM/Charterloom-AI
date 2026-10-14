@@ -1,0 +1,1519 @@
+{
+  "project_name": "Meridian Capture",
+  "charter_fingerprint": "33fb0950613c6bdb",
+  "recommendation": {
+    "workflow": "regulated_compliance_pipeline",
+    "confidence": 0.6465,
+    "margin": 0.4621,
+    "needs_human_review": false,
+    "ranking": [
+      {
+        "workflow": "regulated_compliance_pipeline",
+        "probability": 0.6465
+      },
+      {
+        "workflow": "incident_change_control",
+        "probability": 0.1844
+      },
+      {
+        "workflow": "stage_gate_waterfall",
+        "probability": 0.092
+      }
+    ],
+    "probabilities": {
+      "regulated_compliance_pipeline": 0.6465,
+      "incident_change_control": 0.1844,
+      "stage_gate_waterfall": 0.092,
+      "kanban_continuous_flow": 0.0523,
+      "scrumban_hybrid": 0.0079,
+      "scaled_release_train": 0.0074,
+      "scrum_product_delivery": 0.0059,
+      "dual_track_discovery": 0.0036
+    },
+    "experts": {
+      "semantic": {
+        "regulated_compliance_pipeline": 0.3572,
+        "incident_change_control": 0.2142,
+        "stage_gate_waterfall": 0.2137,
+        "kanban_continuous_flow": 0.1507,
+        "scrumban_hybrid": 0.0132,
+        "scaled_release_train": 0.0392,
+        "scrum_product_delivery": 0.004,
+        "dual_track_discovery": 0.0078
+      },
+      "structural": {
+        "regulated_compliance_pipeline": 0.7261,
+        "incident_change_control": 0.1864,
+        "stage_gate_waterfall": 0.066,
+        "kanban_continuous_flow": 0.0156,
+        "scrumban_hybrid": 0.0018,
+        "scaled_release_train": 0.0002,
+        "scrum_product_delivery": 0.0035,
+        "dual_track_discovery": 0.0003
+      },
+      "precedent": {
+        "regulated_compliance_pipeline": 0.4413,
+        "incident_change_control": 0.1546,
+        "stage_gate_waterfall": 0.1404,
+        "kanban_continuous_flow": 0.1704,
+        "scrumban_hybrid": 0.0347,
+        "scaled_release_train": 0.0224,
+        "scrum_product_delivery": 0.0187,
+        "dual_track_discovery": 0.0174
+      }
+    },
+    "blend_weights": {
+      "semantic": 0.1,
+      "structural": 0.75,
+      "precedent": 0.15
+    },
+    "precedents": [
+      {
+        "project_id": "PRJ00028",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.7262,
+        "outcome_score": 0.772
+      },
+      {
+        "project_id": "PRJ01695",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.7152,
+        "outcome_score": 0.952
+      },
+      {
+        "project_id": "PRJ00289",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.6879,
+        "outcome_score": 0.885
+      },
+      {
+        "project_id": "PRJ02070",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.6845,
+        "outcome_score": 0.785
+      },
+      {
+        "project_id": "PRJ00195",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.6362,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00800",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.6314,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00487",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.6085,
+        "outcome_score": 0.852
+      },
+      {
+        "project_id": "PRJ01307",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.5424,
+        "outcome_score": 0.775
+      },
+      {
+        "project_id": "PRJ00068",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.5367,
+        "outcome_score": 0.861
+      },
+      {
+        "project_id": "PRJ01046",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.5335,
+        "outcome_score": 0.763
+      },
+      {
+        "project_id": "PRJ02311",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.5285,
+        "outcome_score": 0.952
+      },
+      {
+        "project_id": "PRJ00414",
+        "workflow_archetype": "scrumban_hybrid",
+        "similarity": 0.5261,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ00307",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.503,
+        "outcome_score": 0.88
+      },
+      {
+        "project_id": "PRJ01496",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.5004,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ01747",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4982,
+        "outcome_score": 0.765
+      },
+      {
+        "project_id": "PRJ01819",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4884,
+        "outcome_score": 0.782
+      },
+      {
+        "project_id": "PRJ02006",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4858,
+        "outcome_score": 0.771
+      },
+      {
+        "project_id": "PRJ02246",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4835,
+        "outcome_score": 0.772
+      },
+      {
+        "project_id": "PRJ00109",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4818,
+        "outcome_score": 0.815
+      },
+      {
+        "project_id": "PRJ00870",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4664,
+        "outcome_score": 0.87
+      },
+      {
+        "project_id": "PRJ02071",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4653,
+        "outcome_score": 0.841
+      },
+      {
+        "project_id": "PRJ01238",
+        "workflow_archetype": "stage_gate_waterfall",
+        "similarity": 0.4635,
+        "outcome_score": 0.987
+      },
+      {
+        "project_id": "PRJ02093",
+        "workflow_archetype": "kanban_continuous_flow",
+        "similarity": 0.4618,
+        "outcome_score": 0.899
+      },
+      {
+        "project_id": "PRJ01779",
+        "workflow_archetype": "regulated_compliance_pipeline",
+        "similarity": 0.4545,
+        "outcome_score": 0.74
+      },
+      {
+        "project_id": "PRJ01939",
+        "workflow_archetype": "dual_track_discovery",
+        "similarity": 0.4485,
+        "outcome_score": 0.734
+      },
+      {
+        "project_id": "PRJ01928",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.442,
+        "outcome_score": 0.938
+      },
+      {
+        "project_id": "PRJ01419",
+        "workflow_archetype": "scrum_product_delivery",
+        "similarity": 0.4412,
+        "outcome_score": 0.822
+      },
+      {
+        "project_id": "PRJ01661",
+        "workflow_archetype": "scaled_release_train",
+        "similarity": 0.4378,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ01817",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4339,
+        "outcome_score": 1.0
+      },
+      {
+        "project_id": "PRJ02073",
+        "workflow_archetype": "incident_change_control",
+        "similarity": 0.4323,
+        "outcome_score": 0.791
+      }
+    ],
+    "feature_drivers": [
+      {
+        "feature": "initiative_regulatory_module",
+        "contribution": 1.9898,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_pharmaceuticals",
+        "contribution": 1.7882,
+        "value": 1.0
+      },
+      {
+        "feature": "max_strictness",
+        "contribution": 1.2198,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_fixed_deadline",
+        "contribution": 0.8297,
+        "value": 0.5
+      },
+      {
+        "feature": "regime_gdpr",
+        "contribution": 0.353,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_scope_fixed",
+        "contribution": 0.2429,
+        "value": 1.0
+      }
+    ]
+  },
+  "charter_profile": {
+    "signals": {
+      "scope_fixed": 1.0,
+      "dependencies": 0.5,
+      "production_critical": 0.5,
+      "change_risk": 0.5,
+      "personal_data": 1.0,
+      "fixed_deadline": 0.5
+    },
+    "team_size": 11,
+    "teams": 2,
+    "duration_weeks": 36,
+    "unplanned_pct": null,
+    "sprint_length_days": null,
+    "regimes": [
+      "cfr_part_11",
+      "gdpr"
+    ],
+    "domain": "pharmaceuticals",
+    "initiative_type": "regulatory_module",
+    "word_count": 301
+  },
+  "evidence": {
+    "similar_blueprints": [
+      {
+        "doc_id": "BP00010",
+        "doc_type": "blueprint",
+        "title": "Falcon Lattice (adverse event intake system)",
+        "score": 0.80967,
+        "dense_score": 0.8097,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00010: Falcon Lattice (adverse event intake system). Workflow archetype adopted: Agile Scrum Product Delivery. State flow: Product Backlog > Sprint Backlog > In Progress > Code Review > QA Verification > Ready for Release > Done. Workflow adjustments applied: add model validation, add rollback plan, tighten wip. Outcome score 0.17 on a zero to one scale. On time delivery 38%, defect ...",
+        "metadata": {
+          "project_id": "PRJ00010",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.1696,
+          "high_performing": false,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "BP01053",
+        "doc_type": "blueprint",
+        "title": "Granite Relay 900 (laboratory data capture service)",
+        "score": 0.78185,
+        "dense_score": 0.7818,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01053: Granite Relay 900 (laboratory data capture service). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: none. Outcome score 0.65 on a zero to one scale. On ...",
+        "metadata": {
+          "project_id": "PRJ01053",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.6481,
+          "high_performing": false,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "BP00687",
+        "doc_type": "blueprint",
+        "title": "Obsidian Foundry (laboratory data capture service)",
+        "score": 0.76753,
+        "dense_score": 0.7675,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00687: Obsidian Foundry (laboratory data capture service). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add rollback plan. Outcome score 0.70 on a zero to one scale. On time delivery 74%, defect escape rate 7.4%, median ...",
+        "metadata": {
+          "project_id": "PRJ00687",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7023,
+          "high_performing": false,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "BP00028",
+        "doc_type": "blueprint",
+        "title": "Linden Harvest (trial master file index)",
+        "score": 0.72618,
+        "dense_score": 0.7262,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00028: Linden Harvest (trial master file index). Workflow archetype adopted: Kanban Continuous Flow. State flow: Intake > Triage > Ready > In Progress > Peer Review > Deploy and Verify > Done. Workflow adjustments applied: add stakeholder demo. Outcome score 0.77 on a zero to one scale. On time delivery 76%, defect escape rate 6.0%, median cycle time 5.6 days, stakeholder satisfaction ...",
+        "metadata": {
+          "project_id": "PRJ00028",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.7717,
+          "high_performing": true,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "BP00821",
+        "doc_type": "blueprint",
+        "title": "Tidal Pathway (laboratory data capture service)",
+        "score": 0.71586,
+        "dense_score": 0.7159,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00821: Tidal Pathway (laboratory data capture service). Workflow archetype adopted: Change Controlled Operations. State flow: Change Request > Risk Assessment > Change Advisory Board Review > Scheduled > Implementing > Post Implementation Review > Closed. Workflow adjustments applied: add security review. Outcome score 0.53 on a zero to one scale. On time delivery 64%, defect escape ...",
+        "metadata": {
+          "project_id": "PRJ00821",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.532,
+          "high_performing": false,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "BP01695",
+        "doc_type": "blueprint",
+        "title": "Silver Canopy 900 (electronic case report form module)",
+        "score": 0.71525,
+        "dense_score": 0.7152,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP01695: Silver Canopy 900 (electronic case report form module). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add privacy review, add security review, add uat ...",
+        "metadata": {
+          "project_id": "PRJ01695",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.9517,
+          "high_performing": true,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 6
+      },
+      {
+        "doc_id": "BP00289",
+        "doc_type": "blueprint",
+        "title": "Harbour Compass (batch record review tool)",
+        "score": 0.68789,
+        "dense_score": 0.6879,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP00289: Harbour Compass (batch record review tool). Workflow archetype adopted: Regulated Compliance Pipeline. State flow: Draft Requirement > Requirements Traceability > Design Review > Implementation > Verification > Independent Validation > Compliance Review > Release Authorisation > Released. Workflow adjustments applied: add rollback plan, tighten wip. Outcome score 0.89 on a zero ...",
+        "metadata": {
+          "project_id": "PRJ00289",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.8851,
+          "high_performing": true,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 7
+      },
+      {
+        "doc_id": "BP02070",
+        "doc_type": "blueprint",
+        "title": "Silver Ledger 900 (batch record review tool)",
+        "score": 0.68455,
+        "dense_score": 0.6845,
+        "bm25_score": 0.0,
+        "section": "Blueprint",
+        "passage": "Historical project blueprint BP02070: Silver Ledger 900 (batch record review tool). Workflow archetype adopted: Stage Gate Phased Delivery. State flow: Initiation > Requirements Definition > Solution Design > Build > System Testing > Deployment Readiness > Closed. Workflow adjustments applied: add privacy review, add rollback plan, add stakeholder demo, add uat stage. Outcome score 0.78 on a zero to one scale. On ...",
+        "metadata": {
+          "project_id": "PRJ02070",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7848,
+          "high_performing": true,
+          "domain": "pharmaceuticals",
+          "project_type": "regulatory_module"
+        },
+        "rank": 8
+      }
+    ],
+    "post_mortems": [
+      {
+        "doc_id": "PM00010",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Falcon Lattice (adverse event intake system)",
+        "score": 0.80967,
+        "dense_score": 0.8097,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Require a tested rollback plan before any production release.",
+        "metadata": {
+          "project_id": "PRJ00010",
+          "workflow_archetype": "scrum_product_delivery",
+          "outcome_score": 0.1696,
+          "recommended_adjustments": [
+            "ADD_ROLLBACK_PLAN"
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "PM01053",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Granite Relay 900 (laboratory data capture service)",
+        "score": 0.78185,
+        "dense_score": 0.7818,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the data protection officer an approver on transitions that change personal data handling.",
+        "metadata": {
+          "project_id": "PRJ01053",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.6481,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW"
+          ]
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "PM00687",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Obsidian Foundry (laboratory data capture service)",
+        "score": 0.76753,
+        "dense_score": 0.7675,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "No workflow adjustments were recommended.",
+        "metadata": {
+          "project_id": "PRJ00687",
+          "workflow_archetype": "stage_gate_waterfall",
+          "outcome_score": 0.7023,
+          "recommended_adjustments": []
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "PM00028",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Linden Harvest (trial master file index)",
+        "score": 0.72618,
+        "dense_score": 0.7262,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Add a recurring stakeholder demonstration to the workflow ceremonies.",
+        "metadata": {
+          "project_id": "PRJ00028",
+          "workflow_archetype": "kanban_continuous_flow",
+          "outcome_score": 0.7717,
+          "recommended_adjustments": [
+            "ADD_STAKEHOLDER_DEMO"
+          ]
+        },
+        "rank": 4
+      },
+      {
+        "doc_id": "PM00821",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Tidal Pathway (laboratory data capture service)",
+        "score": 0.71586,
+        "dense_score": 0.7159,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Treat security review as a workflow gate rather than an optional checklist item. Lower the in progress limit when unplanned work is high.",
+        "metadata": {
+          "project_id": "PRJ00821",
+          "workflow_archetype": "incident_change_control",
+          "outcome_score": 0.532,
+          "recommended_adjustments": [
+            "ADD_SECURITY_REVIEW",
+            "TIGHTEN_WIP"
+          ]
+        },
+        "rank": 5
+      },
+      {
+        "doc_id": "PM01695",
+        "doc_type": "post_mortem",
+        "title": "Post mortem for Silver Canopy 900 (electronic case report form module)",
+        "score": 0.71525,
+        "dense_score": 0.7152,
+        "bm25_score": 0.0,
+        "section": "Lessons and recommended workflow adjustments",
+        "passage": "Make the data protection officer an approver on transitions that change personal data handling. Add an independent security review state before release with a named security approver. Record client acceptance as a guarded transition rather than an email.",
+        "metadata": {
+          "project_id": "PRJ01695",
+          "workflow_archetype": "regulated_compliance_pipeline",
+          "outcome_score": 0.9517,
+          "recommended_adjustments": [
+            "ADD_PRIVACY_REVIEW",
+            "ADD_SECURITY_REVIEW",
+            "ADD_UAT_STAGE"
+          ]
+        },
+        "rank": 6
+      }
+    ],
+    "methodology": [
+      {
+        "doc_id": "TEMPLATE_regulated_compliance_pipeline",
+        "doc_type": "workflow_template",
+        "title": "Regulated Compliance Pipeline",
+        "score": 0.03151,
+        "dense_score": 0.4366,
+        "bm25_score": 45.768,
+        "section": "Regulated Compliance Pipeline",
+        "passage": "Regulated Compliance Pipeline. Regulated Compliance Pipeline. Workflow template: Regulated Compliance Pipeline (regulated_compliance_pipeline). Traceable, signature gated lifecycle for modules subject to strict regulatory oversight. States in order: Draft Requirement, Requirements Traceability, Design Review, Implementation, Verification, Independent Validation, Compliance Review, Release Authorisation, Released, On ...",
+        "metadata": {
+          "workflow_archetype": "regulated_compliance_pipeline"
+        },
+        "rank": 1
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "doc_type": "methodology",
+        "title": "Workflow Selection Heuristics",
+        "score": 0.0311,
+        "dense_score": 0.3958,
+        "bm25_score": 47.164,
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How many teams must integrate? Four or more teams sharing a ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/workflow_selection_heuristics.md"
+        },
+        "rank": 2
+      },
+      {
+        "doc_id": "METHOD_regulated_compliance_pipeline",
+        "doc_type": "methodology",
+        "title": "Regulated Compliance Pipeline",
+        "score": 0.03055,
+        "dense_score": 0.5156,
+        "bm25_score": 18.265,
+        "section": "Automation patterns",
+        "passage": "Regulated Compliance Pipeline. Automation patterns. Write audit records on every transition. Block progression into Verification or Release Authorisation until mandatory evidence such as executed test protocols is attached. Open CAPA records automatically on validation failure. Schedule a monthly review of who holds approval and signature rights.",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/regulated_compliance_pipeline.md"
+        },
+        "rank": 3
+      },
+      {
+        "doc_id": "METHOD_scrum_product_delivery",
+        "doc_type": "methodology",
+        "title": "Agile Scrum Product Delivery",
+        "score": 0.0262,
+        "dense_score": 0.2467,
+        "bm25_score": 15.516,
+        "section": "When to use it",
+        "passage": "Agile Scrum Product Delivery. When to use it. Scrum suits product work where the problem is understood well enough to start but the solution will be discovered through delivery. It works best for a single cross functional team of roughly three to eleven people that can own a product goal end to end. Typical fits are new customer facing features, internal tools with engaged users and rebuilds of existing journeys ...",
+        "metadata": {
+          "source": "/home/claude/charterloom_ai/data/knowledge_base/methodologies/scrum_product_delivery.md"
+        },
+        "rank": 4
+      }
+    ]
+  },
+  "configuration": {
+    "schema_version": "1.2",
+    "generated_by": "Charterloom AI",
+    "project": {
+      "name": "Meridian Capture",
+      "charter_fingerprint": "33fb0950613c6bdb"
+    },
+    "workflow": {
+      "archetype": "regulated_compliance_pipeline",
+      "display_name": "Regulated Compliance Pipeline",
+      "family": "controlled",
+      "template_version": "2026.10",
+      "recommendation_confidence": 0.6465
+    },
+    "cadence": {
+      "type": "controlled_release",
+      "release_window_days": 28
+    },
+    "states": [
+      {
+        "key": "draft_requirement",
+        "name": "Draft Requirement",
+        "category": "backlog",
+        "initial": true,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "requirements_traceability",
+        "name": "Requirements Traceability",
+        "category": "todo",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Requirement linked to risk control",
+          "Verification method defined"
+        ]
+      },
+      {
+        "key": "design_review",
+        "name": "Design Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "implementation",
+        "name": "Implementation",
+        "category": "in_progress",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 7,
+        "sla_hours": 120,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "verification",
+        "name": "Verification",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": 4,
+        "sla_hours": 72,
+        "entry_criteria": [],
+        "exit_criteria": [
+          "Executed test protocol attached",
+          "Deviations recorded"
+        ]
+      },
+      {
+        "key": "independent_validation",
+        "name": "Independent Validation",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 96,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "compliance_review",
+        "name": "Compliance Review",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "release_authorisation",
+        "name": "Release Authorisation",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 48,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "privacy_impact_assessment",
+        "name": "Privacy Impact Assessment",
+        "category": "review",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": 72,
+        "entry_criteria": [
+          "Dpia record prepared"
+        ],
+        "exit_criteria": [
+          "Approved by data protection officer"
+        ]
+      },
+      {
+        "key": "released",
+        "name": "Released",
+        "category": "done",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "on_hold",
+        "name": "On Hold",
+        "category": "blocked",
+        "initial": false,
+        "terminal": false,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      },
+      {
+        "key": "rejected",
+        "name": "Rejected",
+        "category": "cancelled",
+        "initial": false,
+        "terminal": true,
+        "wip_limit": null,
+        "sla_hours": null,
+        "entry_criteria": [],
+        "exit_criteria": []
+      }
+    ],
+    "transitions": [
+      {
+        "key": "establish_traceability",
+        "name": "Establish traceability",
+        "from": "draft_requirement",
+        "to": "requirements_traceability",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "risk_reference"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "submit_design",
+        "name": "Submit design",
+        "from": "requirements_traceability",
+        "to": "design_review",
+        "guards": [
+          {
+            "type": "linked_artifact",
+            "artifact": "design_specification"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "approve_design",
+        "name": "Approve design",
+        "from": "design_review",
+        "to": "implementation",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "design_authority",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "revise_design",
+        "name": "Revise design",
+        "from": "design_review",
+        "to": "requirements_traceability",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "submit_verification",
+        "name": "Submit verification",
+        "from": "implementation",
+        "to": "verification",
+        "guards": [
+          {
+            "type": "linked_artifact",
+            "artifact": "test_protocol"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "verification_failed",
+        "name": "Verification failed",
+        "from": "verification",
+        "to": "implementation",
+        "guards": [],
+        "actions": [
+          {
+            "type": "create_record",
+            "record": "nonconformance"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "verification_passed",
+        "name": "Verification passed",
+        "from": "verification",
+        "to": "independent_validation",
+        "guards": [
+          {
+            "type": "checklist_complete",
+            "checklist": "verification_protocol"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "validation_failed",
+        "name": "Validation failed",
+        "from": "independent_validation",
+        "to": "implementation",
+        "guards": [],
+        "actions": [
+          {
+            "type": "create_record",
+            "record": "capa"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "validation_passed",
+        "name": "Validation passed",
+        "from": "independent_validation",
+        "to": "compliance_review",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "validation_lead",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "compliance_findings",
+        "name": "Compliance findings",
+        "from": "compliance_review",
+        "to": "implementation",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "compliance_cleared",
+        "name": "Compliance cleared",
+        "from": "compliance_review",
+        "to": "release_authorisation",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "compliance_officer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "authorise_release",
+        "name": "Authorise release",
+        "from": "release_authorisation",
+        "to": "privacy_impact_assessment",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "quality_assurance_lead",
+            "min_approvals": 2,
+            "distinct_from_author": true
+          },
+          {
+            "type": "electronic_signature",
+            "meaning": "release approval"
+          }
+        ],
+        "actions": [
+          {
+            "type": "stamp_field",
+            "field": "released_at"
+          },
+          {
+            "type": "freeze_record"
+          }
+        ],
+        "is_release": false
+      },
+      {
+        "key": "place_on_hold",
+        "name": "Place on hold",
+        "from": "implementation",
+        "to": "on_hold",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "hold_reason"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "resume",
+        "name": "Resume",
+        "from": "on_hold",
+        "to": "implementation",
+        "guards": [],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "reject_requirement",
+        "name": "Reject requirement",
+        "from": "draft_requirement",
+        "to": "rejected",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "rejection_rationale"
+          }
+        ],
+        "actions": [],
+        "is_release": false
+      },
+      {
+        "key": "privacy_impact_assessment_passed",
+        "name": "Privacy Impact Assessment passed",
+        "from": "privacy_impact_assessment",
+        "to": "released",
+        "guards": [
+          {
+            "type": "approval",
+            "role": "data_protection_officer",
+            "min_approvals": 1,
+            "distinct_from_author": true
+          },
+          {
+            "type": "linked_artifact",
+            "artifact": "dpia_record"
+          },
+          {
+            "type": "electronic_signature",
+            "meaning": "release approval"
+          }
+        ],
+        "actions": [],
+        "is_release": true
+      },
+      {
+        "key": "privacy_impact_assessment_failed",
+        "name": "Privacy Impact Assessment failed",
+        "from": "privacy_impact_assessment",
+        "to": "implementation",
+        "guards": [
+          {
+            "type": "field_required",
+            "field": "privacy_impact_assessment_findings"
+          }
+        ],
+        "actions": [
+          {
+            "type": "notify",
+            "audience": "assignee"
+          }
+        ],
+        "is_release": false
+      }
+    ],
+    "triggers": [
+      {
+        "key": "audit_trail_every_transition",
+        "event": "transition_completed",
+        "condition": "true",
+        "action": "append_audit_log",
+        "description": "Writes an immutable, time stamped audit record for every state change.",
+        "params": {
+          "retain_years": 10
+        }
+      },
+      {
+        "key": "evidence_completeness_check",
+        "event": "transition_requested",
+        "condition": "target_state in ['verification', 'release_authorisation']",
+        "action": "validate_attachments",
+        "description": "Blocks progression until mandatory evidence is attached.",
+        "params": {}
+      },
+      {
+        "key": "capa_on_failure",
+        "event": "transition_completed",
+        "condition": "transition in ['verification_failed', 'validation_failed']",
+        "action": "create_record:capa;notify:quality_assurance_lead",
+        "description": "Opens a corrective and preventive action automatically.",
+        "params": {}
+      },
+      {
+        "key": "periodic_access_review",
+        "event": "scheduled",
+        "condition": "cron == 'monthly'",
+        "action": "create_task:access_review",
+        "description": "Schedules a monthly review of who can approve and sign.",
+        "params": {}
+      },
+      {
+        "key": "data_retention_review",
+        "event": "scheduled",
+        "condition": "cron == 'quarterly'",
+        "action": "create_task:retention_review",
+        "description": "Checks personal data against retention rules.",
+        "params": {}
+      }
+    ],
+    "ceremonies": [
+      {
+        "name": "Design review board",
+        "cadence": "per_design",
+        "duration_minutes": 90,
+        "participants": [
+          "design_authority",
+          "engineer",
+          "quality_assurance_lead"
+        ]
+      },
+      {
+        "name": "Change impact assessment",
+        "cadence": "weekly",
+        "duration_minutes": 60,
+        "participants": [
+          "compliance_officer",
+          "engineer"
+        ]
+      },
+      {
+        "name": "Quality review",
+        "cadence": "biweekly",
+        "duration_minutes": 60,
+        "participants": [
+          "quality_assurance_lead",
+          "validation_lead"
+        ]
+      }
+    ],
+    "roles": [
+      "engineer",
+      "design_authority",
+      "validation_lead",
+      "compliance_officer",
+      "quality_assurance_lead",
+      "data_protection_officer"
+    ],
+    "metrics": [
+      "traceability_coverage",
+      "first_pass_validation_rate",
+      "open_capa_count",
+      "audit_findings"
+    ],
+    "anchors": {
+      "intake": "draft_requirement",
+      "rework": "implementation",
+      "release_transition": "privacy_impact_assessment_passed",
+      "done": "released",
+      "blocked": "on_hold",
+      "build_states": [
+        "implementation"
+      ],
+      "review_states": [
+        "verification",
+        "independent_validation",
+        "compliance_review"
+      ]
+    },
+    "compliance": {
+      "regimes": [
+        "cfr_part_11",
+        "gdpr"
+      ],
+      "regime_names": [
+        "FDA 21 CFR Part 11 electronic records and signatures",
+        "UK GDPR and the Data Protection Act 2018"
+      ]
+    },
+    "adjustments": [
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "kind": "gate",
+        "score": 0.6661,
+        "evidence_support": 0.393,
+        "charter_prior": 1.0,
+        "mandated_by_regime": true,
+        "applied": true,
+        "evidence": [
+          "PM01053",
+          "PM01695",
+          "PM02070",
+          "PM00650",
+          "PM00487"
+        ]
+      },
+      {
+        "code": "ADD_ROLLBACK_PLAN",
+        "title": "Mandatory rollback plan",
+        "kind": "guard",
+        "score": 0.374,
+        "evidence_support": 0.271,
+        "charter_prior": 0.5,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00010",
+          "PM00289",
+          "PM02070",
+          "PM00487"
+        ]
+      },
+      {
+        "code": "ADD_DEPENDENCY_SYNC",
+        "title": "Cross team dependency synchronisation",
+        "kind": "trigger",
+        "score": 0.2567,
+        "evidence_support": 0.0576,
+        "charter_prior": 0.5,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00135"
+        ]
+      },
+      {
+        "code": "TIGHTEN_WIP",
+        "title": "Tighter WIP limits",
+        "kind": "parameter",
+        "score": 0.175,
+        "evidence_support": 0.3181,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00821",
+          "PM00289",
+          "PM02181",
+          "PM00800",
+          "PM00487"
+        ]
+      },
+      {
+        "code": "ADD_SECURITY_REVIEW",
+        "title": "Security review gate",
+        "kind": "gate",
+        "score": 0.1433,
+        "evidence_support": 0.2606,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00821",
+          "PM01695",
+          "PM00353",
+          "PM00487"
+        ]
+      },
+      {
+        "code": "ADD_UAT_STAGE",
+        "title": "User acceptance testing stage",
+        "kind": "gate",
+        "score": 0.0736,
+        "evidence_support": 0.1339,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM01695",
+          "PM00650"
+        ]
+      },
+      {
+        "code": "ADD_STAKEHOLDER_DEMO",
+        "title": "Stakeholder demonstration ceremony",
+        "kind": "ceremony",
+        "score": 0.0713,
+        "evidence_support": 0.1296,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00028",
+          "PM00487"
+        ]
+      },
+      {
+        "code": "ADD_DATA_MIGRATION_REHEARSAL",
+        "title": "Migration rehearsal stage",
+        "kind": "gate",
+        "score": 0.0684,
+        "evidence_support": 0.1244,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00289",
+          "PM00135"
+        ]
+      },
+      {
+        "code": "ADD_VENDOR_CHECKPOINT",
+        "title": "Vendor acceptance checkpoint",
+        "kind": "gate",
+        "score": 0.0366,
+        "evidence_support": 0.0665,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM02070"
+        ]
+      },
+      {
+        "code": "ADD_MODEL_VALIDATION",
+        "title": "Model validation gate",
+        "kind": "gate",
+        "score": 0.0317,
+        "evidence_support": 0.0576,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": [
+          "PM00135"
+        ]
+      },
+      {
+        "code": "ADD_ACCESSIBILITY_REVIEW",
+        "title": "Accessibility review gate",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_PERFORMANCE_TEST",
+        "title": "Performance testing stage",
+        "kind": "gate",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_SPIKE_TIMEBOX",
+        "title": "Timeboxed research spikes",
+        "kind": "trigger",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_FEATURE_FLAGS",
+        "title": "Feature flag release control",
+        "kind": "guard",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      },
+      {
+        "code": "ADD_DEFINITION_OF_READY",
+        "title": "Definition of ready guard",
+        "kind": "guard",
+        "score": 0.0,
+        "evidence_support": 0.0,
+        "charter_prior": 0.0,
+        "mandated_by_regime": false,
+        "applied": false,
+        "evidence": []
+      }
+    ],
+    "changelog": [
+      {
+        "change": "WIP limit for implementation set from 4 to 7",
+        "reason": "Sized to a team of 11 people across 2 teams",
+        "evidence": []
+      },
+      {
+        "change": "Inserted gate 'Privacy Impact Assessment' before released",
+        "reason": "Privacy impact assessment gate mandated by detected regulatory regime",
+        "evidence": [
+          "PM01053",
+          "PM01695",
+          "PM02070",
+          "PM00650",
+          "PM00487"
+        ]
+      },
+      {
+        "change": "Added electronic signature guard (release approval) to the release transition (privacy_impact_assessment_passed)",
+        "reason": "Electronic signatures under FDA 21 CFR Part 11",
+        "evidence": []
+      },
+      {
+        "change": "Added automation 'data_retention_review'",
+        "reason": "Storage limitation under UK GDPR",
+        "evidence": []
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "stats": {
+        "reachable_states": 12,
+        "states": 12,
+        "transitions": 17,
+        "triggers": 5,
+        "guarded_transitions": 12,
+        "terminal_states": 2
+      }
+    }
+  },
+  "rationale": {
+    "summary": "Regulated Compliance Pipeline is recommended with 65% confidence. The charter indicates that scope is fixed and baselined, personal data is processed, cross team dependencies are significant, the service is production critical. 10 of the 30 most similar high performing historical projects used this workflow.",
+    "charter_signals": [
+      "scope is fixed and baselined",
+      "personal data is processed",
+      "cross team dependencies are significant",
+      "the service is production critical",
+      "production change risk is high",
+      "the deadline is fixed"
+    ],
+    "regimes": [
+      "FDA 21 CFR Part 11 electronic records and signatures",
+      "UK GDPR and the Data Protection Act 2018"
+    ],
+    "feature_drivers": [
+      {
+        "feature": "initiative_regulatory_module",
+        "contribution": 1.9898,
+        "value": 1.0
+      },
+      {
+        "feature": "domain_pharmaceuticals",
+        "contribution": 1.7882,
+        "value": 1.0
+      },
+      {
+        "feature": "max_strictness",
+        "contribution": 1.2198,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_fixed_deadline",
+        "contribution": 0.8297,
+        "value": 0.5
+      },
+      {
+        "feature": "regime_gdpr",
+        "contribution": 0.353,
+        "value": 1.0
+      },
+      {
+        "feature": "signal_scope_fixed",
+        "contribution": 0.2429,
+        "value": 1.0
+      }
+    ],
+    "precedent_agreement": 0.333,
+    "alternatives": [
+      {
+        "workflow": "incident_change_control",
+        "display_name": "Change Controlled Operations",
+        "probability": 0.1844
+      },
+      {
+        "workflow": "stage_gate_waterfall",
+        "display_name": "Stage Gate Phased Delivery",
+        "probability": 0.092
+      }
+    ],
+    "methodology_citations": [
+      {
+        "doc_id": "TEMPLATE_regulated_compliance_pipeline",
+        "title": "Regulated Compliance Pipeline",
+        "section": "Regulated Compliance Pipeline",
+        "passage": "Regulated Compliance Pipeline. Regulated Compliance Pipeline. Workflow template: Regulated Compliance Pipeline (regulated_compliance_pipeline). Traceable, signature gated lifecycle for modules subject to strict regulatory oversight. States in order: Draft Requirement, Requirements Traceability, Design Review, Implementation, Verification, Independent ..."
+      },
+      {
+        "doc_id": "METHOD_workflow_selection_heuristics",
+        "title": "Workflow Selection Heuristics",
+        "section": "Primary questions",
+        "passage": "Workflow Selection Heuristics. Primary questions. * How much of the work is known before it starts? High uncertainty favours Scrum or dual track discovery; fixed, baselined scope favours a stage gate lifecycle. * How does work arrive? Continuous, interrupt driven demand favours Kanban; a mix of roadmap and interrupts in a small team favours Scrumban. * How ..."
+      },
+      {
+        "doc_id": "METHOD_regulated_compliance_pipeline",
+        "title": "Regulated Compliance Pipeline",
+        "section": "Automation patterns",
+        "passage": "Regulated Compliance Pipeline. Automation patterns. Write audit records on every transition. Block progression into Verification or Release Authorisation until mandatory evidence such as executed test protocols is attached. Open CAPA records automatically on validation failure. Schedule a monthly review of who holds approval and signature rights."
+      },
+      {
+        "doc_id": "METHOD_scrum_product_delivery",
+        "title": "Agile Scrum Product Delivery",
+        "section": "When to use it",
+        "passage": "Agile Scrum Product Delivery. When to use it. Scrum suits product work where the problem is understood well enough to start but the solution will be discovered through delivery. It works best for a single cross functional team of roughly three to eleven people that can own a product goal end to end. Typical fits are new customer facing features, internal ..."
+      }
+    ],
+    "applied_adjustments": [
+      {
+        "code": "ADD_PRIVACY_REVIEW",
+        "title": "Privacy impact assessment gate",
+        "score": 0.6661,
+        "mandated_by_regime": true,
+        "evidence": [
+          "PM01053",
+          "PM01695",
+          "PM02070"
+        ]
+      }
+    ]
+  },
+  "latency_ms": 76.5
+}
