@@ -1,0 +1,398 @@
+{
+  "archetype": "scrum_product_delivery",
+  "display_name": "Agile Scrum Product Delivery",
+  "family": "iterative",
+  "summary": "Fixed length sprints for evolving product features with a single accountable product owner.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "product_backlog",
+      "name": "Product Backlog",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Story written in user voice",
+        "Acceptance criteria agreed"
+      ]
+    },
+    {
+      "key": "sprint_backlog",
+      "name": "Sprint Backlog",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [
+        "Estimated in story points",
+        "Committed in sprint planning"
+      ],
+      "exit_criteria": []
+    },
+    {
+      "key": "in_progress",
+      "name": "In Progress",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 6,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "code_review",
+      "name": "Code Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 4,
+      "sla_hours": 24,
+      "entry_criteria": [
+        "Pull request linked",
+        "Unit tests passing"
+      ],
+      "exit_criteria": []
+    },
+    {
+      "key": "qa_verification",
+      "name": "QA Verification",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 4,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "ready_for_release",
+      "name": "Ready for Release",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [
+        "Definition of done satisfied"
+      ],
+      "exit_criteria": []
+    },
+    {
+      "key": "done",
+      "name": "Done",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "blocked",
+      "name": "Blocked",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "cancelled",
+      "name": "Cancelled",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "plan_into_sprint",
+      "name": "Plan into sprint",
+      "from": "product_backlog",
+      "to": "sprint_backlog",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "story_points"
+        },
+        {
+          "type": "field_required",
+          "field": "acceptance_criteria"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "return_to_backlog",
+      "name": "Return to backlog",
+      "from": "sprint_backlog",
+      "to": "product_backlog",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "start_work",
+      "name": "Start work",
+      "from": "sprint_backlog",
+      "to": "in_progress",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "assignee"
+        },
+        {
+          "type": "wip_available"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "submit_for_review",
+      "name": "Submit for review",
+      "from": "in_progress",
+      "to": "code_review",
+      "guards": [
+        {
+          "type": "linked_artifact",
+          "artifact": "pull_request"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "request_changes",
+      "name": "Request changes",
+      "from": "code_review",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "approve_review",
+      "name": "Approve review",
+      "from": "code_review",
+      "to": "qa_verification",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "engineer",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "fail_verification",
+      "name": "Fail verification",
+      "from": "qa_verification",
+      "to": "in_progress",
+      "guards": [],
+      "actions": [
+        {
+          "type": "increment_counter",
+          "field": "reopen_count"
+        }
+      ]
+    },
+    {
+      "key": "pass_verification",
+      "name": "Pass verification",
+      "from": "qa_verification",
+      "to": "ready_for_release",
+      "guards": [
+        {
+          "type": "checklist_complete",
+          "checklist": "test_plan"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "release",
+      "name": "Release",
+      "from": "ready_for_release",
+      "to": "done",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "product_owner",
+          "min_approvals": 1,
+          "distinct_from_author": false
+        }
+      ],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "released_at"
+        },
+        {
+          "type": "notify",
+          "audience": "stakeholders"
+        }
+      ]
+    },
+    {
+      "key": "block",
+      "name": "Block",
+      "from": "in_progress",
+      "to": "blocked",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "blocker_reason"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "unblock",
+      "name": "Unblock",
+      "from": "blocked",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "cancel",
+      "name": "Cancel",
+      "from": "product_backlog",
+      "to": "cancelled",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "cancellation_reason"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "auto_submit_on_pull_request",
+      "event": "external_webhook",
+      "condition": "pull_request.opened and item.state == 'in_progress'",
+      "action": "transition:submit_for_review",
+      "description": "Moves an item to code review when its pull request is opened.",
+      "params": {}
+    },
+    {
+      "key": "stale_review_alert",
+      "event": "time_in_state_exceeded",
+      "condition": "state == 'code_review' and hours_in_state > 24",
+      "action": "notify:reviewers",
+      "description": "Nudges reviewers when a review has waited longer than a working day.",
+      "params": {}
+    },
+    {
+      "key": "blocked_escalation",
+      "event": "time_in_state_exceeded",
+      "condition": "state == 'blocked' and hours_in_state > 48",
+      "action": "notify:scrum_master",
+      "description": "Escalates blockers that have not cleared within two days.",
+      "params": {}
+    },
+    {
+      "key": "sprint_close_carryover",
+      "event": "sprint_closed",
+      "condition": "item.state not in ['done', 'cancelled']",
+      "action": "move:sprint_backlog;label:carryover",
+      "description": "Carries unfinished work into the next sprint and labels it.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Sprint planning",
+      "cadence": "per_sprint",
+      "duration_minutes": 120,
+      "participants": [
+        "product_owner",
+        "scrum_master",
+        "engineer"
+      ]
+    },
+    {
+      "name": "Daily scrum",
+      "cadence": "daily",
+      "duration_minutes": 15,
+      "participants": [
+        "engineer",
+        "scrum_master"
+      ]
+    },
+    {
+      "name": "Backlog refinement",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "product_owner",
+        "engineer"
+      ]
+    },
+    {
+      "name": "Sprint review",
+      "cadence": "per_sprint",
+      "duration_minutes": 60,
+      "participants": [
+        "product_owner",
+        "engineer",
+        "stakeholder"
+      ]
+    },
+    {
+      "name": "Retrospective",
+      "cadence": "per_sprint",
+      "duration_minutes": 60,
+      "participants": [
+        "scrum_master",
+        "engineer",
+        "product_owner"
+      ]
+    }
+  ],
+  "roles": [
+    "product_owner",
+    "scrum_master",
+    "engineer",
+    "qa_engineer",
+    "stakeholder"
+  ],
+  "cadence": {
+    "type": "sprint",
+    "sprint_length_days": 14
+  },
+  "metrics": [
+    "velocity",
+    "sprint_goal_success_rate",
+    "escaped_defects",
+    "cycle_time"
+  ],
+  "anchors": {
+    "intake": "product_backlog",
+    "rework": "in_progress",
+    "release_transition": "release",
+    "done": "done",
+    "blocked": "blocked",
+    "build_states": [
+      "in_progress"
+    ],
+    "review_states": [
+      "code_review",
+      "qa_verification"
+    ]
+  },
+  "description_text": "Workflow template: Agile Scrum Product Delivery (scrum_product_delivery).\nFixed length sprints for evolving product features with a single accountable product owner.\nStates in order: Product Backlog, Sprint Backlog, In Progress, Code Review, QA Verification, Ready for Release, Done, Blocked, Cancelled.\nTransition Plan into sprint moves work from product_backlog to sprint_backlog with required field story points; required field acceptance criteria.\nTransition Return to backlog moves work from sprint_backlog to product_backlog with no guard.\nTransition Start work moves work from sprint_backlog to in_progress with required field assignee; wip available.\nTransition Submit for review moves work from in_progress to code_review with linked pull request.\nTransition Request changes moves work from code_review to in_progress with no guard.\nTransition Approve review moves work from code_review to qa_verification with approval by 1 engineer.\nTransition Fail verification moves work from qa_verification to in_progress with no guard.\nTransition Pass verification moves work from qa_verification to ready_for_release with completed test plan checklist.\nTransition Release moves work from ready_for_release to done with approval by 1 product owner.\nTransition Block moves work from in_progress to blocked with required field blocker reason.\nTransition Unblock moves work from blocked to in_progress with no guard.\nTransition Cancel moves work from product_backlog to cancelled with required field cancellation reason.\nAutomation auto_submit_on_pull_request: Moves an item to code review when its pull request is opened.\nAutomation stale_review_alert: Nudges reviewers when a review has waited longer than a working day.\nAutomation blocked_escalation: Escalates blockers that have not cleared within two days.\nAutomation sprint_close_carryover: Carries unfinished work into the next sprint and labels it.\nCeremonies: Sprint planning, Daily scrum, Backlog refinement, Sprint review, Retrospective.\nPrimary metrics: velocity, sprint goal success rate, escaped defects, cycle time."
+}

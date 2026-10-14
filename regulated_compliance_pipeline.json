@@ -1,0 +1,437 @@
+{
+  "archetype": "regulated_compliance_pipeline",
+  "display_name": "Regulated Compliance Pipeline",
+  "family": "controlled",
+  "summary": "Traceable, signature gated lifecycle for modules subject to strict regulatory oversight.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "draft_requirement",
+      "name": "Draft Requirement",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "requirements_traceability",
+      "name": "Requirements Traceability",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Requirement linked to risk control",
+        "Verification method defined"
+      ]
+    },
+    {
+      "key": "design_review",
+      "name": "Design Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "implementation",
+      "name": "Implementation",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 4,
+      "sla_hours": 120,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "verification",
+      "name": "Verification",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 4,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Executed test protocol attached",
+        "Deviations recorded"
+      ]
+    },
+    {
+      "key": "independent_validation",
+      "name": "Independent Validation",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 96,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "compliance_review",
+      "name": "Compliance Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "release_authorisation",
+      "name": "Release Authorisation",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "released",
+      "name": "Released",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "on_hold",
+      "name": "On Hold",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "rejected",
+      "name": "Rejected",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "establish_traceability",
+      "name": "Establish traceability",
+      "from": "draft_requirement",
+      "to": "requirements_traceability",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "risk_reference"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "submit_design",
+      "name": "Submit design",
+      "from": "requirements_traceability",
+      "to": "design_review",
+      "guards": [
+        {
+          "type": "linked_artifact",
+          "artifact": "design_specification"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "approve_design",
+      "name": "Approve design",
+      "from": "design_review",
+      "to": "implementation",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "design_authority",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "revise_design",
+      "name": "Revise design",
+      "from": "design_review",
+      "to": "requirements_traceability",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "submit_verification",
+      "name": "Submit verification",
+      "from": "implementation",
+      "to": "verification",
+      "guards": [
+        {
+          "type": "linked_artifact",
+          "artifact": "test_protocol"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "verification_failed",
+      "name": "Verification failed",
+      "from": "verification",
+      "to": "implementation",
+      "guards": [],
+      "actions": [
+        {
+          "type": "create_record",
+          "record": "nonconformance"
+        }
+      ]
+    },
+    {
+      "key": "verification_passed",
+      "name": "Verification passed",
+      "from": "verification",
+      "to": "independent_validation",
+      "guards": [
+        {
+          "type": "checklist_complete",
+          "checklist": "verification_protocol"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "validation_failed",
+      "name": "Validation failed",
+      "from": "independent_validation",
+      "to": "implementation",
+      "guards": [],
+      "actions": [
+        {
+          "type": "create_record",
+          "record": "capa"
+        }
+      ]
+    },
+    {
+      "key": "validation_passed",
+      "name": "Validation passed",
+      "from": "independent_validation",
+      "to": "compliance_review",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "validation_lead",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "compliance_findings",
+      "name": "Compliance findings",
+      "from": "compliance_review",
+      "to": "implementation",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "compliance_cleared",
+      "name": "Compliance cleared",
+      "from": "compliance_review",
+      "to": "release_authorisation",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "compliance_officer",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "authorise_release",
+      "name": "Authorise release",
+      "from": "release_authorisation",
+      "to": "released",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "quality_assurance_lead",
+          "min_approvals": 2,
+          "distinct_from_author": true
+        },
+        {
+          "type": "electronic_signature",
+          "meaning": "release approval"
+        }
+      ],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "released_at"
+        },
+        {
+          "type": "freeze_record"
+        }
+      ]
+    },
+    {
+      "key": "place_on_hold",
+      "name": "Place on hold",
+      "from": "implementation",
+      "to": "on_hold",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "hold_reason"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "resume",
+      "name": "Resume",
+      "from": "on_hold",
+      "to": "implementation",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "reject_requirement",
+      "name": "Reject requirement",
+      "from": "draft_requirement",
+      "to": "rejected",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "rejection_rationale"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "audit_trail_every_transition",
+      "event": "transition_completed",
+      "condition": "true",
+      "action": "append_audit_log",
+      "description": "Writes an immutable, time stamped audit record for every state change.",
+      "params": {
+        "retain_years": 10
+      }
+    },
+    {
+      "key": "evidence_completeness_check",
+      "event": "transition_requested",
+      "condition": "target_state in ['verification', 'release_authorisation']",
+      "action": "validate_attachments",
+      "description": "Blocks progression until mandatory evidence is attached.",
+      "params": {}
+    },
+    {
+      "key": "capa_on_failure",
+      "event": "transition_completed",
+      "condition": "transition in ['verification_failed', 'validation_failed']",
+      "action": "create_record:capa;notify:quality_assurance_lead",
+      "description": "Opens a corrective and preventive action automatically.",
+      "params": {}
+    },
+    {
+      "key": "periodic_access_review",
+      "event": "scheduled",
+      "condition": "cron == 'monthly'",
+      "action": "create_task:access_review",
+      "description": "Schedules a monthly review of who can approve and sign.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Design review board",
+      "cadence": "per_design",
+      "duration_minutes": 90,
+      "participants": [
+        "design_authority",
+        "engineer",
+        "quality_assurance_lead"
+      ]
+    },
+    {
+      "name": "Change impact assessment",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "compliance_officer",
+        "engineer"
+      ]
+    },
+    {
+      "name": "Quality review",
+      "cadence": "biweekly",
+      "duration_minutes": 60,
+      "participants": [
+        "quality_assurance_lead",
+        "validation_lead"
+      ]
+    }
+  ],
+  "roles": [
+    "engineer",
+    "design_authority",
+    "validation_lead",
+    "compliance_officer",
+    "quality_assurance_lead"
+  ],
+  "cadence": {
+    "type": "controlled_release",
+    "release_window_days": 28
+  },
+  "metrics": [
+    "traceability_coverage",
+    "first_pass_validation_rate",
+    "open_capa_count",
+    "audit_findings"
+  ],
+  "anchors": {
+    "intake": "draft_requirement",
+    "rework": "implementation",
+    "release_transition": "authorise_release",
+    "done": "released",
+    "blocked": "on_hold",
+    "build_states": [
+      "implementation"
+    ],
+    "review_states": [
+      "verification",
+      "independent_validation",
+      "compliance_review"
+    ]
+  },
+  "description_text": "Workflow template: Regulated Compliance Pipeline (regulated_compliance_pipeline).\nTraceable, signature gated lifecycle for modules subject to strict regulatory oversight.\nStates in order: Draft Requirement, Requirements Traceability, Design Review, Implementation, Verification, Independent Validation, Compliance Review, Release Authorisation, Released, On Hold, Rejected.\nTransition Establish traceability moves work from draft_requirement to requirements_traceability with required field risk reference.\nTransition Submit design moves work from requirements_traceability to design_review with linked design specification.\nTransition Approve design moves work from design_review to implementation with approval by 1 design authority.\nTransition Revise design moves work from design_review to requirements_traceability with no guard.\nTransition Submit verification moves work from implementation to verification with linked test protocol.\nTransition Verification failed moves work from verification to implementation with no guard.\nTransition Verification passed moves work from verification to independent_validation with completed verification protocol checklist.\nTransition Validation failed moves work from independent_validation to implementation with no guard.\nTransition Validation passed moves work from independent_validation to compliance_review with approval by 1 validation lead.\nTransition Compliance findings moves work from compliance_review to implementation with no guard.\nTransition Compliance cleared moves work from compliance_review to release_authorisation with approval by 1 compliance officer.\nTransition Authorise release moves work from release_authorisation to released with approval by 2 quality assurance lead; electronic signature meaning release approval.\nTransition Place on hold moves work from implementation to on_hold with required field hold reason.\nTransition Resume moves work from on_hold to implementation with no guard.\nTransition Reject requirement moves work from draft_requirement to rejected with required field rejection rationale.\nAutomation audit_trail_every_transition: Writes an immutable, time stamped audit record for every state change.\nAutomation evidence_completeness_check: Blocks progression until mandatory evidence is attached.\nAutomation capa_on_failure: Opens a corrective and preventive action automatically.\nAutomation periodic_access_review: Schedules a monthly review of who can approve and sign.\nCeremonies: Design review board, Change impact assessment, Quality review.\nPrimary metrics: traceability coverage, first pass validation rate, open capa count, audit findings."
+}

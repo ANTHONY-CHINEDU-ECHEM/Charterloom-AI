@@ -1,0 +1,336 @@
+{
+  "archetype": "incident_change_control",
+  "display_name": "Change Controlled Operations",
+  "family": "controlled",
+  "summary": "Risk assessed, CAB approved change lifecycle for production infrastructure and migrations.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "change_request",
+      "name": "Change Request",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "risk_assessment",
+      "name": "Risk Assessment",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 24,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Impact and blast radius documented",
+        "Risk rating assigned"
+      ]
+    },
+    {
+      "key": "cab_review",
+      "name": "Change Advisory Board Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "scheduled",
+      "name": "Scheduled",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "implementing",
+      "name": "Implementing",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "post_implementation_review",
+      "name": "Post Implementation Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "closed",
+      "name": "Closed",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "rolled_back",
+      "name": "Rolled Back",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "rejected",
+      "name": "Rejected",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "assess",
+      "name": "Assess",
+      "from": "change_request",
+      "to": "risk_assessment",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "submit_to_cab",
+      "name": "Submit to cab",
+      "from": "risk_assessment",
+      "to": "cab_review",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "risk_rating"
+        },
+        {
+          "type": "linked_artifact",
+          "artifact": "implementation_plan"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "cab_rejects",
+      "name": "Cab rejects",
+      "from": "cab_review",
+      "to": "rejected",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "rejection_reason"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "cab_requests_rework",
+      "name": "Cab requests rework",
+      "from": "cab_review",
+      "to": "risk_assessment",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "schedule",
+      "name": "Schedule",
+      "from": "cab_review",
+      "to": "scheduled",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "change_advisory_board",
+          "min_approvals": 2,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "emergency_change",
+      "name": "Emergency change",
+      "from": "change_request",
+      "to": "implementing",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "emergency_change_authority",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        },
+        {
+          "type": "field_required",
+          "field": "incident_reference"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "begin_implementation",
+      "name": "Begin implementation",
+      "from": "scheduled",
+      "to": "implementing",
+      "guards": [
+        {
+          "type": "change_window_open"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "complete_implementation",
+      "name": "Complete implementation",
+      "from": "implementing",
+      "to": "post_implementation_review",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "roll_back",
+      "name": "Roll back",
+      "from": "implementing",
+      "to": "rolled_back",
+      "guards": [],
+      "actions": [
+        {
+          "type": "notify",
+          "audience": "service_owner"
+        }
+      ]
+    },
+    {
+      "key": "replan_after_rollback",
+      "name": "Replan after rollback",
+      "from": "rolled_back",
+      "to": "risk_assessment",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "close_change",
+      "name": "Close change",
+      "from": "post_implementation_review",
+      "to": "closed",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "pir_outcome"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "freeze_window_enforcement",
+      "event": "transition_requested",
+      "condition": "transition == 'begin_implementation' and calendar.freeze_active",
+      "action": "reject_transition;notify:change_manager",
+      "description": "Prevents implementation during declared change freezes.",
+      "params": {}
+    },
+    {
+      "key": "health_check_auto_rollback",
+      "event": "external_webhook",
+      "condition": "monitoring.error_budget_burn > 2.0 and state == 'implementing'",
+      "action": "transition:roll_back;page:on_call",
+      "description": "Rolls back automatically when error budget burn spikes.",
+      "params": {}
+    },
+    {
+      "key": "pir_reminder",
+      "event": "time_in_state_exceeded",
+      "condition": "state == 'post_implementation_review' and hours_in_state > 72",
+      "action": "notify:change_manager",
+      "description": "Chases overdue post implementation reviews.",
+      "params": {}
+    },
+    {
+      "key": "emergency_change_retro_review",
+      "event": "transition_completed",
+      "condition": "transition == 'emergency_change'",
+      "action": "create_task:retrospective_cab_review",
+      "description": "Forces retrospective CAB review of emergency changes.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Change advisory board",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "change_advisory_board",
+        "change_manager",
+        "service_owner"
+      ]
+    },
+    {
+      "name": "Operational readiness review",
+      "cadence": "per_change",
+      "duration_minutes": 30,
+      "participants": [
+        "service_owner",
+        "engineer"
+      ]
+    }
+  ],
+  "roles": [
+    "change_manager",
+    "change_advisory_board",
+    "emergency_change_authority",
+    "service_owner",
+    "engineer",
+    "on_call"
+  ],
+  "cadence": {
+    "type": "change_windows",
+    "standard_window": "weekday_evening",
+    "freeze_calendar": true
+  },
+  "metrics": [
+    "change_failure_rate",
+    "mean_time_to_restore",
+    "emergency_change_ratio",
+    "change_lead_time"
+  ],
+  "anchors": {
+    "intake": "change_request",
+    "rework": "risk_assessment",
+    "release_transition": "schedule",
+    "done": "closed",
+    "blocked": "rolled_back",
+    "build_states": [
+      "implementing"
+    ],
+    "review_states": [
+      "cab_review",
+      "post_implementation_review"
+    ]
+  },
+  "description_text": "Workflow template: Change Controlled Operations (incident_change_control).\nRisk assessed, CAB approved change lifecycle for production infrastructure and migrations.\nStates in order: Change Request, Risk Assessment, Change Advisory Board Review, Scheduled, Implementing, Post Implementation Review, Closed, Rolled Back, Rejected.\nTransition Assess moves work from change_request to risk_assessment with no guard.\nTransition Submit to cab moves work from risk_assessment to cab_review with required field risk rating; linked implementation plan.\nTransition Cab rejects moves work from cab_review to rejected with required field rejection reason.\nTransition Cab requests rework moves work from cab_review to risk_assessment with no guard.\nTransition Schedule moves work from cab_review to scheduled with approval by 2 change advisory board.\nTransition Emergency change moves work from change_request to implementing with approval by 1 emergency change authority; required field incident reference.\nTransition Begin implementation moves work from scheduled to implementing with change window open.\nTransition Complete implementation moves work from implementing to post_implementation_review with no guard.\nTransition Roll back moves work from implementing to rolled_back with no guard.\nTransition Replan after rollback moves work from rolled_back to risk_assessment with no guard.\nTransition Close change moves work from post_implementation_review to closed with required field pir outcome.\nAutomation freeze_window_enforcement: Prevents implementation during declared change freezes.\nAutomation health_check_auto_rollback: Rolls back automatically when error budget burn spikes.\nAutomation pir_reminder: Chases overdue post implementation reviews.\nAutomation emergency_change_retro_review: Forces retrospective CAB review of emergency changes.\nCeremonies: Change advisory board, Operational readiness review.\nPrimary metrics: change failure rate, mean time to restore, emergency change ratio, change lead time."
+}

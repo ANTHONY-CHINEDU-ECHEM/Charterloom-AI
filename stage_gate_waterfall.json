@@ -1,0 +1,364 @@
+{
+  "archetype": "stage_gate_waterfall",
+  "display_name": "Stage Gate Phased Delivery",
+  "family": "phased",
+  "summary": "Sequential phases separated by formal governance gates for fixed scope and hardware work.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "initiation",
+      "name": "Initiation",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Business case approved"
+      ]
+    },
+    {
+      "key": "requirements_definition",
+      "name": "Requirements Definition",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 480,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "solution_design",
+      "name": "Solution Design",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 480,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "build",
+      "name": "Build",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 12,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "system_testing",
+      "name": "System Testing",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 240,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "deployment_readiness",
+      "name": "Deployment Readiness",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 120,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "closed",
+      "name": "Closed",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "change_control",
+      "name": "Change Control",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "cancelled",
+      "name": "Cancelled",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "gate_one_requirements",
+      "name": "Gate one requirements",
+      "from": "initiation",
+      "to": "requirements_definition",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "steering_committee",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        },
+        {
+          "type": "linked_artifact",
+          "artifact": "gate_review_pack"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "gate_two_design",
+      "name": "Gate two design",
+      "from": "requirements_definition",
+      "to": "solution_design",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "steering_committee",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        },
+        {
+          "type": "linked_artifact",
+          "artifact": "gate_review_pack"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "gate_three_build",
+      "name": "Gate three build",
+      "from": "solution_design",
+      "to": "build",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "steering_committee",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        },
+        {
+          "type": "linked_artifact",
+          "artifact": "gate_review_pack"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "gate_four_test",
+      "name": "Gate four test",
+      "from": "build",
+      "to": "system_testing",
+      "guards": [
+        {
+          "type": "checklist_complete",
+          "checklist": "build_completion"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "defects_found",
+      "name": "Defects found",
+      "from": "system_testing",
+      "to": "build",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "gate_five_readiness",
+      "name": "Gate five readiness",
+      "from": "system_testing",
+      "to": "deployment_readiness",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "steering_committee",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        },
+        {
+          "type": "linked_artifact",
+          "artifact": "gate_review_pack"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "go_live",
+      "name": "Go live",
+      "from": "deployment_readiness",
+      "to": "closed",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "sponsor",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "go_live_at"
+        },
+        {
+          "type": "notify",
+          "audience": "stakeholders"
+        }
+      ]
+    },
+    {
+      "key": "raise_change_request",
+      "name": "Raise change request",
+      "from": "build",
+      "to": "change_control",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "change_request_reference"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "change_approved",
+      "name": "Change approved",
+      "from": "change_control",
+      "to": "build",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "change_board",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "terminate",
+      "name": "Terminate",
+      "from": "initiation",
+      "to": "cancelled",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "termination_reason"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "gate_review_scheduler",
+      "event": "transition_requested",
+      "condition": "transition.startswith('gate')",
+      "action": "create_meeting:gate_review",
+      "description": "Books a gate review with the steering committee.",
+      "params": {}
+    },
+    {
+      "key": "baseline_change_detection",
+      "event": "field_changed",
+      "condition": "field in ['scope', 'budget', 'end_date']",
+      "action": "transition:raise_change_request",
+      "description": "Routes any baseline change through change control.",
+      "params": {}
+    },
+    {
+      "key": "milestone_slippage_alert",
+      "event": "scheduled",
+      "condition": "days_behind_baseline > 5",
+      "action": "notify:sponsor;label:at_risk",
+      "description": "Alerts the sponsor when a milestone slips beyond tolerance.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Gate review",
+      "cadence": "per_phase",
+      "duration_minutes": 120,
+      "participants": [
+        "steering_committee",
+        "project_manager",
+        "sponsor"
+      ]
+    },
+    {
+      "name": "Weekly status",
+      "cadence": "weekly",
+      "duration_minutes": 45,
+      "participants": [
+        "project_manager",
+        "workstream_lead"
+      ]
+    },
+    {
+      "name": "Change board",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "change_board",
+        "project_manager"
+      ]
+    }
+  ],
+  "roles": [
+    "sponsor",
+    "project_manager",
+    "workstream_lead",
+    "steering_committee",
+    "change_board",
+    "engineer"
+  ],
+  "cadence": {
+    "type": "phased",
+    "gate_count": 5
+  },
+  "metrics": [
+    "schedule_performance_index",
+    "cost_performance_index",
+    "change_request_volume",
+    "defect_density"
+  ],
+  "anchors": {
+    "intake": "initiation",
+    "rework": "build",
+    "release_transition": "go_live",
+    "done": "closed",
+    "blocked": "change_control",
+    "build_states": [
+      "build",
+      "solution_design"
+    ],
+    "review_states": [
+      "system_testing",
+      "deployment_readiness"
+    ]
+  },
+  "description_text": "Workflow template: Stage Gate Phased Delivery (stage_gate_waterfall).\nSequential phases separated by formal governance gates for fixed scope and hardware work.\nStates in order: Initiation, Requirements Definition, Solution Design, Build, System Testing, Deployment Readiness, Closed, Change Control, Cancelled.\nTransition Gate one requirements moves work from initiation to requirements_definition with approval by 1 steering committee; linked gate review pack.\nTransition Gate two design moves work from requirements_definition to solution_design with approval by 1 steering committee; linked gate review pack.\nTransition Gate three build moves work from solution_design to build with approval by 1 steering committee; linked gate review pack.\nTransition Gate four test moves work from build to system_testing with completed build completion checklist.\nTransition Defects found moves work from system_testing to build with no guard.\nTransition Gate five readiness moves work from system_testing to deployment_readiness with approval by 1 steering committee; linked gate review pack.\nTransition Go live moves work from deployment_readiness to closed with approval by 1 sponsor.\nTransition Raise change request moves work from build to change_control with required field change request reference.\nTransition Change approved moves work from change_control to build with approval by 1 change board.\nTransition Terminate moves work from initiation to cancelled with required field termination reason.\nAutomation gate_review_scheduler: Books a gate review with the steering committee.\nAutomation baseline_change_detection: Routes any baseline change through change control.\nAutomation milestone_slippage_alert: Alerts the sponsor when a milestone slips beyond tolerance.\nCeremonies: Gate review, Weekly status, Change board.\nPrimary metrics: schedule performance index, cost performance index, change request volume, defect density."
+}

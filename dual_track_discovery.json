@@ -1,0 +1,363 @@
+{
+  "archetype": "dual_track_discovery",
+  "display_name": "Dual Track Discovery and Delivery",
+  "family": "experimental",
+  "summary": "Hypothesis driven discovery feeding a delivery track, suited to research and ML work.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "opportunity_backlog",
+      "name": "Opportunity Backlog",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "hypothesis_framing",
+      "name": "Hypothesis Framing",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Falsifiable hypothesis",
+        "Success metric and kill criteria agreed"
+      ]
+    },
+    {
+      "key": "discovery_research",
+      "name": "Discovery Research",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 4,
+      "sla_hours": 120,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "experiment_running",
+      "name": "Experiment Running",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "evidence_review",
+      "name": "Evidence Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "delivery_backlog",
+      "name": "Delivery Backlog",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "building",
+      "name": "Building",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 5,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "validation_in_production",
+      "name": "Validation in Production",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "learned_and_shipped",
+      "name": "Learned and Shipped",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "blocked",
+      "name": "Blocked",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "discarded",
+      "name": "Discarded",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "frame_hypothesis",
+      "name": "Frame hypothesis",
+      "from": "opportunity_backlog",
+      "to": "hypothesis_framing",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "begin_discovery",
+      "name": "Begin discovery",
+      "from": "hypothesis_framing",
+      "to": "discovery_research",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "success_metric"
+        },
+        {
+          "type": "field_required",
+          "field": "kill_criteria"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "launch_experiment",
+      "name": "Launch experiment",
+      "from": "discovery_research",
+      "to": "experiment_running",
+      "guards": [
+        {
+          "type": "linked_artifact",
+          "artifact": "experiment_design"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "collect_evidence",
+      "name": "Collect evidence",
+      "from": "experiment_running",
+      "to": "evidence_review",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "iterate_research",
+      "name": "Iterate research",
+      "from": "evidence_review",
+      "to": "discovery_research",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "discard_hypothesis",
+      "name": "Discard hypothesis",
+      "from": "evidence_review",
+      "to": "discarded",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "learning_summary"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "promote_to_delivery",
+      "name": "Promote to delivery",
+      "from": "evidence_review",
+      "to": "delivery_backlog",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "product_trio",
+          "min_approvals": 2,
+          "distinct_from_author": false
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "start_build",
+      "name": "Start build",
+      "from": "delivery_backlog",
+      "to": "building",
+      "guards": [
+        {
+          "type": "wip_available"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "ship_for_validation",
+      "name": "Ship for validation",
+      "from": "building",
+      "to": "validation_in_production",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "outcome_missed",
+      "name": "Outcome missed",
+      "from": "validation_in_production",
+      "to": "building",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "confirm_outcome",
+      "name": "Confirm outcome",
+      "from": "validation_in_production",
+      "to": "learned_and_shipped",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "measured_outcome"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "block",
+      "name": "Block",
+      "from": "building",
+      "to": "blocked",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "unblock",
+      "name": "Unblock",
+      "from": "blocked",
+      "to": "building",
+      "guards": [],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "experiment_metrics_attach",
+      "event": "transition_completed",
+      "condition": "transition == 'collect_evidence'",
+      "action": "attach:experiment_dashboard",
+      "description": "Attaches experiment telemetry to the evidence review.",
+      "params": {}
+    },
+    {
+      "key": "kill_criteria_check",
+      "event": "scheduled",
+      "condition": "state == 'experiment_running'",
+      "action": "evaluate:kill_criteria;notify:product_trio",
+      "description": "Evaluates kill criteria daily while experiments run.",
+      "params": {}
+    },
+    {
+      "key": "learning_log",
+      "event": "transition_completed",
+      "condition": "transition in ['discard_hypothesis', 'confirm_outcome']",
+      "action": "append_learning_log",
+      "description": "Records every validated or invalidated hypothesis.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Discovery sync",
+      "cadence": "twice_weekly",
+      "duration_minutes": 30,
+      "participants": [
+        "product_trio",
+        "researcher"
+      ]
+    },
+    {
+      "name": "Evidence review",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "product_trio",
+        "data_scientist"
+      ]
+    },
+    {
+      "name": "Delivery planning",
+      "cadence": "biweekly",
+      "duration_minutes": 60,
+      "participants": [
+        "product_trio",
+        "engineer"
+      ]
+    }
+  ],
+  "roles": [
+    "product_trio",
+    "researcher",
+    "data_scientist",
+    "engineer",
+    "stakeholder"
+  ],
+  "cadence": {
+    "type": "dual_track",
+    "discovery_cycle_days": 7,
+    "delivery_iteration_days": 14
+  },
+  "metrics": [
+    "hypotheses_tested",
+    "validated_learning_rate",
+    "time_to_evidence",
+    "outcome_attainment"
+  ],
+  "anchors": {
+    "intake": "opportunity_backlog",
+    "rework": "building",
+    "release_transition": "confirm_outcome",
+    "done": "learned_and_shipped",
+    "blocked": "blocked",
+    "build_states": [
+      "building",
+      "discovery_research"
+    ],
+    "review_states": [
+      "evidence_review",
+      "validation_in_production"
+    ]
+  },
+  "description_text": "Workflow template: Dual Track Discovery and Delivery (dual_track_discovery).\nHypothesis driven discovery feeding a delivery track, suited to research and ML work.\nStates in order: Opportunity Backlog, Hypothesis Framing, Discovery Research, Experiment Running, Evidence Review, Delivery Backlog, Building, Validation in Production, Learned and Shipped, Blocked, Discarded.\nTransition Frame hypothesis moves work from opportunity_backlog to hypothesis_framing with no guard.\nTransition Begin discovery moves work from hypothesis_framing to discovery_research with required field success metric; required field kill criteria.\nTransition Launch experiment moves work from discovery_research to experiment_running with linked experiment design.\nTransition Collect evidence moves work from experiment_running to evidence_review with no guard.\nTransition Iterate research moves work from evidence_review to discovery_research with no guard.\nTransition Discard hypothesis moves work from evidence_review to discarded with required field learning summary.\nTransition Promote to delivery moves work from evidence_review to delivery_backlog with approval by 2 product trio.\nTransition Start build moves work from delivery_backlog to building with wip available.\nTransition Ship for validation moves work from building to validation_in_production with no guard.\nTransition Outcome missed moves work from validation_in_production to building with no guard.\nTransition Confirm outcome moves work from validation_in_production to learned_and_shipped with required field measured outcome.\nTransition Block moves work from building to blocked with no guard.\nTransition Unblock moves work from blocked to building with no guard.\nAutomation experiment_metrics_attach: Attaches experiment telemetry to the evidence review.\nAutomation kill_criteria_check: Evaluates kill criteria daily while experiments run.\nAutomation learning_log: Records every validated or invalidated hypothesis.\nCeremonies: Discovery sync, Evidence review, Delivery planning.\nPrimary metrics: hypotheses tested, validated learning rate, time to evidence, outcome attainment."
+}

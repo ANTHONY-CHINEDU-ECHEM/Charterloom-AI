@@ -1,0 +1,336 @@
+{
+  "archetype": "kanban_continuous_flow",
+  "display_name": "Kanban Continuous Flow",
+  "family": "flow",
+  "summary": "Pull based flow with explicit WIP limits and classes of service for maintenance and support.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "intake",
+      "name": "Intake",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "triage",
+      "name": "Triage",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 8,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Class of service assigned",
+        "Impact assessed"
+      ]
+    },
+    {
+      "key": "ready",
+      "name": "Ready",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 10,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "in_progress",
+      "name": "In Progress",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 5,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "peer_review",
+      "name": "Peer Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": 12,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "deploy_verification",
+      "name": "Deploy and Verify",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": 24,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "done",
+      "name": "Done",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "blocked",
+      "name": "Blocked",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 24,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "rejected",
+      "name": "Rejected",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "triage_item",
+      "name": "Triage item",
+      "from": "intake",
+      "to": "triage",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "reject",
+      "name": "Reject",
+      "from": "triage",
+      "to": "rejected",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "rejection_reason"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "accept_into_ready",
+      "name": "Accept into ready",
+      "from": "triage",
+      "to": "ready",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "class_of_service"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "pull",
+      "name": "Pull",
+      "from": "ready",
+      "to": "in_progress",
+      "guards": [
+        {
+          "type": "wip_available"
+        },
+        {
+          "type": "field_required",
+          "field": "assignee"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "submit_review",
+      "name": "Submit review",
+      "from": "in_progress",
+      "to": "peer_review",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "rework",
+      "name": "Rework",
+      "from": "peer_review",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "approve",
+      "name": "Approve",
+      "from": "peer_review",
+      "to": "deploy_verification",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "engineer",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "verification_failed",
+      "name": "Verification failed",
+      "from": "deploy_verification",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "verify",
+      "name": "Verify",
+      "from": "deploy_verification",
+      "to": "done",
+      "guards": [],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "resolved_at"
+        }
+      ]
+    },
+    {
+      "key": "block",
+      "name": "Block",
+      "from": "in_progress",
+      "to": "blocked",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "blocker_reason"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "unblock",
+      "name": "Unblock",
+      "from": "blocked",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "expedite_jump_queue",
+      "event": "field_changed",
+      "condition": "class_of_service == 'expedite'",
+      "action": "move:ready;priority:top;notify:service_owner",
+      "description": "Places expedite items at the head of the ready queue.",
+      "params": {}
+    },
+    {
+      "key": "wip_limit_guard",
+      "event": "wip_limit_exceeded",
+      "condition": "target_state.wip > target_state.wip_limit",
+      "action": "reject_transition;notify:team",
+      "description": "Refuses pulls that would breach a WIP limit.",
+      "params": {}
+    },
+    {
+      "key": "aging_work_alert",
+      "event": "time_in_state_exceeded",
+      "condition": "hours_in_state > sla_hours",
+      "action": "notify:service_owner;label:aging",
+      "description": "Flags items that exceed the service level for their state.",
+      "params": {}
+    },
+    {
+      "key": "fixed_date_reminder",
+      "event": "scheduled",
+      "condition": "class_of_service == 'fixed_date' and days_to_due < 5",
+      "action": "notify:assignee",
+      "description": "Reminds owners of approaching fixed date commitments.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Replenishment",
+      "cadence": "weekly",
+      "duration_minutes": 45,
+      "participants": [
+        "service_owner",
+        "engineer"
+      ]
+    },
+    {
+      "name": "Daily flow review",
+      "cadence": "daily",
+      "duration_minutes": 15,
+      "participants": [
+        "engineer",
+        "service_owner"
+      ]
+    },
+    {
+      "name": "Service delivery review",
+      "cadence": "biweekly",
+      "duration_minutes": 60,
+      "participants": [
+        "service_owner",
+        "stakeholder"
+      ]
+    }
+  ],
+  "roles": [
+    "service_owner",
+    "engineer",
+    "support_analyst",
+    "stakeholder"
+  ],
+  "cadence": {
+    "type": "continuous",
+    "replenishment_days": 7,
+    "classes_of_service": [
+      "expedite",
+      "fixed_date",
+      "standard",
+      "intangible"
+    ]
+  },
+  "metrics": [
+    "throughput",
+    "cycle_time_p85",
+    "work_item_age",
+    "flow_efficiency"
+  ],
+  "anchors": {
+    "intake": "intake",
+    "rework": "in_progress",
+    "release_transition": "verify",
+    "done": "done",
+    "blocked": "blocked",
+    "build_states": [
+      "in_progress"
+    ],
+    "review_states": [
+      "peer_review",
+      "deploy_verification"
+    ]
+  },
+  "description_text": "Workflow template: Kanban Continuous Flow (kanban_continuous_flow).\nPull based flow with explicit WIP limits and classes of service for maintenance and support.\nStates in order: Intake, Triage, Ready, In Progress, Peer Review, Deploy and Verify, Done, Blocked, Rejected.\nTransition Triage item moves work from intake to triage with no guard.\nTransition Reject moves work from triage to rejected with required field rejection reason.\nTransition Accept into ready moves work from triage to ready with required field class of service.\nTransition Pull moves work from ready to in_progress with wip available; required field assignee.\nTransition Submit review moves work from in_progress to peer_review with no guard.\nTransition Rework moves work from peer_review to in_progress with no guard.\nTransition Approve moves work from peer_review to deploy_verification with approval by 1 engineer.\nTransition Verification failed moves work from deploy_verification to in_progress with no guard.\nTransition Verify moves work from deploy_verification to done with no guard.\nTransition Block moves work from in_progress to blocked with required field blocker reason.\nTransition Unblock moves work from blocked to in_progress with no guard.\nAutomation expedite_jump_queue: Places expedite items at the head of the ready queue.\nAutomation wip_limit_guard: Refuses pulls that would breach a WIP limit.\nAutomation aging_work_alert: Flags items that exceed the service level for their state.\nAutomation fixed_date_reminder: Reminds owners of approaching fixed date commitments.\nCeremonies: Replenishment, Daily flow review, Service delivery review.\nPrimary metrics: throughput, cycle time p85, work item age, flow efficiency."
+}

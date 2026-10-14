@@ -1,0 +1,286 @@
+{
+  "archetype": "scrumban_hybrid",
+  "display_name": "Scrumban Hybrid Flow",
+  "family": "flow",
+  "summary": "Planning on demand with flow limits for teams that mix roadmap work with interrupts.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "backlog",
+      "name": "Backlog",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "ready",
+      "name": "Ready",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 8,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "in_progress",
+      "name": "In Progress",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 5,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "review",
+      "name": "Review",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": 24,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "testing",
+      "name": "Testing",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 3,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "done",
+      "name": "Done",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "blocked",
+      "name": "Blocked",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "cancelled",
+      "name": "Cancelled",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "make_ready",
+      "name": "Make ready",
+      "from": "backlog",
+      "to": "ready",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "priority"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "pull",
+      "name": "Pull",
+      "from": "ready",
+      "to": "in_progress",
+      "guards": [
+        {
+          "type": "wip_available"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "submit_review",
+      "name": "Submit review",
+      "from": "in_progress",
+      "to": "review",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "rework",
+      "name": "Rework",
+      "from": "review",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "approve",
+      "name": "Approve",
+      "from": "review",
+      "to": "testing",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "engineer",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "test_failed",
+      "name": "Test failed",
+      "from": "testing",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "accept",
+      "name": "Accept",
+      "from": "testing",
+      "to": "done",
+      "guards": [],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "completed_at"
+        }
+      ]
+    },
+    {
+      "key": "block",
+      "name": "Block",
+      "from": "in_progress",
+      "to": "blocked",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "unblock",
+      "name": "Unblock",
+      "from": "blocked",
+      "to": "in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "cancel",
+      "name": "Cancel",
+      "from": "backlog",
+      "to": "cancelled",
+      "guards": [],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "planning_on_demand",
+      "event": "transition_completed",
+      "condition": "count(state == 'ready') < 3",
+      "action": "create_meeting:planning;notify:team_lead",
+      "description": "Triggers a planning session when the ready queue runs low.",
+      "params": {}
+    },
+    {
+      "key": "interrupt_lane",
+      "event": "field_changed",
+      "condition": "type == 'incident'",
+      "action": "move:ready;priority:top",
+      "description": "Routes interrupts into a protected expedite lane.",
+      "params": {}
+    },
+    {
+      "key": "aging_wip_alert",
+      "event": "time_in_state_exceeded",
+      "condition": "hours_in_state > sla_hours",
+      "action": "notify:team_lead",
+      "description": "Flags work items that are aging beyond their service level.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Planning on demand",
+      "cadence": "triggered",
+      "duration_minutes": 60,
+      "participants": [
+        "team_lead",
+        "engineer"
+      ]
+    },
+    {
+      "name": "Daily standup",
+      "cadence": "daily",
+      "duration_minutes": 15,
+      "participants": [
+        "engineer",
+        "team_lead"
+      ]
+    },
+    {
+      "name": "Retrospective",
+      "cadence": "biweekly",
+      "duration_minutes": 45,
+      "participants": [
+        "team_lead",
+        "engineer"
+      ]
+    }
+  ],
+  "roles": [
+    "team_lead",
+    "engineer",
+    "product_owner",
+    "stakeholder"
+  ],
+  "cadence": {
+    "type": "hybrid",
+    "review_days": 14
+  },
+  "metrics": [
+    "throughput",
+    "cycle_time",
+    "interrupt_ratio",
+    "planned_vs_unplanned"
+  ],
+  "anchors": {
+    "intake": "backlog",
+    "rework": "in_progress",
+    "release_transition": "accept",
+    "done": "done",
+    "blocked": "blocked",
+    "build_states": [
+      "in_progress"
+    ],
+    "review_states": [
+      "review",
+      "testing"
+    ]
+  },
+  "description_text": "Workflow template: Scrumban Hybrid Flow (scrumban_hybrid).\nPlanning on demand with flow limits for teams that mix roadmap work with interrupts.\nStates in order: Backlog, Ready, In Progress, Review, Testing, Done, Blocked, Cancelled.\nTransition Make ready moves work from backlog to ready with required field priority.\nTransition Pull moves work from ready to in_progress with wip available.\nTransition Submit review moves work from in_progress to review with no guard.\nTransition Rework moves work from review to in_progress with no guard.\nTransition Approve moves work from review to testing with approval by 1 engineer.\nTransition Test failed moves work from testing to in_progress with no guard.\nTransition Accept moves work from testing to done with no guard.\nTransition Block moves work from in_progress to blocked with no guard.\nTransition Unblock moves work from blocked to in_progress with no guard.\nTransition Cancel moves work from backlog to cancelled with no guard.\nAutomation planning_on_demand: Triggers a planning session when the ready queue runs low.\nAutomation interrupt_lane: Routes interrupts into a protected expedite lane.\nAutomation aging_wip_alert: Flags work items that are aging beyond their service level.\nCeremonies: Planning on demand, Daily standup, Retrospective.\nPrimary metrics: throughput, cycle time, interrupt ratio, planned vs unplanned."
+}

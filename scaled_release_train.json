@@ -1,0 +1,363 @@
+{
+  "archetype": "scaled_release_train",
+  "display_name": "Scaled Agile Release Train",
+  "family": "iterative",
+  "summary": "Programme increment planning across many teams with shared cadence and dependency control.",
+  "template_version": "2026.10",
+  "states": [
+    {
+      "key": "programme_backlog",
+      "name": "Programme Backlog",
+      "category": "backlog",
+      "initial": true,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "feature_analysis",
+      "name": "Feature Analysis",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 12,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": [
+        "Benefit hypothesis written",
+        "WSJF score calculated"
+      ]
+    },
+    {
+      "key": "increment_committed",
+      "name": "Committed to Increment",
+      "category": "todo",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "feature_in_progress",
+      "name": "Feature In Progress",
+      "category": "in_progress",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 10,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "system_demo",
+      "name": "System Demo",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 72,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "integration_testing",
+      "name": "Integration Testing",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": 6,
+      "sla_hours": 96,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "release_ready",
+      "name": "Release Ready",
+      "category": "review",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "released",
+      "name": "Released",
+      "category": "done",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "dependency_blocked",
+      "name": "Dependency Blocked",
+      "category": "blocked",
+      "initial": false,
+      "terminal": false,
+      "wip_limit": null,
+      "sla_hours": 48,
+      "entry_criteria": [],
+      "exit_criteria": []
+    },
+    {
+      "key": "deferred",
+      "name": "Deferred",
+      "category": "cancelled",
+      "initial": false,
+      "terminal": true,
+      "wip_limit": null,
+      "sla_hours": null,
+      "entry_criteria": [],
+      "exit_criteria": []
+    }
+  ],
+  "transitions": [
+    {
+      "key": "analyse",
+      "name": "Analyse",
+      "from": "programme_backlog",
+      "to": "feature_analysis",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "commit_in_planning",
+      "name": "Commit in planning",
+      "from": "feature_analysis",
+      "to": "increment_committed",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "wsjf_score"
+        },
+        {
+          "type": "field_required",
+          "field": "owning_team"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "start_feature",
+      "name": "Start feature",
+      "from": "increment_committed",
+      "to": "feature_in_progress",
+      "guards": [
+        {
+          "type": "wip_available"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "demo",
+      "name": "Demo",
+      "from": "feature_in_progress",
+      "to": "system_demo",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "demo_feedback",
+      "name": "Demo feedback",
+      "from": "system_demo",
+      "to": "feature_in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "accept_demo",
+      "name": "Accept demo",
+      "from": "system_demo",
+      "to": "integration_testing",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "product_manager",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "integration_failed",
+      "name": "Integration failed",
+      "from": "integration_testing",
+      "to": "feature_in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "integration_passed",
+      "name": "Integration passed",
+      "from": "integration_testing",
+      "to": "release_ready",
+      "guards": [
+        {
+          "type": "checklist_complete",
+          "checklist": "end_to_end_suite"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "release_on_demand",
+      "name": "Release on demand",
+      "from": "release_ready",
+      "to": "released",
+      "guards": [
+        {
+          "type": "approval",
+          "role": "release_train_engineer",
+          "min_approvals": 1,
+          "distinct_from_author": true
+        }
+      ],
+      "actions": [
+        {
+          "type": "stamp_field",
+          "field": "released_at"
+        }
+      ]
+    },
+    {
+      "key": "blocked_on_dependency",
+      "name": "Blocked on dependency",
+      "from": "feature_in_progress",
+      "to": "dependency_blocked",
+      "guards": [
+        {
+          "type": "field_required",
+          "field": "dependency_owner"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "key": "dependency_cleared",
+      "name": "Dependency cleared",
+      "from": "dependency_blocked",
+      "to": "feature_in_progress",
+      "guards": [],
+      "actions": []
+    },
+    {
+      "key": "defer",
+      "name": "Defer",
+      "from": "programme_backlog",
+      "to": "deferred",
+      "guards": [],
+      "actions": []
+    }
+  ],
+  "triggers": [
+    {
+      "key": "increment_boundary_carryover",
+      "event": "increment_closed",
+      "condition": "item.state not in ['released', 'deferred']",
+      "action": "move:programme_backlog;label:carryover",
+      "description": "Returns uncompleted features for replanning.",
+      "params": {}
+    },
+    {
+      "key": "dependency_aging_alert",
+      "event": "time_in_state_exceeded",
+      "condition": "state == 'dependency_blocked' and hours_in_state > 48",
+      "action": "notify:release_train_engineer;notify:dependency_owner",
+      "description": "Escalates aging cross team dependencies.",
+      "params": {}
+    },
+    {
+      "key": "risk_roam_capture",
+      "event": "field_changed",
+      "condition": "label == 'risk'",
+      "action": "create_record:roam_risk",
+      "description": "Captures programme risks on the ROAM board.",
+      "params": {}
+    }
+  ],
+  "ceremonies": [
+    {
+      "name": "Increment planning",
+      "cadence": "per_increment",
+      "duration_minutes": 960,
+      "participants": [
+        "release_train_engineer",
+        "product_manager",
+        "team_lead"
+      ]
+    },
+    {
+      "name": "Coordination sync",
+      "cadence": "weekly",
+      "duration_minutes": 60,
+      "participants": [
+        "release_train_engineer",
+        "team_lead"
+      ]
+    },
+    {
+      "name": "System demo",
+      "cadence": "biweekly",
+      "duration_minutes": 60,
+      "participants": [
+        "product_manager",
+        "team_lead",
+        "stakeholder"
+      ]
+    },
+    {
+      "name": "Inspect and adapt",
+      "cadence": "per_increment",
+      "duration_minutes": 180,
+      "participants": [
+        "release_train_engineer",
+        "team_lead",
+        "product_manager"
+      ]
+    }
+  ],
+  "roles": [
+    "release_train_engineer",
+    "product_manager",
+    "system_architect",
+    "team_lead",
+    "engineer",
+    "stakeholder"
+  ],
+  "cadence": {
+    "type": "programme_increment",
+    "increment_weeks": 10,
+    "iteration_days": 14
+  },
+  "metrics": [
+    "increment_predictability",
+    "feature_cycle_time",
+    "dependency_count",
+    "release_frequency"
+  ],
+  "anchors": {
+    "intake": "programme_backlog",
+    "rework": "feature_in_progress",
+    "release_transition": "release_on_demand",
+    "done": "released",
+    "blocked": "dependency_blocked",
+    "build_states": [
+      "feature_in_progress"
+    ],
+    "review_states": [
+      "system_demo",
+      "integration_testing"
+    ]
+  },
+  "description_text": "Workflow template: Scaled Agile Release Train (scaled_release_train).\nProgramme increment planning across many teams with shared cadence and dependency control.\nStates in order: Programme Backlog, Feature Analysis, Committed to Increment, Feature In Progress, System Demo, Integration Testing, Release Ready, Released, Dependency Blocked, Deferred.\nTransition Analyse moves work from programme_backlog to feature_analysis with no guard.\nTransition Commit in planning moves work from feature_analysis to increment_committed with required field wsjf score; required field owning team.\nTransition Start feature moves work from increment_committed to feature_in_progress with wip available.\nTransition Demo moves work from feature_in_progress to system_demo with no guard.\nTransition Demo feedback moves work from system_demo to feature_in_progress with no guard.\nTransition Accept demo moves work from system_demo to integration_testing with approval by 1 product manager.\nTransition Integration failed moves work from integration_testing to feature_in_progress with no guard.\nTransition Integration passed moves work from integration_testing to release_ready with completed end to end suite checklist.\nTransition Release on demand moves work from release_ready to released with approval by 1 release train engineer.\nTransition Blocked on dependency moves work from feature_in_progress to dependency_blocked with required field dependency owner.\nTransition Dependency cleared moves work from dependency_blocked to feature_in_progress with no guard.\nTransition Defer moves work from programme_backlog to deferred with no guard.\nAutomation increment_boundary_carryover: Returns uncompleted features for replanning.\nAutomation dependency_aging_alert: Escalates aging cross team dependencies.\nAutomation risk_roam_capture: Captures programme risks on the ROAM board.\nCeremonies: Increment planning, Coordination sync, System demo, Inspect and adapt.\nPrimary metrics: increment predictability, feature cycle time, dependency count, release frequency."
+}

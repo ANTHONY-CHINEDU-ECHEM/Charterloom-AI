@@ -1,0 +1,17 @@
+{
+  "_comment": "Overrides for charterloom.config.Settings. Relative paths resolve against the project root.",
+  "knowledge_base_dir": "data/knowledge_base",
+  "artifacts_dir": "artifacts",
+  "reports_dir": "reports",
+  "examples_dir": "examples",
+  "random_seed": 1014,
+  "n_projects": 2400,
+  "embedding_dim": 256,
+  "neighbour_k": 30,
+  "neighbour_temperature": 0.2,
+  "precedent_feature_weight": 2.0,
+  "abstention_threshold": 0.5,
+  "post_mortem_top_k": 15,
+  "adjustment_threshold": 0.42,
+  "test_fraction": 0.2
+}
