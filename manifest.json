@@ -1,0 +1,29 @@
+{
+  "projects": 2400,
+  "blueprints": 2400,
+  "post_mortems": 2400,
+  "synthetic_words": 1063197,
+  "high_performance_threshold": 0.7294,
+  "high_performing_projects": 1200,
+  "adopted_workflow_counts": {
+    "dual_track_discovery": 199,
+    "incident_change_control": 350,
+    "kanban_continuous_flow": 270,
+    "regulated_compliance_pipeline": 323,
+    "scaled_release_train": 176,
+    "scrum_product_delivery": 505,
+    "scrumban_hybrid": 233,
+    "stage_gate_waterfall": 344
+  },
+  "high_performing_workflow_counts": {
+    "dual_track_discovery": 98,
+    "incident_change_control": 193,
+    "kanban_continuous_flow": 141,
+    "regulated_compliance_pipeline": 138,
+    "scaled_release_train": 99,
+    "scrum_product_delivery": 293,
+    "scrumban_hybrid": 58,
+    "stage_gate_waterfall": 180
+  },
+  "optimal_adoption_rate": 0.5917
+}
