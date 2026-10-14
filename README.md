@@ -4,7 +4,111 @@
 
 Charterloom AI reads a project charter, retrieves evidence from an organisational archive of historical project blueprints, post mortems and delivery methodologies, recommends the workflow archetype most likely to succeed, and generates a tailored, validated state machine configuration ready for a project management backend. Every recommendation arrives with calibrated confidence, the precedents behind it, cited methodology passages and a changelog that explains each customisation.
 
-![Charterloom AI pipeline](reports/figures/architecture.png)
+# Charterloom AI: System Architecture
+
+Charterloom AI turns a free-text project charter into a validated, citation-backed workflow. The pipeline runs in five stages: **ingestion → representation → retrieval → reasoning → output**.
+
+```mermaid
+flowchart LR
+
+    subgraph S1["1 · Inputs"]
+        direction TB
+        PC(["Project Charter<br/>Free-text requirements"])
+        KB[("Knowledge Base<br/>Blueprints · Post-mortems<br/>Methodologies · Templates")]
+    end
+
+    subgraph S2["2 · Representation"]
+        direction TB
+        FE["Feature Extractor<br/>Signals · Team · Regimes"]
+        SE["Semantic Embedder<br/>TF-IDF + LSA"]
+    end
+
+    subgraph S3["3 · Retrieval"]
+        direction TB
+        PSI["Project Space Index<br/>Nearest precedents"]
+        HR["Hybrid Retriever<br/>BM25 + Dense · RRF fusion"]
+    end
+
+    subgraph S4["4 · Reasoning"]
+        direction TB
+        RH["Recommendation Head<br/>Semantic · Structural ·<br/>Precedent experts"]
+        CU["Customizer<br/>Parameters · Overlays ·<br/>Evidence adjustments"]
+    end
+
+    subgraph S5["5 · Output"]
+        VW[["Validated Workflow<br/>State-machine JSON<br/>Rationale · Citations"]]
+    end
+
+    PC -->|charter text| FE
+    PC -->|charter text| SE
+    FE -->|feature vector| PSI
+    SE -->|embedding| PSI
+    KB -.->|indexed corpus| PSI
+    SE -->|query vector| HR
+    KB -.->|documents| HR
+    PSI -->|top-k precedents| RH
+    PSI -->|precedent context| CU
+    HR -->|ranked evidence| CU
+    RH ==>|base recommendation| CU
+    RH ==>|selected blueprint| VW
+    CU ==>|tailored workflow| VW
+
+    classDef input fill:#EEF2FF,stroke:#4F46E5,stroke-width:1.5px,color:#1E1B4B
+    classDef store fill:#ECFDF5,stroke:#059669,stroke-width:1.5px,color:#064E3B
+    classDef process fill:#F5F3FF,stroke:#7C3AED,stroke-width:1.5px,color:#2E1065
+    classDef reason fill:#FFF7ED,stroke:#EA580C,stroke-width:1.5px,color:#431407
+    classDef output fill:#F0FDF4,stroke:#16A34A,stroke-width:2.5px,color:#052E16
+
+    class PC input
+    class KB store
+    class FE,SE,PSI,HR process
+    class RH,CU reason
+    class VW output
+
+    style S1 fill:#FFFFFF,stroke:#CBD5E1,stroke-dasharray:4 3
+    style S2 fill:#FFFFFF,stroke:#CBD5E1,stroke-dasharray:4 3
+    style S3 fill:#FFFFFF,stroke:#CBD5E1,stroke-dasharray:4 3
+    style S4 fill:#FFFFFF,stroke:#CBD5E1,stroke-dasharray:4 3
+    style S5 fill:#FFFFFF,stroke:#CBD5E1,stroke-dasharray:4 3
+
+    linkStyle 4,6 stroke:#059669,stroke-width:1.5px
+    linkStyle 10,11,12 stroke:#EA580C,stroke-width:2.5px
+```
+
+### Legend
+
+| Shape / colour | Meaning |
+|---|---|
+| Rounded, indigo | External input |
+| Cylinder, teal | Persistent knowledge store |
+| Rectangle, violet | Representation and retrieval components |
+| Rectangle, orange | Reasoning and decision components |
+| Double-bordered, green | Final system output |
+| Solid arrow | Primary data flow |
+| Dashed arrow | Corpus / knowledge-base access |
+| Thick arrow | Decision path to output |
+
+## Components
+
+| Stage | Component | Responsibility | Key techniques |
+|---|---|---|---|
+| 1 · Inputs | **Project Charter** | Free-text statement of project goals, scope and constraints | — |
+| 1 · Inputs | **Knowledge Base** | Curated corpus of prior project knowledge | Blueprints, post-mortems, methodologies, templates |
+| 2 · Representation | **Feature Extractor** | Derives structured signals from the charter | Signal, team and regime extraction |
+| 2 · Representation | **Semantic Embedder** | Encodes the charter into a dense semantic vector | TF-IDF + Latent Semantic Analysis |
+| 3 · Retrieval | **Project Space Index** | Locates the most similar historical projects | Nearest-neighbour search over precedents |
+| 3 · Retrieval | **Hybrid Retriever** | Fetches supporting evidence from the knowledge base | BM25 + dense retrieval, Reciprocal Rank Fusion |
+| 4 · Reasoning | **Recommendation Head** | Selects the best-fit workflow blueprint | Mixture of semantic, structural and precedent experts |
+| 4 · Reasoning | **Customizer** | Tailors the blueprint to this charter | Parameter setting, overlays, evidence-based adjustments |
+| 5 · Output | **Validated Workflow** | Deliverable consumed by downstream tools | State-machine JSON with rationale and citations |
+
+## End-to-end flow
+
+1. The **charter** is processed in parallel by the **Feature Extractor** (structured signals) and the **Semantic Embedder** (dense vector).
+2. Both representations query the **Project Space Index** to find the nearest precedent projects; the embedding also drives the **Hybrid Retriever** over the knowledge base.
+3. The **Recommendation Head** combines its experts over the retrieved precedents to choose a base blueprint.
+4. The **Customizer** adapts that blueprint using precedent context and ranked evidence.
+5. The result is emitted as a **Validated Workflow**: a state-machine definition, with the rationale and citations behind every decision.
 
 ## Project Brief
 
@@ -79,7 +183,8 @@ The blueprints and post mortems are synthesised by a transparent generative mode
 
 Charter text reveals each latent attribute only with 80 percent probability and occasionally injects misleading cues, so the text is a realistic, imperfect view of the truth. The latent labels are written to a separate `ground_truth` folder that is used only for evaluation and is never indexed. The full specification is in [`data/knowledge_base/DATASHEET.md`](data/knowledge_base/DATASHEET.md).
 
-![Historical projects by adopted workflow](reports/figures/knowledge_base_composition.png)
+<img width="1360" height="720" alt="knowledge_base_composition" src="https://github.com/user-attachments/assets/fd311afb-2f8a-439a-a096-40ffaca97874" />
+
 
 ## How It Works
 
@@ -139,7 +244,8 @@ Charterloom recommends **Agile Scrum Product Delivery with 92 percent confidence
 </tbody>
 </table>
 
-![Clearwater Disputes workflow](reports/figures/workflow_payments_dispute_portal.png)
+<img width="3435" height="660" alt="workflow_payments_dispute_portal" src="https://github.com/user-attachments/assets/b91b1bee-ab70-480c-802b-ebf54d5e9915" />
+
 
 The full output, including evidence and rationale, is in [`examples/outputs/payments_dispute_portal.json`](examples/outputs/payments_dispute_portal.json). The other six example charters cover a clinical trial data capture module, a billing support service, a claims fraud machine learning study, a core ledger migration, a public sector benefits programme and a smart meter firmware rollout.
 
@@ -156,7 +262,8 @@ The full output, including evidence and rationale, is in [`examples/outputs/paym
 </tbody>
 </table>
 
-![Tidal Cutover workflow](reports/figures/workflow_core_ledger_migration.png)
+<img width="3435" height="660" alt="workflow_core_ledger_migration" src="https://github.com/user-attachments/assets/a63cb63a-1be8-443b-b8af-53b2c7f57635" />
+
 
 ## Evaluation
 
@@ -178,19 +285,23 @@ The 2,400 projects are split 80/20, stratified by latent optimal workflow. Entir
 </tbody>
 </table>
 
-![Model comparison](reports/figures/model_comparison.png)
+<img width="1424" height="720" alt="model_comparison" src="https://github.com/user-attachments/assets/8ec6ac7d-0b28-4bda-a0c5-69a4270c73dd" />
+
 
 The blend beats every individual expert on every metric. The largest gains are in probability quality: log loss falls by 9 percent against the best single expert and calibration error by 29 percent. That matters because the confidence drives the human review flag.
 
-![Confusion matrix](reports/figures/confusion_matrix.png)
+<img width="1077" height="1072" alt="confusion_matrix" src="https://github.com/user-attachments/assets/12877a4d-37db-4393-8507-24880fdebe77" />
 
-![F1 by archetype](reports/figures/per_class_f1.png)
+
+<img width="1328" height="688" alt="per_class_f1" src="https://github.com/user-attachments/assets/ffe88bfc-f310-4154-9a68-3ff42590fc83" />
+
 
 The release train is recognised almost perfectly because team count is unambiguous. The hardest class is Scrumban, with an F1 of 0.33 on only 11 test cases; most of its errors are predicted as Scrum. This mirrors practice, where Scrumban is a hybrid whose boundary with Scrum depends on interrupt share, a signal that charters often leave implicit. Regulated work is sometimes predicted as Scrum or stage gate when the charter names a regulation without describing its evidence obligations.
 
 ### Calibration and selective prediction
 
-![Reliability diagram](reports/figures/reliability_diagram.png)
+<img width="1007" height="816" alt="reliability_diagram" src="https://github.com/user-attachments/assets/15625414-446f-4644-9eb4-a390a7c25394" />
+
 
 With an expected calibration error of 0.072, probabilities can be read at face value. At the 0.50 review threshold, 84.3 percent of charters are handled automatically at 80.3 percent accuracy, and the 15.7 percent that are flagged are genuinely hard, with only 40.5 percent accuracy. Human attention is therefore concentrated where it adds the most value.
 
@@ -207,7 +318,8 @@ A retrieved precedent counts as relevant only if it used the same workflow and w
 </tbody>
 </table>
 
-![Retrieval quality](reports/figures/retrieval_quality.png)
+<img width="1424" height="688" alt="retrieval_quality" src="https://github.com/user-attachments/assets/f6ea5090-38bc-4cb5-8ccb-b0945773b063" />
+
 
 Text similarity alone is dominated by domain vocabulary: two payments projects look alike even when one is a research study and the other a maintenance service. Adding the standardised delivery features to the similarity space raises precision at 5 by 66 percent and nDCG by 68 percent. That improvement is what turns the precedent expert from a weak signal into a useful one.
 
@@ -222,11 +334,13 @@ Text similarity alone is dominated by domain vocabulary: two payments projects l
 </tbody>
 </table>
 
-![Adjustment selection](reports/figures/adjustment_selection.png)
+<img width="1424" height="688" alt="adjustment_selection" src="https://github.com/user-attachments/assets/b1ef43d3-0119-4810-86ca-28000d8b003f" />
+
 
 Charter priors alone over trigger, because a mention of personal data or a vendor does not always mean a gate is warranted. Post mortem evidence alone misses needs that the charter states plainly. Combining them gives the best balance and raises precision by 8.4 points over priors alone. Security, accessibility, privacy and rollback controls are selected with F1 above 0.8. Tighter WIP limits and the definition of ready are the hardest adjustments, because the conditions that require them are rarely stated in a charter.
 
-![F1 by adjustment](reports/figures/adjustment_f1_by_code.png)
+<img width="1360" height="880" alt="adjustment_f1_by_code" src="https://github.com/user-attachments/assets/2c3a40b3-504f-42cc-8087-84c6f12ca967" />
+
 
 ### Generated configurations
 
